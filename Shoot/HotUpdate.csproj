@@ -45,6 +45,7 @@
      <Compile Include="Assets/HotUpdate/BattleLogic/Entity/EntityEffect.cs" />
      <Compile Include="Assets/HotUpdate/EventDefine/BattleEventDefine.cs" />
      <Compile Include="Assets/HotUpdate/BattleLogic/BattleRoom.cs" />
+     <Compile Include="Assets/HotUpdate/Main.cs" />
      <Compile Include="Assets/HotUpdate/GameLogic/GameManager.cs" />
      <Compile Include="Assets/HotUpdate/UIWindow/UILoadingWindow.cs" />
      <Compile Include="Assets/HotUpdate/BattleLogic/Entity/EntityBullet.cs" />
@@ -57,7 +58,6 @@
      <Compile Include="Assets/HotUpdate/EventDefine/SceneEventDefine.cs" />
      <Compile Include="Assets/HotUpdate/GameLogic/FsmNode/FsmInitGame.cs" />
      <Compile Include="Assets/HotUpdate/UIWindow/UIAboutWindow.cs" />
-     <Compile Include="Assets/HotUpdate/Main.cs" />
      <Folder Include="Assets/HotUpdate/BattleLogic" />
      <Folder Include="Assets/HotUpdate/BattleLogic/Entity" />
      <Folder Include="Assets/HotUpdate/EventDefine" />

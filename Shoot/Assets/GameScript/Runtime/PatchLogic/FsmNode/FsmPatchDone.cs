@@ -22,6 +22,7 @@ internal class FsmPatchDone : IStateNode
 		// // 开启游戏流程
 		// GameManager.Instance.Run();
 		Debug.Log("开始游戏！～～～");
+		Main.Run();
 	}
 	void IStateNode.OnUpdate()
 	{

@@ -816,6 +816,10 @@
       <Project>{67a68d5a-6140-fa76-6039-b326d648d7ce}</Project>
       <Name>Unity.VisualScripting.State.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="HotUpdate.csproj">
+      <Project>{dbcdece0-a75c-8652-cf76-36c8dff0ef3f}</Project>
+      <Name>HotUpdate</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.VisualScripting.SettingsProvider.Editor.csproj">
       <Project>{0d50870b-164b-cf96-511e-f4e50a86cc78}</Project>
       <Name>Unity.VisualScripting.SettingsProvider.Editor</Name>
@@ -903,10 +907,6 @@
     <ProjectReference Include="Unity.VisualScripting.State.csproj">
       <Project>{cf9a55f8-768c-1914-0157-96061767e4dc}</Project>
       <Name>Unity.VisualScripting.State</Name>
-    </ProjectReference>
-    <ProjectReference Include="HotUpdate.csproj">
-      <Project>{dbcdece0-a75c-8652-cf76-36c8dff0ef3f}</Project>
-      <Name>HotUpdate</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
