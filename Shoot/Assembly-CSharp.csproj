@@ -43,23 +43,22 @@
   <ItemGroup>
      <Compile Include="Assets/GameScript/Runtime/Behaviour/BhvApplicationQuit.cs" />
      <Compile Include="Assets/GameScript/Runtime/EventDefine/UserEventDefine.cs" />
-     <Compile Include="Assets/ThirdParty/StreamingAssetsHelper/Runtime/StreamingAssetsHelper.cs" />
      <Compile Include="Assets/GameScript/Runtime/PatchLogic/FsmNode/FsmInitialize.cs" />
      <Compile Include="Assets/GameScript/Runtime/PatchLogic/FsmNode/FsmPatchPrepare.cs" />
+     <Compile Include="Assets/HybridCLRData/Generated/AOTGenericReferences.cs" />
      <Compile Include="Assets/GameScript/Runtime/PatchLogic/FsmNode/FsmUpdateVersion.cs" />
      <Compile Include="Assets/GameScript/Runtime/EventDefine/PatchEventDefine.cs" />
+     <Compile Include="Assets/GameScript/Runtime/AppEntry.cs" />
      <Compile Include="Assets/GameScript/Runtime/PatchLogic/FileStream.cs" />
      <Compile Include="Assets/GameScript/Runtime/PatchLogic/FsmNode/FsmCreateDownloader.cs" />
      <Compile Include="Assets/GameScript/Runtime/PatchLogic/FsmNode/FsmUpdateManifest.cs" />
      <Compile Include="Assets/GameScript/Runtime/PatchLogic/FsmNode/FsmDownloadFiles.cs" />
      <Compile Include="Assets/GameScript/Runtime/PatchLogic/FsmNode/FsmDownloadOver.cs" />
-     <Compile Include="Assets/ThirdParty/Extension/Scripts/Runtime/AssetOperationHandleExtension.cs" />
      <Compile Include="Assets/GameScript/Runtime/PatchLogic/FsmNode/FsmPatchDone.cs" />
      <Compile Include="Assets/GameScript/Runtime/Behaviour/BhvBackgroundScroller.cs" />
      <Compile Include="Assets/GameScript/Runtime/Boot.cs" />
      <Compile Include="Assets/GameScript/Runtime/PatchLogic/PatchWindow.cs" />
      <Compile Include="Assets/GameScript/Runtime/PatchLogic/PatchManager.cs" />
-     <Compile Include="Assets/ThirdParty/Extension/Scripts/Runtime/LoadAssetsByTagOperation.cs" />
      <Compile Include="Assets/GameScript/Runtime/PatchLogic/FsmNode/FsmClearCache.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets/GameArt/ShaderVariants" />
@@ -71,12 +70,10 @@
      <Folder Include="Assets/GameArt/Entity/Asteroid/prop_asteroid_02" />
      <Folder Include="Assets/GameRes/UIImage" />
      <None Include="Library/PackageCache/com.unity.collab-proxy@2.0.4/Lib/Editor/PlasticSCM/Localization/guihelp.zh-Hant.txt" />
-     <Folder Include="Assets/ThirdParty/UniFramework/UniWindow" />
      <Folder Include="Assets/GameRes/Scene" />
      <Folder Include="Library/PackageCache/com.unity.test-framework@1.1.31" />
      <Folder Include="Assets/GameRes/Effect" />
      <Folder Include="Assets/GameArt/UIAtlas" />
-     <Folder Include="Assets/ThirdParty/Extension/Scripts" />
      <Folder Include="Assets/ThirdParty/Extension" />
      <None Include="Library/PackageCache/com.unity.collab-proxy@2.0.4/Lib/Editor/PlasticSCM/Localization/plastic-gui.zh-Hant.txt" />
      <None Include="Library/PackageCache/com.unity.collab-proxy@2.0.4/Lib/Editor/PlasticSCM/Localization/images.es.txt" />
@@ -94,10 +91,8 @@
      <None Include="Library/PackageCache/com.unity.collab-proxy@2.0.4/Lib/Editor/PlasticSCM/Localization/basecommands.ko.txt" />
      <Folder Include="Library/PackageCache/com.unity.ide.rider@3.0.21/Rider" />
      <None Include="Library/PackageCache/com.unity.collab-proxy@2.0.4/Lib/Editor/PlasticSCM/Localization/semantic.zh-Hant.txt" />
-     <Folder Include="Assets/ThirdParty/StreamingAssetsHelper/Runtime" />
      <None Include="Library/PackageCache/com.unity.collab-proxy@2.0.4/Lib/Editor/PlasticSCM/Localization/clientcommon.es.txt" />
      <Folder Include="Library/PackageCache/com.unity.textmeshpro@3.0.6/Editor Resources" />
-     <None Include="Assets/ThirdParty/UniTask/UniTask/package.json" />
      <None Include="Assets/GameArt/Shader/MyUnlitShader.shader" />
      <Folder Include="Assets/GameRes/UIPanel" />
      <Folder Include="Assets/GameScript/Runtime/PatchLogic/FsmNode" />
@@ -105,15 +100,12 @@
      <None Include="Library/PackageCache/com.unity.collab-proxy@2.0.4/Lib/Editor/PlasticSCM/Localization/guihelp.ja.txt" />
      <Folder Include="Library/PackageCache/com.unity.visualscripting@1.8.0/Graphics" />
      <Folder Include="Assets/GameArt/Entity/Vehicle/vehicle_enemyShip" />
-     <Folder Include="Assets/HybridCLRData/Generated" />
      <None Include="Library/PackageCache/com.unity.collab-proxy@2.0.4/Lib/Editor/PlasticSCM/Localization/xdiff.ja.txt" />
      <None Include="Library/PackageCache/com.unity.collab-proxy@2.0.4/Lib/Editor/PlasticSCM/Localization/configurehelper.es.txt" />
-     <Folder Include="Assets/ThirdParty/UniTask" />
      <Folder Include="Assets/GameScript/Runtime/Behaviour" />
-     <Folder Include="Assets/ThirdParty/UniFramework/UniEvent" />
-     <Folder Include="Assets/ThirdParty/UniFramework/UniUtility" />
      <None Include="Library/PackageCache/com.unity.timeline@1.6.5/package.json" />
      <Folder Include="Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom" />
+     <None Include="Assets/HybridCLRData/Generated/link.xml" />
      <None Include="Library/PackageCache/com.unity.collab-proxy@2.0.4/Lib/Editor/PlasticSCM/Localization/configurehelper.en.txt" />
      <Folder Include="Assets/GameRes/UISprite/common" />
      <Folder Include="Assets/GameScript/Runtime" />
@@ -128,7 +120,6 @@
      <None Include="Library/PackageCache/com.unity.collab-proxy@2.0.4/Lib/Editor/PlasticSCM/Localization/differences.zh-Hant.txt" />
      <Folder Include="Assets/GameArt/Entity/Asteroid/prop_asteroid_03/Materials" />
      <None Include="Library/PackageCache/com.unity.collab-proxy@2.0.4/Lib/Editor/PlasticSCM/Localization/plastic-gui.ko.txt" />
-     <Folder Include="Assets/HybridCLRData" />
      <None Include="Library/PackageCache/com.unity.collab-proxy@2.0.4/Lib/Editor/PlasticSCM/Localization/basecommands.ja.txt" />
      <None Include="Library/PackageCache/com.unity.visualscripting@1.8.0/package.json" />
      <None Include="Library/PackageCache/com.unity.editorcoroutines@1.0.0/package.json" />
@@ -139,7 +130,6 @@
      <None Include="Library/PackageCache/com.unity.collab-proxy@2.0.4/Lib/Editor/PlasticSCM/Localization/xdiff.ko.txt" />
      <Folder Include="Library/PackageCache/com.unity.timeline@1.6.5" />
      <None Include="Library/PackageCache/com.unity.collab-proxy@2.0.4/Lib/Editor/PlasticSCM/Localization/clientcommon.ja.txt" />
-     <Folder Include="Assets/ThirdParty/UniFramework/UniSingleton" />
      <None Include="Library/PackageCache/com.unity.collab-proxy@2.0.4/Lib/Editor/PlasticSCM/Localization/basecommands.zh-Hans.txt" />
      <None Include="Library/PackageCache/com.unity.textmeshpro@3.0.6/PackageConversionData.json" />
      <None Include="Library/PackageCache/com.unity.collab-proxy@2.0.4/Lib/Editor/PlasticSCM/Localization/guihelp.en.txt" />
@@ -147,7 +137,7 @@
      <None Include="Library/PackageCache/com.unity.collab-proxy@2.0.4/Lib/Editor/PlasticSCM/Localization/differences.ja.txt" />
      <None Include="Library/PackageCache/com.unity.collab-proxy@2.0.4/Lib/Editor/PlasticSCM/Localization/configurehelper.ja.txt" />
      <None Include="Library/PackageCache/com.unity.collab-proxy@2.0.4/Lib/Editor/PlasticSCM/Localization/semantic.en.txt" />
-     <None Include="Assets/YooAsset/package.json" />
+     <None Include="Assets/ThirdParty/YooAsset/package.json" />
      <None Include="Library/PackageCache/com.unity.ide.visualstudio@2.0.18/package.json" />
      <None Include="Library/PackageCache/com.unity.collab-proxy@2.0.4/Lib/Editor/PlasticSCM/Localization/workspaceserver.ko.txt" />
      <Folder Include="Assets/GameRes/UISprite/common/window" />
@@ -157,7 +147,6 @@
      <None Include="Library/PackageCache/com.unity.collab-proxy@2.0.4/Lib/Editor/PlasticSCM/Localization/commontypes.en.txt" />
      <None Include="Library/PackageCache/com.unity.collab-proxy@2.0.4/Lib/Editor/PlasticSCM/Localization/commontypes.es.txt" />
      <None Include="Library/PackageCache/com.unity.collab-proxy@2.0.4/Lib/Editor/PlasticSCM/Localization/images.zh-Hant.txt" />
-     <Folder Include="Assets/ThirdParty/UniFramework/UniMachine" />
      <None Include="Assets/GameArt/ShaderVariants/MyShaderVariants.json" />
      <Folder Include="Assets/GameArt/UIFont" />
      <Folder Include="Assets/GameArt/Entity/Vehicle/vehicle_playerShip/Materials" />
@@ -187,10 +176,10 @@
      <Folder Include="Assets/GameRes/Config" />
      <None Include="Library/PackageCache/com.unity.collab-proxy@2.0.4/Lib/Editor/PlasticSCM/Localization/binmergetool.en.txt" />
      <None Include="Library/PackageCache/com.unity.visualscripting@1.8.0/ValidationExceptions.json" />
+     <Folder Include="Assets/HybridCLRData" />
      <None Include="Library/PackageCache/com.unity.collab-proxy@2.0.4/Lib/Editor/PlasticSCM/Localization/configurehelper.zh-Hant.txt" />
      <Folder Include="Library/PackageCache/com.unity.settings-manager@1.0.3" />
      <None Include="Library/PackageCache/com.unity.collab-proxy@2.0.4/Lib/Editor/PlasticSCM/Localization/cm-help.zh-Hans.txt" />
-     <Folder Include="Assets/ThirdParty/Extension/Scripts/Runtime" />
      <None Include="Library/PackageCache/com.unity.collab-proxy@2.0.4/Lib/Editor/PlasticSCM/Localization/semantic.ko.txt" />
      <Folder Include="Assets/GameScript" />
      <None Include="Library/PackageCache/com.unity.collab-proxy@2.0.4/Lib/Editor/PlasticSCM/Localization/workspaceserver.en.txt" />
@@ -213,7 +202,7 @@
      <None Include="Library/PackageCache/com.unity.collab-proxy@2.0.4/Lib/Editor/PlasticSCM/Localization/clientcommon.en.txt" />
      <Folder Include="Library/PackageCache/com.unity.collab-proxy@2.0.4" />
      <None Include="Library/PackageCache/com.unity.collab-proxy@2.0.4/Lib/Editor/PlasticSCM/Localization/binmergetool.zh-Hans.txt" />
-     <Folder Include="Assets/YooAsset" />
+     <Folder Include="Assets/ThirdParty/YooAsset" />
      <None Include="Library/PackageCache/com.unity.collab-proxy@2.0.4/Lib/Editor/PlasticSCM/Localization/i3.es.txt" />
      <None Include="Library/PackageCache/com.unity.collab-proxy@2.0.4/Lib/Editor/PlasticSCM/Localization/mergetool.zh-Hans.txt" />
      <Folder Include="Assets/GameRes" />
@@ -222,10 +211,10 @@
      <Folder Include="Library/PackageCache/com.unity.collab-proxy@2.0.4/Lib/Editor" />
      <Folder Include="Assets/Resources" />
      <None Include="Library/PackageCache/com.unity.collab-proxy@2.0.4/Lib/Editor/PlasticSCM/Localization/plastic-gui.es.txt" />
-     <Folder Include="Assets/ThirdParty/UniTask/UniTask" />
      <None Include="Library/PackageCache/com.unity.collab-proxy@2.0.4/Lib/Editor/PlasticSCM/Localization/images.en.txt" />
      <None Include="Library/PackageCache/com.unity.collab-proxy@2.0.4/Lib/Editor/PlasticSCM/Localization/binmergetool.ja.txt" />
      <None Include="Assets/GameArt/Shader/StandardMobile.shader" />
+     <Folder Include="Assets/HybridCLRData/Generated" />
      <None Include="Library/PackageCache/com.unity.testtools.codecoverage@1.0.1/package.json" />
      <Folder Include="Library/PackageCache/com.unity.scriptablebuildpipeline@1.20.2" />
      <Folder Include="Library/PackageCache/com.unity.textmeshpro@3.0.6" />
@@ -238,11 +227,9 @@
      <Folder Include="Assets/GameArt/Entity/Vehicle/vehicle_enemyShip/Materials" />
      <Folder Include="Assets/GameArt" />
      <None Include="Library/PackageCache/com.unity.collab-proxy@2.0.4/Lib/Editor/PlasticSCM/Localization/images.ja.txt" />
-     <Folder Include="Assets/ThirdParty/UniFramework" />
      <Folder Include="Library/PackageCache/com.unity.ide.vscode@1.2.5" />
      <Folder Include="Library/PackageCache/com.unity.textmeshpro@3.0.6/Tests" />
      <None Include="Library/PackageCache/com.unity.textmeshpro@3.0.6/Editor Resources/Shaders/TMP_Properties.cginc" />
-     <Folder Include="Assets/ThirdParty/UniFramework/UniPooling" />
      <None Include="Library/PackageCache/com.unity.textmeshpro@3.0.6/Editor Resources/Shaders/TMP_SDF Internal Editor.shader" />
      <None Include="Library/PackageCache/com.unity.collab-proxy@2.0.4/Lib/Editor/PlasticSCM/Localization/xdiff.es.txt" />
      <None Include="Library/PackageCache/com.unity.collab-proxy@2.0.4/Lib/Editor/PlasticSCM/Localization/configurehelper.zh-Hans.txt" />
@@ -955,10 +942,6 @@
       <Project>{ef045e46-99de-7632-c58f-ea6973180c31}</Project>
       <Name>Unity.VisualScripting.Flow.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="UniMachine.csproj">
-      <Project>{86339f0c-5ea5-c53f-4507-c92a9c241177}</Project>
-      <Name>UniMachine</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.VSCode.Editor.csproj">
       <Project>{e749974f-2cfd-837a-cdac-995f9e25f1ea}</Project>
       <Name>Unity.VSCode.Editor</Name>
@@ -967,21 +950,17 @@
       <Project>{769b8ce4-54ca-d3de-7dea-f719ebac80bd}</Project>
       <Name>YooAsset.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="UniSingleton.csproj">
-      <Project>{129ea1ff-21db-5d91-9968-556d08613eda}</Project>
-      <Name>UniSingleton</Name>
-    </ProjectReference>
     <ProjectReference Include="UnityEditor.CacheServer.csproj">
       <Project>{93ed0ccd-7b0f-5213-a9e7-b457ea7320a1}</Project>
       <Name>UnityEditor.CacheServer</Name>
     </ProjectReference>
-    <ProjectReference Include="UniEvent.csproj">
-      <Project>{286f82bf-d5d6-3571-5adf-c0d6a8c78005}</Project>
-      <Name>UniEvent</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.TextMeshPro.Editor.csproj">
       <Project>{a6057419-12f7-9470-105f-c4cfe0911d80}</Project>
       <Name>Unity.TextMeshPro.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.VisualStudio.Editor.csproj">
+      <Project>{02483a96-0693-bd43-cfba-453a6b70c561}</Project>
+      <Name>Unity.VisualStudio.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Performance.Profile-Analyzer.Editor.csproj">
       <Project>{c225468e-9762-b6b2-7e20-719293964f65}</Project>
@@ -990,10 +969,6 @@
     <ProjectReference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.csproj">
       <Project>{4d7e2272-7eee-ca1e-2559-22586ac58a3c}</Project>
       <Name>Unity.TestTools.CodeCoverage.Editor.OpenCover.Model</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.VisualStudio.Editor.csproj">
-      <Project>{02483a96-0693-bd43-cfba-453a6b70c561}</Project>
-      <Name>Unity.VisualStudio.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Timeline.csproj">
       <Project>{e5874ef6-ec62-663f-9c56-c9b961072684}</Project>
@@ -1011,9 +986,9 @@
       <Project>{67a68d5a-6140-fa76-6039-b326d648d7ce}</Project>
       <Name>Unity.VisualScripting.State.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="HotUpdate.csproj">
-      <Project>{dbcdece0-a75c-8652-cf76-36c8dff0ef3f}</Project>
-      <Name>HotUpdate</Name>
+    <ProjectReference Include="Extension.csproj">
+      <Project>{f93bdda6-54d6-66a8-636d-72e0f85ff315}</Project>
+      <Name>Extension</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.VisualScripting.SettingsProvider.Editor.csproj">
       <Project>{0d50870b-164b-cf96-511e-f4e50a86cc78}</Project>
@@ -1023,10 +998,6 @@
       <Project>{1bb25892-e971-ef67-d3d5-f5ca01a0019b}</Project>
       <Name>Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection</Name>
     </ProjectReference>
-    <ProjectReference Include="UniTask.DOTween.csproj">
-      <Project>{47518b8d-1826-6598-a440-3ed448236f6d}</Project>
-      <Name>UniTask.DOTween</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.VisualScripting.Flow.csproj">
       <Project>{ec619727-abe2-0486-d132-fac2384a3675}</Project>
       <Name>Unity.VisualScripting.Flow</Name>
@@ -1035,17 +1006,13 @@
       <Project>{4dc528b8-c3b1-5b4f-cf67-4cf7310deef5}</Project>
       <Name>Unity.PlasticSCM.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="UniPooling.csproj">
-      <Project>{a7ea71e4-c06f-eb9b-6ea1-ff89f93796be}</Project>
-      <Name>UniPooling</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.Rider.Editor.csproj">
       <Project>{2a45b6ad-eb8b-5cdf-4197-677a0e4f4221}</Project>
       <Name>Unity.Rider.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="UniTask.Linq.csproj">
-      <Project>{e9496d0d-847f-8ee4-fe9a-c0f13f4ad66f}</Project>
-      <Name>UniTask.Linq</Name>
+    <ProjectReference Include="UniFramework.csproj">
+      <Project>{55e14297-cb13-6d50-11f3-593bd3e441b0}</Project>
+      <Name>UniFramework</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.VisualScripting.Core.csproj">
       <Project>{4c694f4d-8077-0b42-c7d6-ca457d805428}</Project>
@@ -1055,21 +1022,13 @@
       <Project>{988cc365-5f33-f938-03b7-1246c58b9943}</Project>
       <Name>Unity.EditorCoroutines.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="UniTask.TextMeshPro.csproj">
-      <Project>{568b4c63-ceaa-3127-3979-a6240b0600cc}</Project>
-      <Name>UniTask.TextMeshPro</Name>
-    </ProjectReference>
-    <ProjectReference Include="UniWindow.csproj">
-      <Project>{db3846e1-6569-fa4d-6126-dfa1b22066ca}</Project>
-      <Name>UniWindow</Name>
+    <ProjectReference Include="BetterStreaming.csproj">
+      <Project>{cfbcf696-5e35-04cf-8785-d3fe16963837}</Project>
+      <Name>BetterStreaming</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.VisualScripting.Shared.Editor.csproj">
       <Project>{e532ddf0-bd70-0310-cf90-87f014dde8c2}</Project>
       <Name>Unity.VisualScripting.Shared.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="UniUtility.csproj">
-      <Project>{5205c9fb-6b07-2286-f084-0960c8539315}</Project>
-      <Name>UniUtility</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Timeline.Editor.csproj">
       <Project>{2af3d38d-ac9b-1181-da72-1999f886e345}</Project>
@@ -1087,21 +1046,17 @@
       <Project>{c6e7d2e0-ca80-2266-95ea-efd5c7bcfa8c}</Project>
       <Name>Unity.ScriptableBuildPipeline.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="UniTask.csproj">
-      <Project>{3755a221-bd83-6a54-7474-61bc99ec882f}</Project>
-      <Name>UniTask</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.TestTools.CodeCoverage.Editor.csproj">
       <Project>{30d0735e-cf16-0140-7da1-2d7e526b8578}</Project>
       <Name>Unity.TestTools.CodeCoverage.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="UniTask.Addressables.csproj">
-      <Project>{199a6a66-a280-8bc9-3052-6790ed26363f}</Project>
-      <Name>UniTask.Addressables</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.VisualScripting.State.csproj">
       <Project>{cf9a55f8-768c-1914-0157-96061767e4dc}</Project>
       <Name>Unity.VisualScripting.State</Name>
+    </ProjectReference>
+    <ProjectReference Include="HotFix.csproj">
+      <Project>{723eb823-e755-a4c7-402c-620fb85b3e03}</Project>
+      <Name>HotFix</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

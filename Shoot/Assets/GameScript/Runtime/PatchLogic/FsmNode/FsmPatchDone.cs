@@ -15,14 +15,8 @@ internal class FsmPatchDone : IStateNode
 	void IStateNode.OnEnter()
 	{
 		PatchEventDefine.PatchStatesChange.SendEventMessage("开始游戏！");
-
-		// // 创建游戏管理器
-		// UniSingleton.CreateSingleton<GameManager>();
-		//
-		// // 开启游戏流程
-		// GameManager.Instance.Run();
 		Debug.Log("开始游戏！～～～");
-		Main.Run();
+		AppEntry.StartGame();
 	}
 	void IStateNode.OnUpdate()
 	{

@@ -41,31 +41,113 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets/HotUpdate/BattleLogic/Entity/EntityEnemy.cs" />
-     <Compile Include="Assets/HotUpdate/BattleLogic/Entity/EntityEffect.cs" />
-     <Compile Include="Assets/HotUpdate/EventDefine/BattleEventDefine.cs" />
-     <Compile Include="Assets/HotUpdate/BattleLogic/BattleRoom.cs" />
-     <Compile Include="Assets/HotUpdate/Main.cs" />
-     <Compile Include="Assets/HotUpdate/GameLogic/GameManager.cs" />
-     <Compile Include="Assets/HotUpdate/UIWindow/UILoadingWindow.cs" />
-     <Compile Include="Assets/HotUpdate/BattleLogic/Entity/EntityBullet.cs" />
-     <Compile Include="Assets/HotUpdate/BattleLogic/Entity/EntityAsteroid.cs" />
-     <Compile Include="Assets/HotUpdate/UIWindow/UIBattleWindow.cs" />
-     <Compile Include="Assets/HotUpdate/GameLogic/FsmNode/FsmSceneBattle.cs" />
-     <Compile Include="Assets/HotUpdate/BattleLogic/Entity/EntityPlayer.cs" />
-     <Compile Include="Assets/HotUpdate/UIWindow/UIHomeWindow.cs" />
-     <Compile Include="Assets/HotUpdate/GameLogic/FsmNode/FsmSceneHome.cs" />
-     <Compile Include="Assets/HotUpdate/EventDefine/SceneEventDefine.cs" />
-     <Compile Include="Assets/HotUpdate/GameLogic/FsmNode/FsmInitGame.cs" />
-     <Compile Include="Assets/HotUpdate/UIWindow/UIAboutWindow.cs" />
-     <Folder Include="Assets/HotUpdate/BattleLogic" />
-     <Folder Include="Assets/HotUpdate/BattleLogic/Entity" />
-     <Folder Include="Assets/HotUpdate/EventDefine" />
-     <Folder Include="Assets/HotUpdate/GameLogic" />
-     <Folder Include="Assets/HotUpdate/UIWindow" />
-     <Folder Include="Assets/HotUpdate" />
-     <Folder Include="Assets/HotUpdate/GameLogic/FsmNode" />
-     <None Include="Assets/HotUpdate/HotUpdate.asmdef" />
+     <Compile Include="Assets/HotFix/BattleLogic/Entity/EntityEnemy.cs" />
+     <Compile Include="Assets/HotFix/BattleLogic/Entity/EntityEffect.cs" />
+     <Compile Include="Assets/HotFix/UniFramework/UniUtility/Runtime/StringFormat.cs" />
+     <Compile Include="Assets/HotFix/EventDefine/BattleEventDefine.cs" />
+     <Compile Include="Assets/HotFix/UniFramework/UniTween/Runtime/TweenNode/TimerNode.cs" />
+     <Compile Include="Assets/HotFix/UniFramework/UniTween/Runtime/TweenHandle.cs" />
+     <Compile Include="Assets/HotFix/UniFramework/UniNetwork/Runtime/UniNetworkDriver.cs" />
+     <Compile Include="Assets/HotFix/UniFramework/UniTween/Runtime/TweenNode/UntilNode.cs" />
+     <Compile Include="Assets/HotFix/UniFramework/UniNetwork/Runtime/TCP/TcpClient.cs" />
+     <Compile Include="Assets/HotFix/BattleLogic/BattleRoom.cs" />
+     <Compile Include="Assets/HotFix/UniFramework/UniNetwork/Runtime/RingBuffer.cs" />
+     <Compile Include="Assets/HotFix/UniFramework/UniNetwork/Runtime/Package/INetPackage.cs" />
+     <Compile Include="Assets/HotFix/UniFramework/UniTween/Runtime/UniLogger.cs" />
+     <Compile Include="Assets/HotFix/HotFixEntry.cs" />
+     <Compile Include="Assets/HotFix/UniFramework/UniTween/Runtime/ITweenChain.cs" />
+     <Compile Include="Assets/HotFix/UniFramework/UniWindow/Runtime/UniLogger.cs" />
+     <Compile Include="Assets/HotFix/UniFramework/UniAnimation/Runtime/AnimState.cs" />
+     <Compile Include="Assets/HotFix/GameLogic/GameManager.cs" />
+     <Compile Include="Assets/HotFix/UniFramework/UniWindow/Runtime/WindowAttribute.cs" />
+     <Compile Include="Assets/HotFix/UniFramework/UniTween/Runtime/TweenNode/ExecuteNode.cs" />
+     <Compile Include="Assets/HotFix/UniFramework/UniTween/Runtime/UniTweenDriver.cs" />
+     <Compile Include="Assets/HotFix/UniFramework/UniPooling/Runtime/CreatePoolOperation.cs" />
+     <Compile Include="Assets/HotFix/UniFramework/UniTween/Runtime/TweenExtension/UnityEngine_GameObject_Tween_Extension.cs" />
+     <Compile Include="Assets/HotFix/UIWindow/UILoadingWindow.cs" />
+     <Compile Include="Assets/HotFix/UniFramework/UniNetwork/Runtime/Package/DefaultNetPackageEncoder.cs" />
+     <Compile Include="Assets/HotFix/UniFramework/UniTween/Runtime/UniTimer.cs" />
+     <Compile Include="Assets/HotFix/BattleLogic/Entity/EntityBullet.cs" />
+     <Compile Include="Assets/HotFix/UniFramework/UniTween/Runtime/TweenExtension/UnityEngine_RectTransform_Tween_Extension.cs" />
+     <Compile Include="Assets/HotFix/UniFramework/UniWindow/Runtime/UniWindow.cs" />
+     <Compile Include="Assets/HotFix/UniFramework/UniNetwork/Runtime/Package/DefaultNetPackageDecoder.cs" />
+     <Compile Include="Assets/HotFix/UniFramework/UniTween/Runtime/TweenExtension/UnityEngine_UI_Image_Tween_Extension.cs" />
+     <Compile Include="Assets/HotFix/UniFramework/UniAnimation/Runtime/AnimMixer.cs" />
+     <Compile Include="Assets/HotFix/UniFramework/UniPooling/Runtime/UniPooling.cs" />
+     <Compile Include="Assets/HotFix/UniFramework/UniUtility/Runtime/StringConvert.cs" />
+     <Compile Include="Assets/HotFix/BattleLogic/Entity/EntityAsteroid.cs" />
+     <Compile Include="Assets/HotFix/UniFramework/UniTween/Runtime/UniTween.cs" />
+     <Compile Include="Assets/HotFix/UniFramework/UniAnimation/Runtime/AnimPlayable.cs" />
+     <Compile Include="Assets/HotFix/UIWindow/UIBattleWindow.cs" />
+     <Compile Include="Assets/HotFix/GameLogic/FsmNode/FsmSceneBattle.cs" />
+     <Compile Include="Assets/HotFix/UniFramework/UniWindow/Runtime/UIWindow.cs" />
+     <Compile Include="Assets/HotFix/BattleLogic/Entity/EntityPlayer.cs" />
+     <Compile Include="Assets/HotFix/UniFramework/UniTween/Runtime/TweenExtension/UnityEngine_CanvasGroup_Tween_Extension.cs" />
+     <Compile Include="Assets/HotFix/UniFramework/UniTween/Runtime/TweenNode/ChainNode.cs" />
+     <Compile Include="Assets/HotFix/UniFramework/UniAnimation/Runtime/UniLogger.cs" />
+     <Compile Include="Assets/HotFix/UniFramework/UniTween/Runtime/TweenNode/SelectorNode.cs" />
+     <Compile Include="Assets/HotFix/UniFramework/UniTween/Runtime/TweenNode/SequenceNode.cs" />
+     <Compile Include="Assets/HotFix/UniFramework/UniUtility/Runtime/UniTimer.cs" />
+     <Compile Include="Assets/HotFix/UniFramework/UniPooling/Runtime/Spawner.cs" />
+     <Compile Include="Assets/HotFix/UniFramework/UniPooling/Runtime/UniLogger.cs" />
+     <Compile Include="Assets/HotFix/UniFramework/UniNetwork/Runtime/ThreadSyncContext.cs" />
+     <Compile Include="Assets/HotFix/UniFramework/UniTween/Runtime/TweenEase.cs" />
+     <Compile Include="Assets/HotFix/UniFramework/UniPooling/Runtime/GameObjectPool.cs" />
+     <Compile Include="Assets/HotFix/UIWindow/UIHomeWindow.cs" />
+     <Compile Include="Assets/HotFix/UniFramework/UniTween/Runtime/TweenExtension/UnityEngine_UI_Text_Tween_Extension.cs" />
+     <Compile Include="Assets/HotFix/UniFramework/UniTween/Runtime/TweenNode/ParallelNode.cs" />
+     <Compile Include="Assets/HotFix/UniFramework/UniTween/Runtime/TweenMath.cs" />
+     <Compile Include="Assets/HotFix/UniFramework/UniPooling/Runtime/SpawnHandle.cs" />
+     <Compile Include="Assets/HotFix/UniFramework/UniWindow/Runtime/OpenWindowOperation.cs" />
+     <Compile Include="Assets/HotFix/GameLogic/FsmNode/FsmSceneHome.cs" />
+     <Compile Include="Assets/HotFix/UniFramework/UniNetwork/Runtime/Package/INetPackageEncoder.cs" />
+     <Compile Include="Assets/HotFix/UniFramework/UniNetwork/Runtime/Package/INetPackageDecoder.cs" />
+     <Compile Include="Assets/HotFix/UniFramework/UniAnimation/Runtime/AnimNode.cs" />
+     <Compile Include="Assets/HotFix/UniFramework/UniNetwork/Runtime/UniLogger.cs" />
+     <Compile Include="Assets/HotFix/UniFramework/UniWindow/Runtime/UniWindowDriver.cs" />
+     <Compile Include="Assets/HotFix/UniFramework/UniTween/Runtime/TweenExtension/UnityEngine_Transform_Tween_Extension.cs" />
+     <Compile Include="Assets/HotFix/UniFramework/UniAnimation/Runtime/AnimClip.cs" />
+     <Compile Include="Assets/HotFix/UniFramework/UniTween/Runtime/TweenNode/ValueNode.cs" />
+     <Compile Include="Assets/HotFix/EventDefine/SceneEventDefine.cs" />
+     <Compile Include="Assets/HotFix/UniFramework/UniTween/Runtime/ETweenStatus.cs" />
+     <Compile Include="Assets/HotFix/UniFramework/UniPooling/Runtime/UniPoolingDriver.cs" />
+     <Compile Include="Assets/HotFix/UniFramework/UniNetwork/Runtime/UniNetwork.cs" />
+     <Compile Include="Assets/HotFix/UniFramework/UniUtility/Runtime/BitMask32.cs" />
+     <Compile Include="Assets/HotFix/UniFramework/UniUtility/Runtime/BitMask64.cs" />
+     <Compile Include="Assets/HotFix/UniFramework/UniTween/Runtime/ITweenNode.cs" />
+     <Compile Include="Assets/HotFix/UniFramework/UniAnimation/Runtime/UniAnimation.cs" />
+     <Compile Include="Assets/HotFix/UniFramework/UniTween/Runtime/TweenChain/TweenChainExtension.cs" />
+     <Compile Include="Assets/HotFix/GameLogic/FsmNode/FsmInitGame.cs" />
+     <Compile Include="Assets/HotFix/UniFramework/UniNetwork/Runtime/TCP/TcpChannel.cs" />
+     <Compile Include="Assets/HotFix/UIWindow/UIAboutWindow.cs" />
+     <Compile Include="Assets/HotFix/UniFramework/UniNetwork/Runtime/Package/DefaultNetPackage.cs" />
+     <Compile Include="Assets/HotFix/UniFramework/UniTween/Runtime/ETweenLoop.cs" />
+     <Folder Include="Assets/HotFix/UniFramework/UniTween/Runtime/TweenNode" />
+     <Folder Include="Assets/HotFix/UniFramework/UniAnimation" />
+     <Folder Include="Assets/HotFix/UniFramework/UniTween" />
+     <Folder Include="Assets/HotFix/UniFramework/UniPooling" />
+     <Folder Include="Assets/HotFix/UniFramework/UniUtility/Runtime" />
+     <Folder Include="Assets/HotFix/UniFramework" />
+     <Folder Include="Assets/HotFix/UniFramework/UniTween/Runtime" />
+     <Folder Include="Assets/HotFix/UniFramework/UniWindow" />
+     <Folder Include="Assets/HotFix/UniFramework/UniNetwork/Runtime/TCP" />
+     <Folder Include="Assets/HotFix/BattleLogic" />
+     <Folder Include="Assets/HotFix/BattleLogic/Entity" />
+     <Folder Include="Assets/HotFix/UniFramework/UniTween/Runtime/TweenChain" />
+     <Folder Include="Assets/HotFix/UniFramework/UniAnimation/Runtime" />
+     <Folder Include="Assets/HotFix/UniFramework/UniUtility" />
+     <Folder Include="Assets/HotFix/UniFramework/UniTween/Runtime/TweenExtension" />
+     <Folder Include="Assets/HotFix/EventDefine" />
+     <Folder Include="Assets/HotFix/UniFramework/UniPooling/Runtime" />
+     <Folder Include="Assets/HotFix/UniFramework/UniNetwork" />
+     <Folder Include="Assets/HotFix/UniFramework/UniWindow/Runtime" />
+     <Folder Include="Assets/HotFix/GameLogic" />
+     <Folder Include="Assets/HotFix/UIWindow" />
+     <Folder Include="Assets/HotFix/UniFramework/UniNetwork/Runtime/Package" />
+     <Folder Include="Assets/HotFix" />
+     <Folder Include="Assets/HotFix/GameLogic/FsmNode" />
+     <None Include="Assets/HotFix/HotFix.asmdef" />
+     <Folder Include="Assets/HotFix/UniFramework/UniNetwork/Runtime" />
      <Reference Include="UnityEngine">
      <HintPath>/Applications/Unity/Hub/Editor/2021.3.14f1c1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
      </Reference>
@@ -746,33 +828,21 @@
      </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="UniEvent.csproj">
-      <Project>{286f82bf-d5d6-3571-5adf-c0d6a8c78005}</Project>
-      <Name>UniEvent</Name>
-    </ProjectReference>
-    <ProjectReference Include="UniMachine.csproj">
-      <Project>{86339f0c-5ea5-c53f-4507-c92a9c241177}</Project>
-      <Name>UniMachine</Name>
-    </ProjectReference>
-    <ProjectReference Include="UniPooling.csproj">
-      <Project>{a7ea71e4-c06f-eb9b-6ea1-ff89f93796be}</Project>
-      <Name>UniPooling</Name>
-    </ProjectReference>
-    <ProjectReference Include="UniSingleton.csproj">
-      <Project>{129ea1ff-21db-5d91-9968-556d08613eda}</Project>
-      <Name>UniSingleton</Name>
-    </ProjectReference>
-    <ProjectReference Include="UniUtility.csproj">
-      <Project>{5205c9fb-6b07-2286-f084-0960c8539315}</Project>
-      <Name>UniUtility</Name>
-    </ProjectReference>
-    <ProjectReference Include="UniWindow.csproj">
-      <Project>{db3846e1-6569-fa4d-6126-dfa1b22066ca}</Project>
-      <Name>UniWindow</Name>
-    </ProjectReference>
     <ProjectReference Include="YooAsset.csproj">
       <Project>{7214cb24-1dcf-b8c6-757c-843cf37a554a}</Project>
       <Name>YooAsset</Name>
+    </ProjectReference>
+    <ProjectReference Include="UniFramework.csproj">
+      <Project>{55e14297-cb13-6d50-11f3-593bd3e441b0}</Project>
+      <Name>UniFramework</Name>
+    </ProjectReference>
+    <ProjectReference Include="BetterStreaming.csproj">
+      <Project>{cfbcf696-5e35-04cf-8785-d3fe16963837}</Project>
+      <Name>BetterStreaming</Name>
+    </ProjectReference>
+    <ProjectReference Include="Extension.csproj">
+      <Project>{f93bdda6-54d6-66a8-636d-72e0f85ff315}</Project>
+      <Name>Extension</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

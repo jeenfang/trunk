@@ -54,8 +54,8 @@
      <Compile Include="Library/PackageCache/com.unity.scriptablebuildpipeline@1.20.2/Editor/Utilities/BuildInterfacesWrapper.cs" />
      <Compile Include="Library/PackageCache/com.unity.scriptablebuildpipeline@1.20.2/Editor/Utilities/ValidationMethods.cs" />
      <Compile Include="Library/PackageCache/com.unity.scriptablebuildpipeline@1.20.2/Editor/Interfaces/IBuildCache.cs" />
-     <Compile Include="Library/PackageCache/com.unity.scriptablebuildpipeline@1.20.2/Editor/Tasks/CalculateCustomDependencyData.cs" />
      <Compile Include="Library/PackageCache/com.unity.scriptablebuildpipeline@1.20.2/Editor/Utilities/QualitySettingsApi.cs" />
+     <Compile Include="Library/PackageCache/com.unity.scriptablebuildpipeline@1.20.2/Editor/Tasks/CalculateCustomDependencyData.cs" />
      <Compile Include="Library/PackageCache/com.unity.scriptablebuildpipeline@1.20.2/Editor/Utilities/HashingMethods.cs" />
      <Compile Include="Library/PackageCache/com.unity.scriptablebuildpipeline@1.20.2/Editor/Tasks/CreateBuiltInShadersBundle.cs" />
      <Compile Include="Library/PackageCache/com.unity.scriptablebuildpipeline@1.20.2/Editor/Shared/BuildExtendedAssetData.cs" />
