@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using HotFix.Utility;
 using UnityEngine;
 using UniFramework.Window;
 using UniFramework.Event;
@@ -35,10 +36,12 @@ internal class FsmSceneBattle : IStateNode
 
 	private IEnumerator Prepare()
 	{
-		yield return YooAssets.LoadSceneAsync("scene_battle");
+		yield return UniWindow.OpenWindowAsync<UILoadingWindow>(GameUtility.UINameLoading);
+		yield return YooAssets.LoadSceneAsync(GameUtility.SceneNameBattle);
 
 		_battleRoom = new BattleRoom();
 		yield return _battleRoom.LoadRoom();
+		UniWindow.CloseWindow<UILoadingWindow>();
 
 		// 释放资源
 		var package = YooAssets.GetPackage("DefaultPackage");

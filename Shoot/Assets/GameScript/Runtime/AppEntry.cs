@@ -16,17 +16,17 @@ public static partial class AppEntry
     private static Assembly _hotUpdateAss;
     public static byte[] ReadBytesFromStreamingAssets(string file)
     {
-        //BetterStreamingAssets 在android平台可以直接读取
-        string path = $"{Application.streamingAssetsPath}/{file}";
-        if (BetterStreamingAssets.FileExists(path))
+        // string path = $"{Application.streamingAssetsPath}/{file}";
+        if (BetterStreamingAssets.FileExists(file))
         {
-            return BetterStreamingAssets.ReadAllBytes(path);
+            return BetterStreamingAssets.ReadAllBytes(file);
         }
         return null;
     }
 
     public static void StartGame()
     {
+        BetterStreamingAssets.Initialize();
         LoadMetadataForAOTAssemblies();
 #if UNITY_EDITOR
         _hotUpdateAss = System.AppDomain.CurrentDomain.GetAssemblies().First(a => a.GetName().Name == "HotFix");

@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using HotFix.Utility;
 using UnityEngine;
 using UniFramework.Machine;
 using UniFramework.Window;
 using UniFramework.Singleton;
+using UnityEngine.SceneManagement;
 using YooAsset;
 
 internal class FsmSceneHome : IStateNode
@@ -28,8 +30,8 @@ internal class FsmSceneHome : IStateNode
 
 	private IEnumerator Prepare()
 	{
-		yield return YooAssets.LoadSceneAsync("scene_home");	
-		yield return UniWindow.OpenWindowAsync<UIHomeWindow>("UIHome");
+		yield return YooAssets.LoadSceneAsync(GameUtility.SceneNameHome);	
+		yield return UniWindow.OpenWindowAsync<UIHomeWindow>(GameUtility.UINameHome);
 
 		// 释放资源
 		var package = YooAssets.GetPackage("DefaultPackage");

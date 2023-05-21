@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using HotFix.Utility;
 using UnityEngine;
 using UnityEngine.UI;
 using UniFramework.Window;
@@ -37,6 +38,6 @@ public class UIHomeWindow : UIWindow
 	}
 	private void OnClicAboutBtn()
 	{
-		UniWindow.OpenWindowAsync<UIAboutWindow>("UIAbout");
+		UniWindow.OpenWindowAsync<UIAboutWindow>(GameUtility.UINameAbout);
 	}
 }

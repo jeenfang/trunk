@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using HotFix.Utility;
 using UniFramework.Event;
 using UnityEngine;
 using UniFramework.Window;
@@ -181,7 +182,7 @@ public class BattleRoom
 		entity.InitEntity(handle);
 
 		// 显示战斗界面
-		yield return UniWindow.OpenWindowAsync<UIBattleWindow>("UIBattle");
+		yield return UniWindow.OpenWindowAsync<UIBattleWindow>(GameUtility.UINameBattle);
 
 		// 监听游戏事件
 		_eventGroup.AddListener<BattleEventDefine.PlayerDead>(OnHandleEventMessage);

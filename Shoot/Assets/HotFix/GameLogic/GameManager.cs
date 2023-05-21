@@ -10,6 +10,7 @@ public class GameManager : SingletonInstance<GameManager>, ISingleton
 	private bool _isRun = false;
 	private EventGroup _eventGroup = new EventGroup();
 	private StateMachine _machine;
+	private Camera _mainCamera;
 
 	void ISingleton.OnCreate(object createParam)
 	{
@@ -22,6 +23,19 @@ public class GameManager : SingletonInstance<GameManager>, ISingleton
 	{
 		if (_machine != null)
 			_machine.Update();
+	}
+
+	public Camera mainCamera
+	{
+		get
+		{
+			if (null == _mainCamera)
+			{
+				_mainCamera = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
+			}
+
+			return _mainCamera;
+		}
 	}
 
 	public void Run()
