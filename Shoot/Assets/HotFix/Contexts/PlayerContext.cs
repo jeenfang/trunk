@@ -13,9 +13,9 @@ namespace HotFix.Contexts
             _player.Spawner(playerHandle);
         }
 
-        public void UpdateRotate()
+        public void UpdateTarget(Vector2 input)
         {
-            
+            _player.SetTarget(input);
         }
 
         public void UpdateDir(Vector2 dir)

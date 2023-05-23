@@ -45,7 +45,7 @@ namespace HotFix.Player
             Debug.LogError("isRun:"+_isRun);
         }
 
-        public void SetRotate(Vector2 rotation)
+        public void SetTarget(Vector2 rotation)
         {
             
         }
