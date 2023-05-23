@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using HotFix.Contexts;
 using HotFix.Utility;
 using UnityEngine;
 using UniFramework.Window;
@@ -24,6 +25,8 @@ internal class FsmSceneBattle : IStateNode
 	{
 		if(_battleRoom != null)
 			_battleRoom.UpdateRoom();
+		
+		GameContext.GetContext<PlayerContext>().Move();
 	}
 	void IStateNode.OnExit()
 	{

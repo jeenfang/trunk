@@ -1456,6 +1456,22 @@ static void __M2N_i4i8u4u4(const MethodInfo* method, uint16_t* argVarIndexs, Sta
 }
 
 
+// System.Int32 TMPro.KerningTable::AddKerningPair(System.UInt32,System.UInt32,System.Single)
+static void __M2N_i4i8u4u4r4(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
+{
+    typedef int32_t (*NativeMethod)(int64_t __arg0, uint32_t __arg1, uint32_t __arg2, float __arg3, const MethodInfo* method);
+    *(int32_t*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(uint32_t*)(localVarBase+argVarIndexs[1]), *(uint32_t*)(localVarBase+argVarIndexs[2]), *(float*)(localVarBase+argVarIndexs[3]), method);
+}
+
+
+// System.Int32 TMPro.KerningTable::AddGlyphPairAdjustmentRecord(System.UInt32,TMPro.GlyphValueRecord_Legacy,System.UInt32,TMPro.GlyphValueRecord_Legacy)
+static void __M2N_i4i8u4vf4u4vf4(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
+{
+    typedef int32_t (*NativeMethod)(int64_t __arg0, uint32_t __arg1, HtVector4f __arg2, uint32_t __arg3, HtVector4f __arg4, const MethodInfo* method);
+    *(int32_t*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(uint32_t*)(localVarBase+argVarIndexs[1]), *(HtVector4f*)(localVarBase+argVarIndexs[2]), *(uint32_t*)(localVarBase+argVarIndexs[3]), *(HtVector4f*)(localVarBase+argVarIndexs[4]), method);
+}
+
+
 // System.Int32 System.UInt64::CompareTo(System.UInt64)
 static void __M2N_i4i8u8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
@@ -1512,11 +1528,35 @@ static void __M2N_i4i8vf3i4i4(const MethodInfo* method, uint16_t* argVarIndexs, 
 }
 
 
-// System.Int32 System.Collections.Generic.List`1::BinarySearch(T,System.Collections.Generic.IComparer`1<T>)
+// System.Int32 TMPro.TMP_TextUtilities::FindNearestCharacterOnLine(TMPro.TMP_Text,UnityEngine.Vector3,System.Int32,UnityEngine.Camera,System.Boolean)
+static void __M2N_i4i8vf3i4i8u1(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
+{
+    typedef int32_t (*NativeMethod)(int64_t __arg0, HtVector3f __arg1, int32_t __arg2, int64_t __arg3, uint8_t __arg4, const MethodInfo* method);
+    *(int32_t*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(HtVector3f*)(localVarBase+argVarIndexs[1]), *(int32_t*)(localVarBase+argVarIndexs[2]), *(int64_t*)(localVarBase+argVarIndexs[3]), *(uint8_t*)(localVarBase+argVarIndexs[4]), method);
+}
+
+
+// System.Int32 TMPro.TMP_TextUtilities::GetCursorIndexFromPosition(TMPro.TMP_Text,UnityEngine.Vector3,UnityEngine.Camera)
 static void __M2N_i4i8vf3i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
     typedef int32_t (*NativeMethod)(int64_t __arg0, HtVector3f __arg1, int64_t __arg2, const MethodInfo* method);
     *(int32_t*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(HtVector3f*)(localVarBase+argVarIndexs[1]), *(int64_t*)(localVarBase+argVarIndexs[2]), method);
+}
+
+
+// System.Int32 TMPro.TMP_TextUtilities::GetCursorIndexFromPosition(TMPro.TMP_Text,UnityEngine.Vector3,UnityEngine.Camera,TMPro.CaretPosition&)
+static void __M2N_i4i8vf3i8i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
+{
+    typedef int32_t (*NativeMethod)(int64_t __arg0, HtVector3f __arg1, int64_t __arg2, int64_t __arg3, const MethodInfo* method);
+    *(int32_t*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(HtVector3f*)(localVarBase+argVarIndexs[1]), *(int64_t*)(localVarBase+argVarIndexs[2]), *(int64_t*)(localVarBase+argVarIndexs[3]), method);
+}
+
+
+// System.Int32 TMPro.TMP_TextUtilities::FindIntersectingCharacter(TMPro.TMP_Text,UnityEngine.Vector3,UnityEngine.Camera,System.Boolean)
+static void __M2N_i4i8vf3i8u1(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
+{
+    typedef int32_t (*NativeMethod)(int64_t __arg0, HtVector3f __arg1, int64_t __arg2, uint8_t __arg3, const MethodInfo* method);
+    *(int32_t*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(HtVector3f*)(localVarBase+argVarIndexs[1]), *(int64_t*)(localVarBase+argVarIndexs[2]), *(uint8_t*)(localVarBase+argVarIndexs[3]), method);
 }
 
 
@@ -2296,6 +2336,14 @@ static void __M2N_i8i8i4u1i4(const MethodInfo* method, uint16_t* argVarIndexs, S
 }
 
 
+// TMPro.TMP_SpriteAsset TMPro.TMP_SpriteAsset::SearchForSpriteByHashCode(TMPro.TMP_SpriteAsset,System.Int32,System.Boolean,System.Int32&)
+static void __M2N_i8i8i4u1i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
+{
+    typedef int64_t (*NativeMethod)(int64_t __arg0, int32_t __arg1, uint8_t __arg2, int64_t __arg3, const MethodInfo* method);
+    *(int64_t*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(int32_t*)(localVarBase+argVarIndexs[1]), *(uint8_t*)(localVarBase+argVarIndexs[2]), *(int64_t*)(localVarBase+argVarIndexs[3]), method);
+}
+
+
 // UnityEngine.TextCore.Text.SpriteAsset UnityEngine.TextCore.Text.SpriteAsset::SearchForSpriteByHashCode(UnityEngine.TextCore.Text.SpriteAsset,System.Int32,System.Boolean,System.Int32&,UnityEngine.TextCore.Text.TextSettings)
 static void __M2N_i8i8i4u1i8i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
@@ -2736,6 +2784,22 @@ static void __M2N_i8i8i8u1u1(const MethodInfo* method, uint16_t* argVarIndexs, S
 }
 
 
+// System.IAsyncResult UnityEngine.Events.UnityAction`2::BeginInvoke(T0,T1,System.AsyncCallback,System.Object)
+static void __M2N_i8i8i8vf2i8i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
+{
+    typedef int64_t (*NativeMethod)(int64_t __arg0, int64_t __arg1, HtVector2f __arg2, int64_t __arg3, int64_t __arg4, const MethodInfo* method);
+    *(int64_t*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(int64_t*)(localVarBase+argVarIndexs[1]), *(HtVector2f*)(localVarBase+argVarIndexs[2]), *(int64_t*)(localVarBase+argVarIndexs[3]), *(int64_t*)(localVarBase+argVarIndexs[4]), method);
+}
+
+
+// System.IAsyncResult UnityEngine.Events.UnityAction`2::BeginInvoke(T0,T1,System.AsyncCallback,System.Object)
+static void __M2N_i8i8i8vf3i8i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
+{
+    typedef int64_t (*NativeMethod)(int64_t __arg0, int64_t __arg1, HtVector3f __arg2, int64_t __arg3, int64_t __arg4, const MethodInfo* method);
+    *(int64_t*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(int64_t*)(localVarBase+argVarIndexs[1]), *(HtVector3f*)(localVarBase+argVarIndexs[2]), *(int64_t*)(localVarBase+argVarIndexs[3]), *(int64_t*)(localVarBase+argVarIndexs[4]), method);
+}
+
+
 // System.Byte[] Mono.DataConverter::GetBytes(System.Single)
 static void __M2N_i8i8r4(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
@@ -2744,7 +2808,7 @@ static void __M2N_i8i8r4(const MethodInfo* method, uint16_t* argVarIndexs, Stack
 }
 
 
-// System.IAsyncResult System.Action`1::BeginInvoke(T,System.AsyncCallback,System.Object)
+// System.IAsyncResult UnityEngine.Events.UnityAction`1::BeginInvoke(T0,System.AsyncCallback,System.Object)
 static void __M2N_i8i8r4i8i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
     typedef int64_t (*NativeMethod)(int64_t __arg0, float __arg1, int64_t __arg2, int64_t __arg3, const MethodInfo* method);
@@ -2944,6 +3008,14 @@ static void __M2N_i8i8u4(const MethodInfo* method, uint16_t* argVarIndexs, Stack
 }
 
 
+// TMPro.TMP_FontAsset TMPro.TMP_FontUtilities::SearchForCharacter(TMPro.TMP_FontAsset,System.UInt32,TMPro.TMP_Character&)
+static void __M2N_i8i8u4i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
+{
+    typedef int64_t (*NativeMethod)(int64_t __arg0, uint32_t __arg1, int64_t __arg2, const MethodInfo* method);
+    *(int64_t*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(uint32_t*)(localVarBase+argVarIndexs[1]), *(int64_t*)(localVarBase+argVarIndexs[2]), method);
+}
+
+
 // System.IAsyncResult System.Predicate`1::BeginInvoke(T,System.AsyncCallback,System.Object)
 static void __M2N_i8i8u4i8i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
@@ -3013,6 +3085,14 @@ static void __M2N_i8i8vf2i8(const MethodInfo* method, uint16_t* argVarIndexs, St
 {
     typedef int64_t (*NativeMethod)(int64_t __arg0, HtVector2f __arg1, int64_t __arg2, const MethodInfo* method);
     *(int64_t*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(HtVector2f*)(localVarBase+argVarIndexs[1]), *(int64_t*)(localVarBase+argVarIndexs[2]), method);
+}
+
+
+// System.IAsyncResult UnityEngine.Events.UnityAction`1::BeginInvoke(T0,System.AsyncCallback,System.Object)
+static void __M2N_i8i8vf2i8i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
+{
+    typedef int64_t (*NativeMethod)(int64_t __arg0, HtVector2f __arg1, int64_t __arg2, int64_t __arg3, const MethodInfo* method);
+    *(int64_t*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(HtVector2f*)(localVarBase+argVarIndexs[1]), *(int64_t*)(localVarBase+argVarIndexs[2]), *(int64_t*)(localVarBase+argVarIndexs[3]), method);
 }
 
 
@@ -3096,7 +3176,7 @@ static void __M2N_i8i8vf4(const MethodInfo* method, uint16_t* argVarIndexs, Stac
 }
 
 
-// System.IAsyncResult System.Predicate`1::BeginInvoke(T,System.AsyncCallback,System.Object)
+// System.IAsyncResult UnityEngine.Events.UnityAction`1::BeginInvoke(T0,System.AsyncCallback,System.Object)
 static void __M2N_i8i8vf4i8i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
     typedef int64_t (*NativeMethod)(int64_t __arg0, HtVector4f __arg1, int64_t __arg2, int64_t __arg3, const MethodInfo* method);
@@ -3328,6 +3408,14 @@ static void __M2N_i8u4i8u1(const MethodInfo* method, uint16_t* argVarIndexs, Sta
 }
 
 
+// TMPro.TMP_Character TMPro.TMP_FontAssetUtilities::GetCharacterFromFontAsset(System.UInt32,TMPro.TMP_FontAsset,System.Boolean,TMPro.FontStyles,TMPro.FontWeight,System.Boolean&)
+static void __M2N_i8u4i8u1i4i4i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
+{
+    typedef int64_t (*NativeMethod)(uint32_t __arg0, int64_t __arg1, uint8_t __arg2, int32_t __arg3, int32_t __arg4, int64_t __arg5, const MethodInfo* method);
+    *(int64_t*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(uint32_t*)(localVarBase+argVarIndexs[0]), *(int64_t*)(localVarBase+argVarIndexs[1]), *(uint8_t*)(localVarBase+argVarIndexs[2]), *(int32_t*)(localVarBase+argVarIndexs[3]), *(int32_t*)(localVarBase+argVarIndexs[4]), *(int64_t*)(localVarBase+argVarIndexs[5]), method);
+}
+
+
 // System.Byte[] System.BitConverter::GetBytes(System.UInt64)
 static void __M2N_i8u8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
@@ -3528,6 +3616,22 @@ static void __M2N_r4i8i8i4(const MethodInfo* method, uint16_t* argVarIndexs, Sta
 }
 
 
+// System.Single TMPro.TMP_Text::ConvertToFloat(System.Char[],System.Int32,System.Int32)
+static void __M2N_r4i8i8i4i4(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
+{
+    typedef float (*NativeMethod)(int64_t __arg0, int64_t __arg1, int32_t __arg2, int32_t __arg3, const MethodInfo* method);
+    *(float*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(int64_t*)(localVarBase+argVarIndexs[1]), *(int32_t*)(localVarBase+argVarIndexs[2]), *(int32_t*)(localVarBase+argVarIndexs[3]), method);
+}
+
+
+// System.Single TMPro.TMP_Text::ConvertToFloat(System.Char[],System.Int32,System.Int32,System.Int32&)
+static void __M2N_r4i8i8i4i4i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
+{
+    typedef float (*NativeMethod)(int64_t __arg0, int64_t __arg1, int32_t __arg2, int32_t __arg3, int64_t __arg4, const MethodInfo* method);
+    *(float*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(int64_t*)(localVarBase+argVarIndexs[1]), *(int32_t*)(localVarBase+argVarIndexs[2]), *(int32_t*)(localVarBase+argVarIndexs[3]), *(int64_t*)(localVarBase+argVarIndexs[4]), method);
+}
+
+
 // System.Single UnityEngine.UI.LayoutUtility::GetLayoutProperty(UnityEngine.RectTransform,System.Func`2<UnityEngine.UI.ILayoutElement,System.Single>,System.Single)
 static void __M2N_r4i8i8r4(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
@@ -3589,6 +3693,22 @@ static void __M2N_r4i8srr4(const MethodInfo* method, uint16_t* argVarIndexs, Sta
 {
     typedef float (*NativeMethod)(int64_t __arg0, uint64_t __arg1, float __arg2, const MethodInfo* method);
     *(float*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), (uint64_t)(localVarBase+argVarIndexs[1]), *(float*)(localVarBase+argVarIndexs[2]), method);
+}
+
+
+// System.Single TMPro.TMP_Text::GetRenderedWidth(System.Boolean)
+static void __M2N_r4i8u1(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
+{
+    typedef float (*NativeMethod)(int64_t __arg0, uint8_t __arg1, const MethodInfo* method);
+    *(float*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(uint8_t*)(localVarBase+argVarIndexs[1]), method);
+}
+
+
+// System.Single TMPro.ShaderUtilities::GetPadding(UnityEngine.Material,System.Boolean,System.Boolean)
+static void __M2N_r4i8u1u1(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
+{
+    typedef float (*NativeMethod)(int64_t __arg0, uint8_t __arg1, uint8_t __arg2, const MethodInfo* method);
+    *(float*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(uint8_t*)(localVarBase+argVarIndexs[1]), *(uint8_t*)(localVarBase+argVarIndexs[2]), method);
 }
 
 
@@ -4160,6 +4280,14 @@ static void __M2N_S24i8i8i8u1u1(const MethodInfo* method, uint16_t* argVarIndexs
 }
 
 
+// UnityEngine.Bounds TMPro.TMP_Text::GetTextBounds(System.Boolean)
+static void __M2N_S24i8u1(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
+{
+    typedef ValueTypeSize<24> (*NativeMethod)(int64_t __arg0, uint8_t __arg1, const MethodInfo* method);
+    *(ValueTypeSize<24>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(uint8_t*)(localVarBase+argVarIndexs[1]), method);
+}
+
+
 // UnityEngine.UIElements.UIR.Alloc UnityEngine.UIElements.UIR.BestFitAllocator::Allocate(System.UInt32)
 static void __M2N_S24i8u4(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
@@ -4184,7 +4312,7 @@ static void __M2N_S24i8vf2(const MethodInfo* method, uint16_t* argVarIndexs, Sta
 }
 
 
-// UnityEngine.Ray UnityEngine.Camera::ScreenPointToRay(UnityEngine.Vector3)
+// UnityEngine.Ray UnityEngine.Camera::ViewportPointToRay(UnityEngine.Vector3)
 static void __M2N_S24i8vf3(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
     typedef ValueTypeSize<24> (*NativeMethod)(int64_t __arg0, HtVector3f __arg1, const MethodInfo* method);
@@ -4192,11 +4320,19 @@ static void __M2N_S24i8vf3(const MethodInfo* method, uint16_t* argVarIndexs, Sta
 }
 
 
-// UnityEngine.Ray UnityEngine.Camera::ScreenPointToRay(UnityEngine.Vector3,UnityEngine.Camera/MonoOrStereoscopicEye)
+// UnityEngine.Ray UnityEngine.Camera::ViewportPointToRay(UnityEngine.Vector3,UnityEngine.Camera/MonoOrStereoscopicEye)
 static void __M2N_S24i8vf3i4(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
     typedef ValueTypeSize<24> (*NativeMethod)(int64_t __arg0, HtVector3f __arg1, int32_t __arg2, const MethodInfo* method);
     *(ValueTypeSize<24>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(HtVector3f*)(localVarBase+argVarIndexs[1]), *(int32_t*)(localVarBase+argVarIndexs[2]), method);
+}
+
+
+// UnityEngine.Bounds TouchController.CommonFunctions::GetViewportBounds(UnityEngine.Vector3,UnityEngine.Vector3)
+static void __M2N_S24vf3vf3(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
+{
+    typedef ValueTypeSize<24> (*NativeMethod)(HtVector3f __arg0, HtVector3f __arg1, const MethodInfo* method);
+    *(ValueTypeSize<24>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(HtVector3f*)(localVarBase+argVarIndexs[0]), *(HtVector3f*)(localVarBase+argVarIndexs[1]), method);
 }
 
 
@@ -4536,11 +4672,27 @@ static void __M2N_S64(const MethodInfo* method, uint16_t* argVarIndexs, StackObj
 }
 
 
-// UnityEngine.Matrix4x4 UnityEngine.Matrix4x4::get_inverse()
+// UnityEngine.Matrix4x4 UnityEngine.Camera::get_cullingMatrix()
 static void __M2N_S64i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
     typedef ValueTypeSize<64> (*NativeMethod)(int64_t __arg0, const MethodInfo* method);
     *(ValueTypeSize<64>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), method);
+}
+
+
+// UnityEngine.Matrix4x4 UnityEngine.Camera::GetStereoNonJitteredProjectionMatrix(UnityEngine.Camera/StereoscopicEye)
+static void __M2N_S64i8i4(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
+{
+    typedef ValueTypeSize<64> (*NativeMethod)(int64_t __arg0, int32_t __arg1, const MethodInfo* method);
+    *(ValueTypeSize<64>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(int32_t*)(localVarBase+argVarIndexs[1]), method);
+}
+
+
+// UnityEngine.Matrix4x4 UnityEngine.Camera::CalculateObliqueMatrix(UnityEngine.Vector4)
+static void __M2N_S64i8vf4(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
+{
+    typedef ValueTypeSize<64> (*NativeMethod)(int64_t __arg0, HtVector4f __arg1, const MethodInfo* method);
+    *(ValueTypeSize<64>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(HtVector4f*)(localVarBase+argVarIndexs[1]), method);
 }
 
 
@@ -4653,6 +4805,14 @@ static void __M2N_S88(const MethodInfo* method, uint16_t* argVarIndexs, StackObj
 {
     typedef ValueTypeSize<88> (*NativeMethod)(const MethodInfo* method);
     *(ValueTypeSize<88>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(method);
+}
+
+
+// T TMPro.TMP_TextProcessingStack`1::get_current()
+static void __M2N_S888i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
+{
+    typedef ValueTypeSize<888> (*NativeMethod)(int64_t __arg0, const MethodInfo* method);
+    *(ValueTypeSize<888>*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), method);
 }
 
 
@@ -5200,6 +5360,14 @@ static void __M2N_u1i8i4u1(const MethodInfo* method, uint16_t* argVarIndexs, Sta
 }
 
 
+// System.Boolean System.Collections.Generic.Dictionary`2::TryAdd(TKey,TValue)
+static void __M2N_u1i8i4u2(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
+{
+    typedef uint8_t (*NativeMethod)(int64_t __arg0, int32_t __arg1, uint16_t __arg2, const MethodInfo* method);
+    *(uint8_t*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(int32_t*)(localVarBase+argVarIndexs[1]), *(uint16_t*)(localVarBase+argVarIndexs[2]), method);
+}
+
+
 // System.Boolean UnityEngine.UIElements.IStylePropertyAnimations::Start(UnityEngine.UIElements.StyleSheets.StylePropertyId,UnityEngine.Color,UnityEngine.Color,System.Int32,System.Int32,System.Func`2<System.Single,System.Single>)
 static void __M2N_u1i8i4vf4vf4i4i4i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
@@ -5245,6 +5413,14 @@ static void __M2N_u1i8i8i4i16i16i4i4i8i8(const MethodInfo* method, uint16_t* arg
 {
     typedef uint8_t (*NativeMethod)(int64_t __arg0, int64_t __arg1, int32_t __arg2, ValueTypeSize16 __arg3, ValueTypeSize16 __arg4, int32_t __arg5, int32_t __arg6, int64_t __arg7, int64_t __arg8, const MethodInfo* method);
     *(uint8_t*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(int64_t*)(localVarBase+argVarIndexs[1]), *(int32_t*)(localVarBase+argVarIndexs[2]), *(ValueTypeSize16*)(localVarBase+argVarIndexs[3]), *(ValueTypeSize16*)(localVarBase+argVarIndexs[4]), *(int32_t*)(localVarBase+argVarIndexs[5]), *(int32_t*)(localVarBase+argVarIndexs[6]), *(int64_t*)(localVarBase+argVarIndexs[7]), *(int64_t*)(localVarBase+argVarIndexs[8]), method);
+}
+
+
+// System.Boolean UnityEngine.Camera::RenderToCubemap(UnityEngine.RenderTexture,System.Int32,UnityEngine.Camera/MonoOrStereoscopicEye)
+static void __M2N_u1i8i8i4i4(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
+{
+    typedef uint8_t (*NativeMethod)(int64_t __arg0, int64_t __arg1, int32_t __arg2, int32_t __arg3, const MethodInfo* method);
+    *(uint8_t*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(int64_t*)(localVarBase+argVarIndexs[1]), *(int32_t*)(localVarBase+argVarIndexs[2]), *(int32_t*)(localVarBase+argVarIndexs[3]), method);
 }
 
 
@@ -5664,7 +5840,7 @@ static void __M2N_u1i8u4i4i4i8(const MethodInfo* method, uint16_t* argVarIndexs,
 }
 
 
-// System.Boolean System.Collections.Generic.Dictionary`2::TryGetValue(TKey,TValue&)
+// System.Boolean System.Collections.Generic.Dictionary`2::Remove(TKey,TValue&)
 static void __M2N_u1i8u4i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
     typedef uint8_t (*NativeMethod)(int64_t __arg0, uint32_t __arg1, int64_t __arg2, const MethodInfo* method);
@@ -6048,6 +6224,14 @@ static void __M2N_u1vf3vf3(const MethodInfo* method, uint16_t* argVarIndexs, Sta
 }
 
 
+// System.Boolean TMPro.TMPro_ExtensionMethods::Compare(UnityEngine.Vector3,UnityEngine.Vector3,System.Int32)
+static void __M2N_u1vf3vf3i4(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
+{
+    typedef uint8_t (*NativeMethod)(HtVector3f __arg0, HtVector3f __arg1, int32_t __arg2, const MethodInfo* method);
+    *(uint8_t*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(HtVector3f*)(localVarBase+argVarIndexs[0]), *(HtVector3f*)(localVarBase+argVarIndexs[1]), *(int32_t*)(localVarBase+argVarIndexs[2]), method);
+}
+
+
 // System.Boolean UnityEngine.Physics::Raycast(UnityEngine.Vector3,UnityEngine.Vector3,UnityEngine.RaycastHit&)
 static void __M2N_u1vf3vf3i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
@@ -6109,6 +6293,14 @@ static void __M2N_u1vf4vf4(const MethodInfo* method, uint16_t* argVarIndexs, Sta
 {
     typedef uint8_t (*NativeMethod)(HtVector4f __arg0, HtVector4f __arg1, const MethodInfo* method);
     *(uint8_t*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(HtVector4f*)(localVarBase+argVarIndexs[0]), *(HtVector4f*)(localVarBase+argVarIndexs[1]), method);
+}
+
+
+// System.Boolean TMPro.TMPro_ExtensionMethods::Compare(UnityEngine.Quaternion,UnityEngine.Quaternion,System.Int32)
+static void __M2N_u1vf4vf4i4(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
+{
+    typedef uint8_t (*NativeMethod)(HtVector4f __arg0, HtVector4f __arg1, int32_t __arg2, const MethodInfo* method);
+    *(uint8_t*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(HtVector4f*)(localVarBase+argVarIndexs[0]), *(HtVector4f*)(localVarBase+argVarIndexs[1]), *(int32_t*)(localVarBase+argVarIndexs[2]), method);
 }
 
 
@@ -6213,6 +6405,14 @@ static void __M2N_u2i8i8i4u2(const MethodInfo* method, uint16_t* argVarIndexs, S
 {
     typedef uint16_t (*NativeMethod)(int64_t __arg0, int64_t __arg1, int32_t __arg2, uint16_t __arg3, const MethodInfo* method);
     *(uint16_t*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(int64_t*)(localVarBase+argVarIndexs[1]), *(int32_t*)(localVarBase+argVarIndexs[2]), *(uint16_t*)(localVarBase+argVarIndexs[3]), method);
+}
+
+
+// System.Char TMPro.TMP_InputValidator::Validate(System.String&,System.Int32&,System.Char)
+static void __M2N_u2i8i8i8u2(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
+{
+    typedef uint16_t (*NativeMethod)(int64_t __arg0, int64_t __arg1, int64_t __arg2, uint16_t __arg3, const MethodInfo* method);
+    *(uint16_t*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(int64_t*)(localVarBase+argVarIndexs[1]), *(int64_t*)(localVarBase+argVarIndexs[2]), *(uint16_t*)(localVarBase+argVarIndexs[3]), method);
 }
 
 
@@ -6664,7 +6864,7 @@ static void __M2N_vf2i4i4(const MethodInfo* method, uint16_t* argVarIndexs, Stac
 }
 
 
-// UnityEngine.Vector2 UnityEngine.Vector2::get_normalized()
+// UnityEngine.Vector2 UnityEngine.Camera::get_sensorSize()
 static void __M2N_vf2i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
     typedef HtVector2f (*NativeMethod)(int64_t __arg0, const MethodInfo* method);
@@ -6688,11 +6888,43 @@ static void __M2N_vf2i8i8r4i4r4i4(const MethodInfo* method, uint16_t* argVarInde
 }
 
 
+// UnityEngine.Vector2 TMPro.TMP_Text::GetPreferredValues(System.String,System.Single,System.Single)
+static void __M2N_vf2i8i8r4r4(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
+{
+    typedef HtVector2f (*NativeMethod)(int64_t __arg0, int64_t __arg1, float __arg2, float __arg3, const MethodInfo* method);
+    *(HtVector2f*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(int64_t*)(localVarBase+argVarIndexs[1]), *(float*)(localVarBase+argVarIndexs[2]), *(float*)(localVarBase+argVarIndexs[3]), method);
+}
+
+
+// UnityEngine.Vector2 TMPro.TMP_Text::CalculatePreferredValues(System.Single&,UnityEngine.Vector2,System.Boolean,System.Boolean)
+static void __M2N_vf2i8i8vf2u1u1(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
+{
+    typedef HtVector2f (*NativeMethod)(int64_t __arg0, int64_t __arg1, HtVector2f __arg2, uint8_t __arg3, uint8_t __arg4, const MethodInfo* method);
+    *(HtVector2f*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(int64_t*)(localVarBase+argVarIndexs[1]), *(HtVector2f*)(localVarBase+argVarIndexs[2]), *(uint8_t*)(localVarBase+argVarIndexs[3]), *(uint8_t*)(localVarBase+argVarIndexs[4]), method);
+}
+
+
 // UnityEngine.Vector2 UnityEngine.UIElements.VisualElement::DoMeasure(System.Single,UnityEngine.UIElements.VisualElement/MeasureMode,System.Single,UnityEngine.UIElements.VisualElement/MeasureMode)
 static void __M2N_vf2i8r4i4r4i4(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
     typedef HtVector2f (*NativeMethod)(int64_t __arg0, float __arg1, int32_t __arg2, float __arg3, int32_t __arg4, const MethodInfo* method);
     *(HtVector2f*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(float*)(localVarBase+argVarIndexs[1]), *(int32_t*)(localVarBase+argVarIndexs[2]), *(float*)(localVarBase+argVarIndexs[3]), *(int32_t*)(localVarBase+argVarIndexs[4]), method);
+}
+
+
+// UnityEngine.Vector2 TMPro.TMP_Text::GetPreferredValues(System.Single,System.Single)
+static void __M2N_vf2i8r4r4(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
+{
+    typedef HtVector2f (*NativeMethod)(int64_t __arg0, float __arg1, float __arg2, const MethodInfo* method);
+    *(HtVector2f*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(float*)(localVarBase+argVarIndexs[1]), *(float*)(localVarBase+argVarIndexs[2]), method);
+}
+
+
+// UnityEngine.Vector2 TMPro.TMP_Text::PackUV(System.Single,System.Single,System.Single)
+static void __M2N_vf2i8r4r4r4(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
+{
+    typedef HtVector2f (*NativeMethod)(int64_t __arg0, float __arg1, float __arg2, float __arg3, const MethodInfo* method);
+    *(HtVector2f*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(float*)(localVarBase+argVarIndexs[1]), *(float*)(localVarBase+argVarIndexs[2]), *(float*)(localVarBase+argVarIndexs[3]), method);
 }
 
 
@@ -6709,6 +6941,14 @@ static void __M2N_vf2i8srr4(const MethodInfo* method, uint16_t* argVarIndexs, St
 {
     typedef HtVector2f (*NativeMethod)(int64_t __arg0, uint64_t __arg1, float __arg2, const MethodInfo* method);
     *(HtVector2f*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), (uint64_t)(localVarBase+argVarIndexs[1]), *(float*)(localVarBase+argVarIndexs[2]), method);
+}
+
+
+// UnityEngine.Vector2 TMPro.TMP_Text::GetRenderedValues(System.Boolean)
+static void __M2N_vf2i8u1(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
+{
+    typedef HtVector2f (*NativeMethod)(int64_t __arg0, uint8_t __arg1, const MethodInfo* method);
+    *(HtVector2f*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(uint8_t*)(localVarBase+argVarIndexs[1]), method);
 }
 
 
@@ -6848,6 +7088,14 @@ static void __M2N_vf2vf2vf2r4(const MethodInfo* method, uint16_t* argVarIndexs, 
 }
 
 
+// UnityEngine.Vector2 TouchController.CommonFunctions::GetRelativeTransformedPosition(UnityEngine.Vector2,UnityEngine.Vector3)
+static void __M2N_vf2vf2vf3(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
+{
+    typedef HtVector2f (*NativeMethod)(HtVector2f __arg0, HtVector3f __arg1, const MethodInfo* method);
+    *(HtVector2f*)ret = ((NativeMethod)(method->methodPointerCallByInterp))(*(HtVector2f*)(localVarBase+argVarIndexs[0]), *(HtVector3f*)(localVarBase+argVarIndexs[1]), method);
+}
+
+
 // UnityEngine.Vector2 UnityEngine.Vector2::op_Implicit(UnityEngine.Vector3)
 static void __M2N_vf2vf3(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
@@ -6880,7 +7128,7 @@ static void __M2N_vf3(const MethodInfo* method, uint16_t* argVarIndexs, StackObj
 }
 
 
-// UnityEngine.Vector3 UnityEngine.Quaternion::get_eulerAngles()
+// UnityEngine.Vector3 UnityEngine.Camera::get_transparencySortAxis()
 static void __M2N_vf3i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
     typedef HtVector3f (*NativeMethod)(int64_t __arg0, const MethodInfo* method);
@@ -7048,7 +7296,7 @@ static void __M2N_vf4i4(const MethodInfo* method, uint16_t* argVarIndexs, StackO
 }
 
 
-// UnityEngine.Rect UnityEngine.Camera::get_pixelRect()
+// UnityEngine.Color UnityEngine.Camera::get_backgroundColor()
 static void __M2N_vf4i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
     typedef HtVector4f (*NativeMethod)(int64_t __arg0, const MethodInfo* method);
@@ -7072,7 +7320,7 @@ static void __M2N_vf4i8i4i4(const MethodInfo* method, uint16_t* argVarIndexs, St
 }
 
 
-// UnityEngine.Rect UnityEngine.UI.Clipping::FindCullAndClipWorldRect(System.Collections.Generic.List`1<UnityEngine.UI.RectMask2D>,System.Boolean&)
+// UnityEngine.Color UnityEngine.Material::GetColor(System.String)
 static void __M2N_vf4i8i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
     typedef HtVector4f (*NativeMethod)(int64_t __arg0, int64_t __arg1, const MethodInfo* method);
@@ -7440,7 +7688,7 @@ static void __M2N_vi8i16(const MethodInfo* method, uint16_t* argVarIndexs, Stack
 }
 
 
-// System.Void System.Buffers.SpanAction`2::Invoke(System.Span`1<T>,TArg)
+// System.Void UnityEngine.Camera::SetTargetBuffers(UnityEngine.RenderBuffer,UnityEngine.RenderBuffer)
 static void __M2N_vi8i16i16(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
     typedef void (*NativeMethod)(int64_t __arg0, ValueTypeSize16 __arg1, ValueTypeSize16 __arg2, const MethodInfo* method);
@@ -7752,7 +8000,7 @@ static void __M2N_vi8i4i8i16(const MethodInfo* method, uint16_t* argVarIndexs, S
 }
 
 
-// System.Void UnityEngine.Playables.PlayableExtensions::ConnectInput<U,V>(U,System.Int32,V,System.Int32)
+// System.Void UnityEngine.Camera::AddCommandBufferAsync(UnityEngine.Rendering.CameraEvent,UnityEngine.Rendering.CommandBuffer,UnityEngine.Rendering.ComputeQueueType)
 static void __M2N_vi8i4i8i4(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
     typedef void (*NativeMethod)(int64_t __arg0, int32_t __arg1, int64_t __arg2, int32_t __arg3, const MethodInfo* method);
@@ -7896,7 +8144,15 @@ static void __M2N_vi8i4r4r4r4(const MethodInfo* method, uint16_t* argVarIndexs, 
 }
 
 
-// System.Void System.Collections.Generic.IList`1::set_Item(System.Int32,T)
+// System.Void TMPro.TMP_Text::InsertNewLine(System.Int32,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Boolean&,System.Single&)
+static void __M2N_vi8i4r4r4r4r4r4r4r4r4i8i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
+{
+    typedef void (*NativeMethod)(int64_t __arg0, int32_t __arg1, float __arg2, float __arg3, float __arg4, float __arg5, float __arg6, float __arg7, float __arg8, float __arg9, int64_t __arg10, int64_t __arg11, const MethodInfo* method);
+    ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(int32_t*)(localVarBase+argVarIndexs[1]), *(float*)(localVarBase+argVarIndexs[2]), *(float*)(localVarBase+argVarIndexs[3]), *(float*)(localVarBase+argVarIndexs[4]), *(float*)(localVarBase+argVarIndexs[5]), *(float*)(localVarBase+argVarIndexs[6]), *(float*)(localVarBase+argVarIndexs[7]), *(float*)(localVarBase+argVarIndexs[8]), *(float*)(localVarBase+argVarIndexs[9]), *(int64_t*)(localVarBase+argVarIndexs[10]), *(int64_t*)(localVarBase+argVarIndexs[11]), method);
+}
+
+
+// System.Void UnityEngine.Camera::SetStereoProjectionMatrix(UnityEngine.Camera/StereoscopicEye,UnityEngine.Matrix4x4)
 static void __M2N_vi8i4sr(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
     typedef void (*NativeMethod)(int64_t __arg0, int32_t __arg1, uint64_t __arg2, const MethodInfo* method);
@@ -7952,7 +8208,7 @@ static void __M2N_vi8i4u2(const MethodInfo* method, uint16_t* argVarIndexs, Stac
 }
 
 
-// System.Void System.Collections.Generic.List`1::set_Item(System.Int32,T)
+// System.Void TMPro.TMP_Text/CharacterSubstitution::.ctor(System.Int32,System.UInt32)
 static void __M2N_vi8i4u4(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
     typedef void (*NativeMethod)(int64_t __arg0, int32_t __arg1, uint32_t __arg2, const MethodInfo* method);
@@ -7992,6 +8248,14 @@ static void __M2N_vi8i4vf4(const MethodInfo* method, uint16_t* argVarIndexs, Sta
 }
 
 
+// System.Void TMPro.TextMeshPro::SetMask(TMPro.MaskingTypes,UnityEngine.Vector4,System.Single,System.Single)
+static void __M2N_vi8i4vf4r4r4(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
+{
+    typedef void (*NativeMethod)(int64_t __arg0, int32_t __arg1, HtVector4f __arg2, float __arg3, float __arg4, const MethodInfo* method);
+    ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(int32_t*)(localVarBase+argVarIndexs[1]), *(HtVector4f*)(localVarBase+argVarIndexs[2]), *(float*)(localVarBase+argVarIndexs[3]), *(float*)(localVarBase+argVarIndexs[4]), method);
+}
+
+
 // System.Void Mono.DataConverter/PackContext::Add(System.Byte[])
 static void __M2N_vi8i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
@@ -8013,6 +8277,14 @@ static void __M2N_vi8i8i16i8(const MethodInfo* method, uint16_t* argVarIndexs, S
 {
     typedef void (*NativeMethod)(int64_t __arg0, int64_t __arg1, ValueTypeSize16 __arg2, int64_t __arg3, const MethodInfo* method);
     ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(int64_t*)(localVarBase+argVarIndexs[1]), *(ValueTypeSize16*)(localVarBase+argVarIndexs[2]), *(int64_t*)(localVarBase+argVarIndexs[3]), method);
+}
+
+
+// System.Void UnityEngine.Events.UnityEvent`4::Invoke(T0,T1,T2,T3)
+static void __M2N_vi8i8i16i8i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
+{
+    typedef void (*NativeMethod)(int64_t __arg0, int64_t __arg1, ValueTypeSize16 __arg2, int64_t __arg3, int64_t __arg4, const MethodInfo* method);
+    ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(int64_t*)(localVarBase+argVarIndexs[1]), *(ValueTypeSize16*)(localVarBase+argVarIndexs[2]), *(int64_t*)(localVarBase+argVarIndexs[3]), *(int64_t*)(localVarBase+argVarIndexs[4]), method);
 }
 
 
@@ -8125,6 +8397,14 @@ static void __M2N_vi8i8i4i4i8(const MethodInfo* method, uint16_t* argVarIndexs, 
 {
     typedef void (*NativeMethod)(int64_t __arg0, int64_t __arg1, int32_t __arg2, int32_t __arg3, int64_t __arg4, const MethodInfo* method);
     ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(int64_t*)(localVarBase+argVarIndexs[1]), *(int32_t*)(localVarBase+argVarIndexs[2]), *(int32_t*)(localVarBase+argVarIndexs[3]), *(int64_t*)(localVarBase+argVarIndexs[4]), method);
+}
+
+
+// System.Void TMPro.TMP_Text::ReplaceTagWithCharacter(System.Int32[],System.Int32,System.Int32,System.Char)
+static void __M2N_vi8i8i4i4u2(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
+{
+    typedef void (*NativeMethod)(int64_t __arg0, int64_t __arg1, int32_t __arg2, int32_t __arg3, uint16_t __arg4, const MethodInfo* method);
+    ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(int64_t*)(localVarBase+argVarIndexs[1]), *(int32_t*)(localVarBase+argVarIndexs[2]), *(int32_t*)(localVarBase+argVarIndexs[3]), *(uint16_t*)(localVarBase+argVarIndexs[4]), method);
 }
 
 
@@ -8672,7 +8952,39 @@ static void __M2N_vi8i8r4r4r4r4(const MethodInfo* method, uint16_t* argVarIndexs
 }
 
 
-// System.Void UnityEngine.UIElements.UIR.UIRVEShaderInfoAllocator::SetTransformValue(UnityEngine.UIElements.UIR.BMPAlloc,UnityEngine.Matrix4x4)
+// System.Void TMPro.TMP_Text::SetText(System.String,System.Single,System.Single,System.Single,System.Single,System.Single)
+static void __M2N_vi8i8r4r4r4r4r4(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
+{
+    typedef void (*NativeMethod)(int64_t __arg0, int64_t __arg1, float __arg2, float __arg3, float __arg4, float __arg5, float __arg6, const MethodInfo* method);
+    ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(int64_t*)(localVarBase+argVarIndexs[1]), *(float*)(localVarBase+argVarIndexs[2]), *(float*)(localVarBase+argVarIndexs[3]), *(float*)(localVarBase+argVarIndexs[4]), *(float*)(localVarBase+argVarIndexs[5]), *(float*)(localVarBase+argVarIndexs[6]), method);
+}
+
+
+// System.Void TMPro.TMP_Text::SetText(System.String,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)
+static void __M2N_vi8i8r4r4r4r4r4r4(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
+{
+    typedef void (*NativeMethod)(int64_t __arg0, int64_t __arg1, float __arg2, float __arg3, float __arg4, float __arg5, float __arg6, float __arg7, const MethodInfo* method);
+    ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(int64_t*)(localVarBase+argVarIndexs[1]), *(float*)(localVarBase+argVarIndexs[2]), *(float*)(localVarBase+argVarIndexs[3]), *(float*)(localVarBase+argVarIndexs[4]), *(float*)(localVarBase+argVarIndexs[5]), *(float*)(localVarBase+argVarIndexs[6]), *(float*)(localVarBase+argVarIndexs[7]), method);
+}
+
+
+// System.Void TMPro.TMP_Text::SetText(System.String,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)
+static void __M2N_vi8i8r4r4r4r4r4r4r4(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
+{
+    typedef void (*NativeMethod)(int64_t __arg0, int64_t __arg1, float __arg2, float __arg3, float __arg4, float __arg5, float __arg6, float __arg7, float __arg8, const MethodInfo* method);
+    ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(int64_t*)(localVarBase+argVarIndexs[1]), *(float*)(localVarBase+argVarIndexs[2]), *(float*)(localVarBase+argVarIndexs[3]), *(float*)(localVarBase+argVarIndexs[4]), *(float*)(localVarBase+argVarIndexs[5]), *(float*)(localVarBase+argVarIndexs[6]), *(float*)(localVarBase+argVarIndexs[7]), *(float*)(localVarBase+argVarIndexs[8]), method);
+}
+
+
+// System.Void TMPro.TMP_Text::SetText(System.String,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)
+static void __M2N_vi8i8r4r4r4r4r4r4r4r4(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
+{
+    typedef void (*NativeMethod)(int64_t __arg0, int64_t __arg1, float __arg2, float __arg3, float __arg4, float __arg5, float __arg6, float __arg7, float __arg8, float __arg9, const MethodInfo* method);
+    ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(int64_t*)(localVarBase+argVarIndexs[1]), *(float*)(localVarBase+argVarIndexs[2]), *(float*)(localVarBase+argVarIndexs[3]), *(float*)(localVarBase+argVarIndexs[4]), *(float*)(localVarBase+argVarIndexs[5]), *(float*)(localVarBase+argVarIndexs[6]), *(float*)(localVarBase+argVarIndexs[7]), *(float*)(localVarBase+argVarIndexs[8]), *(float*)(localVarBase+argVarIndexs[9]), method);
+}
+
+
+// System.Void UnityEngine.Material::SetMatrix(System.String,UnityEngine.Matrix4x4)
 static void __M2N_vi8i8sr(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
     typedef void (*NativeMethod)(int64_t __arg0, int64_t __arg1, uint64_t __arg2, const MethodInfo* method);
@@ -8832,6 +9144,14 @@ static void __M2N_vi8i8vf2i4(const MethodInfo* method, uint16_t* argVarIndexs, S
 }
 
 
+// System.Void UnityEngine.Events.UnityEvent`3::Invoke(T0,T1,T2)
+static void __M2N_vi8i8vf2r4(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
+{
+    typedef void (*NativeMethod)(int64_t __arg0, int64_t __arg1, HtVector2f __arg2, float __arg3, const MethodInfo* method);
+    ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(int64_t*)(localVarBase+argVarIndexs[1]), *(HtVector2f*)(localVarBase+argVarIndexs[2]), *(float*)(localVarBase+argVarIndexs[3]), method);
+}
+
+
 // System.Void UnityEngine.Transform::LookAt(UnityEngine.Transform,UnityEngine.Vector3)
 static void __M2N_vi8i8vf3(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
@@ -8840,7 +9160,7 @@ static void __M2N_vi8i8vf3(const MethodInfo* method, uint16_t* argVarIndexs, Sta
 }
 
 
-// System.Void UnityEngine.Animator::SetQuaternion(System.String,UnityEngine.Quaternion)
+// System.Void UnityEngine.Material::SetColor(System.String,UnityEngine.Color)
 static void __M2N_vi8i8vf4(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
     typedef void (*NativeMethod)(int64_t __arg0, int64_t __arg1, HtVector4f __arg2, const MethodInfo* method);
@@ -8992,6 +9312,14 @@ static void __M2N_vi8r4u1(const MethodInfo* method, uint16_t* argVarIndexs, Stac
 }
 
 
+// System.Void UnityEngine.Camera::CalculateProjectionMatrixFromPhysicalProperties(UnityEngine.Matrix4x4&,System.Single,UnityEngine.Vector2,UnityEngine.Vector2,System.Single,System.Single,UnityEngine.Camera/GateFitParameters)
+static void __M2N_vi8r4vf2vf2r4r4i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
+{
+    typedef void (*NativeMethod)(int64_t __arg0, float __arg1, HtVector2f __arg2, HtVector2f __arg3, float __arg4, float __arg5, int64_t __arg6, const MethodInfo* method);
+    ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(float*)(localVarBase+argVarIndexs[1]), *(HtVector2f*)(localVarBase+argVarIndexs[2]), *(HtVector2f*)(localVarBase+argVarIndexs[3]), *(float*)(localVarBase+argVarIndexs[4]), *(float*)(localVarBase+argVarIndexs[5]), *(int64_t*)(localVarBase+argVarIndexs[6]), method);
+}
+
+
 // System.Void UnityEngine.Rigidbody::AddExplosionForce(System.Single,UnityEngine.Vector3,System.Single)
 static void __M2N_vi8r4vf3r4(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
@@ -9024,7 +9352,7 @@ static void __M2N_vi8r8(const MethodInfo* method, uint16_t* argVarIndexs, StackO
 }
 
 
-// System.Void UnityEngine.RenderTexture::.ctor(UnityEngine.RenderTextureDescriptor)
+// System.Void UnityEngine.Camera::set_cullingMatrix(UnityEngine.Matrix4x4)
 static void __M2N_vi8sr(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
     typedef void (*NativeMethod)(int64_t __arg0, uint64_t __arg1, const MethodInfo* method);
@@ -9069,6 +9397,14 @@ static void __M2N_vi8sri8r4(const MethodInfo* method, uint16_t* argVarIndexs, St
 {
     typedef void (*NativeMethod)(int64_t __arg0, uint64_t __arg1, int64_t __arg2, float __arg3, const MethodInfo* method);
     ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), (uint64_t)(localVarBase+argVarIndexs[1]), *(int64_t*)(localVarBase+argVarIndexs[2]), *(float*)(localVarBase+argVarIndexs[3]), method);
+}
+
+
+// System.Void TMPro.TMP_GlyphPairAdjustmentRecord::.ctor(TMPro.TMP_GlyphAdjustmentRecord,TMPro.TMP_GlyphAdjustmentRecord)
+static void __M2N_vi8srsr(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
+{
+    typedef void (*NativeMethod)(int64_t __arg0, uint64_t __arg1, uint64_t __arg2, const MethodInfo* method);
+    ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), (uint64_t)(localVarBase+argVarIndexs[1]), (uint64_t)(localVarBase+argVarIndexs[2]), method);
 }
 
 
@@ -9312,6 +9648,14 @@ static void __M2N_vi8u4sri16r4i4(const MethodInfo* method, uint16_t* argVarIndex
 }
 
 
+// System.Void TMPro.TMP_SpriteGlyph::.ctor(System.UInt32,UnityEngine.TextCore.GlyphMetrics,UnityEngine.TextCore.GlyphRect,System.Single,System.Int32,UnityEngine.Sprite)
+static void __M2N_vi8u4sri16r4i4i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
+{
+    typedef void (*NativeMethod)(int64_t __arg0, uint32_t __arg1, uint64_t __arg2, ValueTypeSize16 __arg3, float __arg4, int32_t __arg5, int64_t __arg6, const MethodInfo* method);
+    ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(uint32_t*)(localVarBase+argVarIndexs[1]), (uint64_t)(localVarBase+argVarIndexs[2]), *(ValueTypeSize16*)(localVarBase+argVarIndexs[3]), *(float*)(localVarBase+argVarIndexs[4]), *(int32_t*)(localVarBase+argVarIndexs[5]), *(int64_t*)(localVarBase+argVarIndexs[6]), method);
+}
+
+
 // System.Void UnityEngine.Playables.FrameRate::.ctor(System.UInt32,System.Boolean)
 static void __M2N_vi8u4u1(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
@@ -9333,6 +9677,14 @@ static void __M2N_vi8u4u4i8(const MethodInfo* method, uint16_t* argVarIndexs, St
 {
     typedef void (*NativeMethod)(int64_t __arg0, uint32_t __arg1, uint32_t __arg2, int64_t __arg3, const MethodInfo* method);
     ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(uint32_t*)(localVarBase+argVarIndexs[1]), *(uint32_t*)(localVarBase+argVarIndexs[2]), *(int64_t*)(localVarBase+argVarIndexs[3]), method);
+}
+
+
+// System.Void TMPro.KerningPair::.ctor(System.UInt32,System.UInt32,System.Single)
+static void __M2N_vi8u4u4r4(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
+{
+    typedef void (*NativeMethod)(int64_t __arg0, uint32_t __arg1, uint32_t __arg2, float __arg3, const MethodInfo* method);
+    ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(uint32_t*)(localVarBase+argVarIndexs[1]), *(uint32_t*)(localVarBase+argVarIndexs[2]), *(float*)(localVarBase+argVarIndexs[3]), method);
 }
 
 
@@ -9360,6 +9712,22 @@ static void __M2N_vi8u4u4u4u1(const MethodInfo* method, uint16_t* argVarIndexs, 
 }
 
 
+// System.Void TMPro.TMP_GlyphAdjustmentRecord::.ctor(System.UInt32,TMPro.TMP_GlyphValueRecord)
+static void __M2N_vi8u4vf4(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
+{
+    typedef void (*NativeMethod)(int64_t __arg0, uint32_t __arg1, HtVector4f __arg2, const MethodInfo* method);
+    ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(uint32_t*)(localVarBase+argVarIndexs[1]), *(HtVector4f*)(localVarBase+argVarIndexs[2]), method);
+}
+
+
+// System.Void TMPro.KerningPair::.ctor(System.UInt32,TMPro.GlyphValueRecord_Legacy,System.UInt32,TMPro.GlyphValueRecord_Legacy)
+static void __M2N_vi8u4vf4u4vf4(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
+{
+    typedef void (*NativeMethod)(int64_t __arg0, uint32_t __arg1, HtVector4f __arg2, uint32_t __arg3, HtVector4f __arg4, const MethodInfo* method);
+    ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(uint32_t*)(localVarBase+argVarIndexs[1]), *(HtVector4f*)(localVarBase+argVarIndexs[2]), *(uint32_t*)(localVarBase+argVarIndexs[3]), *(HtVector4f*)(localVarBase+argVarIndexs[4]), method);
+}
+
+
 // System.Void System.SpanHelpers::ClearWithoutReferences(System.Byte&,System.UInt64)
 static void __M2N_vi8u8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
@@ -9368,7 +9736,7 @@ static void __M2N_vi8u8(const MethodInfo* method, uint16_t* argVarIndexs, StackO
 }
 
 
-// System.Void UnityEngine.Vector2::Scale(UnityEngine.Vector2)
+// System.Void UnityEngine.Camera::set_sensorSize(UnityEngine.Vector2)
 static void __M2N_vi8vf2(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
     typedef void (*NativeMethod)(int64_t __arg0, HtVector2f __arg1, const MethodInfo* method);
@@ -9400,7 +9768,7 @@ static void __M2N_vi8vf2vf2(const MethodInfo* method, uint16_t* argVarIndexs, St
 }
 
 
-// System.Void UnityEngine.Quaternion::SetLookRotation(UnityEngine.Vector3)
+// System.Void UnityEngine.Camera::set_transparencySortAxis(UnityEngine.Vector3)
 static void __M2N_vi8vf3(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
     typedef void (*NativeMethod)(int64_t __arg0, HtVector3f __arg1, const MethodInfo* method);
@@ -9480,6 +9848,22 @@ static void __M2N_vi8vf3vf3i4(const MethodInfo* method, uint16_t* argVarIndexs, 
 }
 
 
+// System.Void TMPro.TMP_Text::DrawTextHighlight(UnityEngine.Vector3,UnityEngine.Vector3,System.Int32&,UnityEngine.Color32)
+static void __M2N_vi8vf3vf3i8i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
+{
+    typedef void (*NativeMethod)(int64_t __arg0, HtVector3f __arg1, HtVector3f __arg2, int64_t __arg3, int64_t __arg4, const MethodInfo* method);
+    ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(HtVector3f*)(localVarBase+argVarIndexs[1]), *(HtVector3f*)(localVarBase+argVarIndexs[2]), *(int64_t*)(localVarBase+argVarIndexs[3]), *(int64_t*)(localVarBase+argVarIndexs[4]), method);
+}
+
+
+// System.Void TMPro.TMP_Text::DrawUnderlineMesh(UnityEngine.Vector3,UnityEngine.Vector3,System.Int32&,System.Single,System.Single,System.Single,System.Single,UnityEngine.Color32)
+static void __M2N_vi8vf3vf3i8r4r4r4r4i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
+{
+    typedef void (*NativeMethod)(int64_t __arg0, HtVector3f __arg1, HtVector3f __arg2, int64_t __arg3, float __arg4, float __arg5, float __arg6, float __arg7, int64_t __arg8, const MethodInfo* method);
+    ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(HtVector3f*)(localVarBase+argVarIndexs[1]), *(HtVector3f*)(localVarBase+argVarIndexs[2]), *(int64_t*)(localVarBase+argVarIndexs[3]), *(float*)(localVarBase+argVarIndexs[4]), *(float*)(localVarBase+argVarIndexs[5]), *(float*)(localVarBase+argVarIndexs[6]), *(float*)(localVarBase+argVarIndexs[7]), *(int64_t*)(localVarBase+argVarIndexs[8]), method);
+}
+
+
 // System.Void UnityEngine.Transform::RotateAround(UnityEngine.Vector3,UnityEngine.Vector3,System.Single)
 static void __M2N_vi8vf3vf3r4(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
@@ -9520,7 +9904,15 @@ static void __M2N_vi8vf3vf4i4i16r4r4u1(const MethodInfo* method, uint16_t* argVa
 }
 
 
-// System.Void UnityEngine.Vector4::Scale(UnityEngine.Vector4)
+// System.Void UnityEngine.Matrix4x4::SetTRS(UnityEngine.Vector3,UnityEngine.Quaternion,UnityEngine.Vector3)
+static void __M2N_vi8vf3vf4vf3(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
+{
+    typedef void (*NativeMethod)(int64_t __arg0, HtVector3f __arg1, HtVector4f __arg2, HtVector3f __arg3, const MethodInfo* method);
+    ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(HtVector3f*)(localVarBase+argVarIndexs[1]), *(HtVector4f*)(localVarBase+argVarIndexs[2]), *(HtVector3f*)(localVarBase+argVarIndexs[3]), method);
+}
+
+
+// System.Void UnityEngine.Camera::set_backgroundColor(UnityEngine.Color)
 static void __M2N_vi8vf4(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
     typedef void (*NativeMethod)(int64_t __arg0, HtVector4f __arg1, const MethodInfo* method);
@@ -9549,6 +9941,14 @@ static void __M2N_vi8vf4i8u1u1u1u1(const MethodInfo* method, uint16_t* argVarInd
 {
     typedef void (*NativeMethod)(int64_t __arg0, HtVector4f __arg1, int64_t __arg2, uint8_t __arg3, uint8_t __arg4, uint8_t __arg5, uint8_t __arg6, const MethodInfo* method);
     ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(HtVector4f*)(localVarBase+argVarIndexs[1]), *(int64_t*)(localVarBase+argVarIndexs[2]), *(uint8_t*)(localVarBase+argVarIndexs[3]), *(uint8_t*)(localVarBase+argVarIndexs[4]), *(uint8_t*)(localVarBase+argVarIndexs[5]), *(uint8_t*)(localVarBase+argVarIndexs[6]), method);
+}
+
+
+// System.Void UnityEngine.Camera::CalculateFrustumCorners(UnityEngine.Rect,System.Single,UnityEngine.Camera/MonoOrStereoscopicEye,UnityEngine.Vector3[])
+static void __M2N_vi8vf4r4i4i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
+{
+    typedef void (*NativeMethod)(int64_t __arg0, HtVector4f __arg1, float __arg2, int32_t __arg3, int64_t __arg4, const MethodInfo* method);
+    ((NativeMethod)(method->methodPointerCallByInterp))(*(int64_t*)(localVarBase+argVarIndexs[0]), *(HtVector4f*)(localVarBase+argVarIndexs[1]), *(float*)(localVarBase+argVarIndexs[2]), *(int32_t*)(localVarBase+argVarIndexs[3]), *(int64_t*)(localVarBase+argVarIndexs[4]), method);
 }
 
 
@@ -9776,6 +10176,54 @@ static void __M2N_vvf4i8(const MethodInfo* method, uint16_t* argVarIndexs, Stack
 }
 
 
+// System.Void UnityEngine.GUI::DrawTexture(UnityEngine.Rect,UnityEngine.Texture,UnityEngine.ScaleMode)
+static void __M2N_vvf4i8i4(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
+{
+    typedef void (*NativeMethod)(HtVector4f __arg0, int64_t __arg1, int32_t __arg2, const MethodInfo* method);
+    ((NativeMethod)(method->methodPointerCallByInterp))(*(HtVector4f*)(localVarBase+argVarIndexs[0]), *(int64_t*)(localVarBase+argVarIndexs[1]), *(int32_t*)(localVarBase+argVarIndexs[2]), method);
+}
+
+
+// System.Void UnityEngine.GUI::DrawTexture(UnityEngine.Rect,UnityEngine.Texture,UnityEngine.ScaleMode,System.Boolean)
+static void __M2N_vvf4i8i4u1(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
+{
+    typedef void (*NativeMethod)(HtVector4f __arg0, int64_t __arg1, int32_t __arg2, uint8_t __arg3, const MethodInfo* method);
+    ((NativeMethod)(method->methodPointerCallByInterp))(*(HtVector4f*)(localVarBase+argVarIndexs[0]), *(int64_t*)(localVarBase+argVarIndexs[1]), *(int32_t*)(localVarBase+argVarIndexs[2]), *(uint8_t*)(localVarBase+argVarIndexs[3]), method);
+}
+
+
+// System.Void UnityEngine.GUI::DrawTexture(UnityEngine.Rect,UnityEngine.Texture,UnityEngine.ScaleMode,System.Boolean,System.Single)
+static void __M2N_vvf4i8i4u1r4(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
+{
+    typedef void (*NativeMethod)(HtVector4f __arg0, int64_t __arg1, int32_t __arg2, uint8_t __arg3, float __arg4, const MethodInfo* method);
+    ((NativeMethod)(method->methodPointerCallByInterp))(*(HtVector4f*)(localVarBase+argVarIndexs[0]), *(int64_t*)(localVarBase+argVarIndexs[1]), *(int32_t*)(localVarBase+argVarIndexs[2]), *(uint8_t*)(localVarBase+argVarIndexs[3]), *(float*)(localVarBase+argVarIndexs[4]), method);
+}
+
+
+// System.Void UnityEngine.GUI::DrawTexture(UnityEngine.Rect,UnityEngine.Texture,UnityEngine.ScaleMode,System.Boolean,System.Single,UnityEngine.Color,System.Single,System.Single)
+static void __M2N_vvf4i8i4u1r4vf4r4r4(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
+{
+    typedef void (*NativeMethod)(HtVector4f __arg0, int64_t __arg1, int32_t __arg2, uint8_t __arg3, float __arg4, HtVector4f __arg5, float __arg6, float __arg7, const MethodInfo* method);
+    ((NativeMethod)(method->methodPointerCallByInterp))(*(HtVector4f*)(localVarBase+argVarIndexs[0]), *(int64_t*)(localVarBase+argVarIndexs[1]), *(int32_t*)(localVarBase+argVarIndexs[2]), *(uint8_t*)(localVarBase+argVarIndexs[3]), *(float*)(localVarBase+argVarIndexs[4]), *(HtVector4f*)(localVarBase+argVarIndexs[5]), *(float*)(localVarBase+argVarIndexs[6]), *(float*)(localVarBase+argVarIndexs[7]), method);
+}
+
+
+// System.Void UnityEngine.GUI::DrawTexture(UnityEngine.Rect,UnityEngine.Texture,UnityEngine.ScaleMode,System.Boolean,System.Single,UnityEngine.Color,UnityEngine.Vector4,System.Single)
+static void __M2N_vvf4i8i4u1r4vf4vf4r4(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
+{
+    typedef void (*NativeMethod)(HtVector4f __arg0, int64_t __arg1, int32_t __arg2, uint8_t __arg3, float __arg4, HtVector4f __arg5, HtVector4f __arg6, float __arg7, const MethodInfo* method);
+    ((NativeMethod)(method->methodPointerCallByInterp))(*(HtVector4f*)(localVarBase+argVarIndexs[0]), *(int64_t*)(localVarBase+argVarIndexs[1]), *(int32_t*)(localVarBase+argVarIndexs[2]), *(uint8_t*)(localVarBase+argVarIndexs[3]), *(float*)(localVarBase+argVarIndexs[4]), *(HtVector4f*)(localVarBase+argVarIndexs[5]), *(HtVector4f*)(localVarBase+argVarIndexs[6]), *(float*)(localVarBase+argVarIndexs[7]), method);
+}
+
+
+// System.Void UnityEngine.GUI::DrawTexture(UnityEngine.Rect,UnityEngine.Texture,UnityEngine.ScaleMode,System.Boolean,System.Single,UnityEngine.Color,UnityEngine.Vector4,UnityEngine.Vector4)
+static void __M2N_vvf4i8i4u1r4vf4vf4vf4(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
+{
+    typedef void (*NativeMethod)(HtVector4f __arg0, int64_t __arg1, int32_t __arg2, uint8_t __arg3, float __arg4, HtVector4f __arg5, HtVector4f __arg6, HtVector4f __arg7, const MethodInfo* method);
+    ((NativeMethod)(method->methodPointerCallByInterp))(*(HtVector4f*)(localVarBase+argVarIndexs[0]), *(int64_t*)(localVarBase+argVarIndexs[1]), *(int32_t*)(localVarBase+argVarIndexs[2]), *(uint8_t*)(localVarBase+argVarIndexs[3]), *(float*)(localVarBase+argVarIndexs[4]), *(HtVector4f*)(localVarBase+argVarIndexs[5]), *(HtVector4f*)(localVarBase+argVarIndexs[6]), *(HtVector4f*)(localVarBase+argVarIndexs[7]), method);
+}
+
+
 // System.Void UnityEngine.GUI::Label(UnityEngine.Rect,UnityEngine.GUIContent,UnityEngine.GUIStyle)
 static void __M2N_vvf4i8i8(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
 {
@@ -9789,6 +10237,22 @@ static void __M2N_vvf4i8i8i8(const MethodInfo* method, uint16_t* argVarIndexs, S
 {
     typedef void (*NativeMethod)(HtVector4f __arg0, int64_t __arg1, int64_t __arg2, int64_t __arg3, const MethodInfo* method);
     ((NativeMethod)(method->methodPointerCallByInterp))(*(HtVector4f*)(localVarBase+argVarIndexs[0]), *(int64_t*)(localVarBase+argVarIndexs[1]), *(int64_t*)(localVarBase+argVarIndexs[2]), *(int64_t*)(localVarBase+argVarIndexs[3]), method);
+}
+
+
+// System.Void TouchController.CommonFunctions::DrawBorder(UnityEngine.Rect,System.Single,UnityEngine.Color)
+static void __M2N_vvf4r4vf4(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
+{
+    typedef void (*NativeMethod)(HtVector4f __arg0, float __arg1, HtVector4f __arg2, const MethodInfo* method);
+    ((NativeMethod)(method->methodPointerCallByInterp))(*(HtVector4f*)(localVarBase+argVarIndexs[0]), *(float*)(localVarBase+argVarIndexs[1]), *(HtVector4f*)(localVarBase+argVarIndexs[2]), method);
+}
+
+
+// System.Void TouchController.CommonFunctions::DrawRect(UnityEngine.Rect,UnityEngine.Color)
+static void __M2N_vvf4vf4(const MethodInfo* method, uint16_t* argVarIndexs, StackObject* localVarBase, void* ret)
+{
+    typedef void (*NativeMethod)(HtVector4f __arg0, HtVector4f __arg1, const MethodInfo* method);
+    ((NativeMethod)(method->methodPointerCallByInterp))(*(HtVector4f*)(localVarBase+argVarIndexs[0]), *(HtVector4f*)(localVarBase+argVarIndexs[1]), method);
 }
 
 
@@ -9975,6 +10439,8 @@ Managed2NativeMethodInfo hybridclr::interpreter::g_managed2nativeStub[] =
 	{"i4i8u4i4i4", __M2N_i4i8u4i4i4},
 	{"i4i8u4i8", __M2N_i4i8u4i8},
 	{"i4i8u4u4", __M2N_i4i8u4u4},
+	{"i4i8u4u4r4", __M2N_i4i8u4u4r4},
+	{"i4i8u4vf4u4vf4", __M2N_i4i8u4vf4u4vf4},
 	{"i4i8u8", __M2N_i4i8u8},
 	{"i4i8u8u8", __M2N_i4i8u8u8},
 	{"i4i8vf2", __M2N_i4i8vf2},
@@ -9982,7 +10448,10 @@ Managed2NativeMethodInfo hybridclr::interpreter::g_managed2nativeStub[] =
 	{"i4i8vf3", __M2N_i4i8vf3},
 	{"i4i8vf3i4", __M2N_i4i8vf3i4},
 	{"i4i8vf3i4i4", __M2N_i4i8vf3i4i4},
+	{"i4i8vf3i4i8u1", __M2N_i4i8vf3i4i8u1},
 	{"i4i8vf3i8", __M2N_i4i8vf3i8},
+	{"i4i8vf3i8i8", __M2N_i4i8vf3i8i8},
+	{"i4i8vf3i8u1", __M2N_i4i8vf3i8u1},
 	{"i4i8vf3vf3", __M2N_i4i8vf3vf3},
 	{"i4i8vf3vf3i8r4i4i4", __M2N_i4i8vf3vf3i8r4i4i4},
 	{"i4i8vf4", __M2N_i4i8vf4},
@@ -10080,6 +10549,7 @@ Managed2NativeMethodInfo hybridclr::interpreter::g_managed2nativeStub[] =
 	{"i8i8i4r8", __M2N_i8i8i4r8},
 	{"i8i8i4u1", __M2N_i8i8i4u1},
 	{"i8i8i4u1i4", __M2N_i8i8i4u1i4},
+	{"i8i8i4u1i8", __M2N_i8i8i4u1i8},
 	{"i8i8i4u1i8i8", __M2N_i8i8i4u1i8i8},
 	{"i8i8i4u1u1u1", __M2N_i8i8i4u1u1u1},
 	{"i8i8i4u1u1u1u1i8i4", __M2N_i8i8i4u1u1u1u1i8i4},
@@ -10135,6 +10605,8 @@ Managed2NativeMethodInfo hybridclr::interpreter::g_managed2nativeStub[] =
 	{"i8i8i8u1i4i8i8i8i8i8", __M2N_i8i8i8u1i4i8i8i8i8i8},
 	{"i8i8i8u1i8i8i8", __M2N_i8i8i8u1i8i8i8},
 	{"i8i8i8u1u1", __M2N_i8i8i8u1u1},
+	{"i8i8i8vf2i8i8", __M2N_i8i8i8vf2i8i8},
+	{"i8i8i8vf3i8i8", __M2N_i8i8i8vf3i8i8},
 	{"i8i8r4", __M2N_i8i8r4},
 	{"i8i8r4i8i8", __M2N_i8i8r4i8i8},
 	{"i8i8r4r4r4", __M2N_i8i8r4r4r4},
@@ -10161,6 +10633,7 @@ Managed2NativeMethodInfo hybridclr::interpreter::g_managed2nativeStub[] =
 	{"i8i8u2u2i4", __M2N_i8i8u2u2i4},
 	{"i8i8u2u2i4i4", __M2N_i8i8u2u2i4i4},
 	{"i8i8u4", __M2N_i8i8u4},
+	{"i8i8u4i8", __M2N_i8i8u4i8},
 	{"i8i8u4i8i8", __M2N_i8i8u4i8i8},
 	{"i8i8u4u1i8", __M2N_i8i8u4u1i8},
 	{"i8i8u4u4", __M2N_i8i8u4u4},
@@ -10170,6 +10643,7 @@ Managed2NativeMethodInfo hybridclr::interpreter::g_managed2nativeStub[] =
 	{"i8i8u8", __M2N_i8i8u8},
 	{"i8i8vf2", __M2N_i8i8vf2},
 	{"i8i8vf2i8", __M2N_i8i8vf2i8},
+	{"i8i8vf2i8i8", __M2N_i8i8vf2i8i8},
 	{"i8i8vf2vf2r4i4i8i8", __M2N_i8i8vf2vf2r4i4i8i8},
 	{"i8i8vf3", __M2N_i8i8vf3},
 	{"i8i8vf3i8i8", __M2N_i8i8vf3i8i8},
@@ -10209,6 +10683,7 @@ Managed2NativeMethodInfo hybridclr::interpreter::g_managed2nativeStub[] =
 	{"i8u4i8", __M2N_i8u4i8},
 	{"i8u4i8i8u1i4i4i8", __M2N_i8u4i8i8u1i4i4i8},
 	{"i8u4i8u1", __M2N_i8u4i8u1},
+	{"i8u4i8u1i4i4i8", __M2N_i8u4i8u1i4i4i8},
 	{"i8u8", __M2N_i8u8},
 	{"i8u8i16i8", __M2N_i8u8i16i8},
 	{"i8u8i8", __M2N_i8u8i8},
@@ -10234,6 +10709,8 @@ Managed2NativeMethodInfo hybridclr::interpreter::g_managed2nativeStub[] =
 	{"r4i8i4srr4r4", __M2N_r4i8i4srr4r4},
 	{"r4i8i8", __M2N_r4i8i8},
 	{"r4i8i8i4", __M2N_r4i8i8i4},
+	{"r4i8i8i4i4", __M2N_r4i8i8i4i4},
+	{"r4i8i8i4i4i8", __M2N_r4i8i8i4i4i8},
 	{"r4i8i8r4", __M2N_r4i8i8r4},
 	{"r4i8i8r4i8", __M2N_r4i8i8r4i8},
 	{"r4i8i8r4r4", __M2N_r4i8i8r4r4},
@@ -10242,6 +10719,8 @@ Managed2NativeMethodInfo hybridclr::interpreter::g_managed2nativeStub[] =
 	{"r4i8r4", __M2N_r4i8r4},
 	{"r4i8r4r4", __M2N_r4i8r4r4},
 	{"r4i8srr4", __M2N_r4i8srr4},
+	{"r4i8u1", __M2N_r4i8u1},
+	{"r4i8u1u1", __M2N_r4i8u1u1},
 	{"r4r4", __M2N_r4r4},
 	{"r4r4i4", __M2N_r4r4i4},
 	{"r4r4r4", __M2N_r4r4r4},
@@ -10313,11 +10792,13 @@ Managed2NativeMethodInfo hybridclr::interpreter::g_managed2nativeStub[] =
 	{"S24i8i4i4i4", __M2N_S24i8i4i4i4},
 	{"S24i8i8", __M2N_S24i8i8},
 	{"S24i8i8i8u1u1", __M2N_S24i8i8i8u1u1},
+	{"S24i8u1", __M2N_S24i8u1},
 	{"S24i8u4", __M2N_S24i8u4},
 	{"S24i8u4u1", __M2N_S24i8u4u1},
 	{"S24i8vf2", __M2N_S24i8vf2},
 	{"S24i8vf3", __M2N_S24i8vf3},
 	{"S24i8vf3i4", __M2N_S24i8vf3i4},
+	{"S24vf3vf3", __M2N_S24vf3vf3},
 	{"S28", __M2N_S28},
 	{"S28i4", __M2N_S28i4},
 	{"S28i8", __M2N_S28i8},
@@ -10361,6 +10842,8 @@ Managed2NativeMethodInfo hybridclr::interpreter::g_managed2nativeStub[] =
 	{"S60i8i4i4", __M2N_S60i8i4i4},
 	{"S64", __M2N_S64},
 	{"S64i8", __M2N_S64i8},
+	{"S64i8i4", __M2N_S64i8i4},
+	{"S64i8vf4", __M2N_S64i8vf4},
 	{"S64r4r4r4r4r4r4", __M2N_S64r4r4r4r4r4r4},
 	{"S64sr", __M2N_S64sr},
 	{"S64srsr", __M2N_S64srsr},
@@ -10375,6 +10858,7 @@ Managed2NativeMethodInfo hybridclr::interpreter::g_managed2nativeStub[] =
 	{"S80i8i8", __M2N_S80i8i8},
 	{"S84i8", __M2N_S84i8},
 	{"S88", __M2N_S88},
+	{"S888i8", __M2N_S888i8},
 	{"S88i8", __M2N_S88i8},
 	{"S88i8i8", __M2N_S88i8i8},
 	{"S96", __M2N_S96},
@@ -10443,12 +10927,14 @@ Managed2NativeMethodInfo hybridclr::interpreter::g_managed2nativeStub[] =
 	{"u1i8i4sr", __M2N_u1i8i4sr},
 	{"u1i8i4srsri4i4i8", __M2N_u1i8i4srsri4i4i8},
 	{"u1i8i4u1", __M2N_u1i8i4u1},
+	{"u1i8i4u2", __M2N_u1i8i4u2},
 	{"u1i8i4vf4vf4i4i4i8", __M2N_u1i8i4vf4vf4i4i4i8},
 	{"u1i8i8", __M2N_u1i8i8},
 	{"u1i8i8i16", __M2N_u1i8i8i16},
 	{"u1i8i8i4", __M2N_u1i8i8i4},
 	{"u1i8i8i4i16i16i4i4i8", __M2N_u1i8i8i4i16i16i4i4i8},
 	{"u1i8i8i4i16i16i4i4i8i8", __M2N_u1i8i8i4i16i16i4i4i8i8},
+	{"u1i8i8i4i4", __M2N_u1i8i8i4i4},
 	{"u1i8i8i4i4i4", __M2N_u1i8i8i4i4i4},
 	{"u1i8i8i4i4i4i4i4i8", __M2N_u1i8i8i4i4i4i4i4i8},
 	{"u1i8i8i4i4i4i4i4i8i8", __M2N_u1i8i8i4i4i4i4i4i8i8},
@@ -10549,6 +11035,7 @@ Managed2NativeMethodInfo hybridclr::interpreter::g_managed2nativeStub[] =
 	{"u1u8u8", __M2N_u1u8u8},
 	{"u1vf2vf2", __M2N_u1vf2vf2},
 	{"u1vf3vf3", __M2N_u1vf3vf3},
+	{"u1vf3vf3i4", __M2N_u1vf3vf3i4},
 	{"u1vf3vf3i8", __M2N_u1vf3vf3i8},
 	{"u1vf3vf3i8r4", __M2N_u1vf3vf3i8r4},
 	{"u1vf3vf3i8r4i4", __M2N_u1vf3vf3i8r4i4},
@@ -10557,6 +11044,7 @@ Managed2NativeMethodInfo hybridclr::interpreter::g_managed2nativeStub[] =
 	{"u1vf3vf3r4i4", __M2N_u1vf3vf3r4i4},
 	{"u1vf3vf3r4i4i4", __M2N_u1vf3vf3r4i4i4},
 	{"u1vf4vf4", __M2N_u1vf4vf4},
+	{"u1vf4vf4i4", __M2N_u1vf4vf4i4},
 	{"u2", __M2N_u2},
 	{"u2i1", __M2N_u2i1},
 	{"u2i16", __M2N_u2i16},
@@ -10570,6 +11058,7 @@ Managed2NativeMethodInfo hybridclr::interpreter::g_managed2nativeStub[] =
 	{"u2i8i8", __M2N_u2i8i8},
 	{"u2i8i8i4", __M2N_u2i8i8i4},
 	{"u2i8i8i4u2", __M2N_u2i8i8i4u2},
+	{"u2i8i8i8u2", __M2N_u2i8i8i8u2},
 	{"u2i8u2", __M2N_u2i8u2},
 	{"u2r4", __M2N_u2r4},
 	{"u2r8", __M2N_u2r8},
@@ -10629,9 +11118,14 @@ Managed2NativeMethodInfo hybridclr::interpreter::g_managed2nativeStub[] =
 	{"vf2i8", __M2N_vf2i8},
 	{"vf2i8i8", __M2N_vf2i8i8},
 	{"vf2i8i8r4i4r4i4", __M2N_vf2i8i8r4i4r4i4},
+	{"vf2i8i8r4r4", __M2N_vf2i8i8r4r4},
+	{"vf2i8i8vf2u1u1", __M2N_vf2i8i8vf2u1u1},
 	{"vf2i8r4i4r4i4", __M2N_vf2i8r4i4r4i4},
+	{"vf2i8r4r4", __M2N_vf2i8r4r4},
+	{"vf2i8r4r4r4", __M2N_vf2i8r4r4r4},
 	{"vf2i8r4vf2u1i8i8", __M2N_vf2i8r4vf2u1i8i8},
 	{"vf2i8srr4", __M2N_vf2i8srr4},
+	{"vf2i8u1", __M2N_vf2i8u1},
 	{"vf2i8vf2", __M2N_vf2i8vf2},
 	{"vf2i8vf3", __M2N_vf2i8vf3},
 	{"vf2i8vf4i4u1", __M2N_vf2i8vf4i4u1},
@@ -10649,6 +11143,7 @@ Managed2NativeMethodInfo hybridclr::interpreter::g_managed2nativeStub[] =
 	{"vf2vf2vf2i8r4r4", __M2N_vf2vf2vf2i8r4r4},
 	{"vf2vf2vf2i8r4r4r4", __M2N_vf2vf2vf2i8r4r4r4},
 	{"vf2vf2vf2r4", __M2N_vf2vf2vf2r4},
+	{"vf2vf2vf3", __M2N_vf2vf2vf3},
 	{"vf2vf3", __M2N_vf2vf3},
 	{"vf2vf4", __M2N_vf2vf4},
 	{"vf2vf4vf2", __M2N_vf2vf4vf2},
@@ -10780,6 +11275,7 @@ Managed2NativeMethodInfo hybridclr::interpreter::g_managed2nativeStub[] =
 	{"vi8i4r4i8", __M2N_vi8i4r4i8},
 	{"vi8i4r4r4", __M2N_vi8i4r4r4},
 	{"vi8i4r4r4r4", __M2N_vi8i4r4r4r4},
+	{"vi8i4r4r4r4r4r4r4r4r4i8i8", __M2N_vi8i4r4r4r4r4r4r4r4r4i8i8},
 	{"vi8i4sr", __M2N_vi8i4sr},
 	{"vi8i4sri16", __M2N_vi8i4sri16},
 	{"vi8i4srsr", __M2N_vi8i4srsr},
@@ -10792,9 +11288,11 @@ Managed2NativeMethodInfo hybridclr::interpreter::g_managed2nativeStub[] =
 	{"vi8i4vf2", __M2N_vi8i4vf2},
 	{"vi8i4vf3", __M2N_vi8i4vf3},
 	{"vi8i4vf4", __M2N_vi8i4vf4},
+	{"vi8i4vf4r4r4", __M2N_vi8i4vf4r4r4},
 	{"vi8i8", __M2N_vi8i8},
 	{"vi8i8i16", __M2N_vi8i8i16},
 	{"vi8i8i16i8", __M2N_vi8i8i16i8},
+	{"vi8i8i16i8i8", __M2N_vi8i8i16i8i8},
 	{"vi8i8i16i8u1vf4", __M2N_vi8i8i16i8u1vf4},
 	{"vi8i8i16u4", __M2N_vi8i8i16u4},
 	{"vi8i8i2", __M2N_vi8i8i2},
@@ -10809,6 +11307,7 @@ Managed2NativeMethodInfo hybridclr::interpreter::g_managed2nativeStub[] =
 	{"vi8i8i4i4i4r4", __M2N_vi8i8i4i4i4r4},
 	{"vi8i8i4i4i4u1i4", __M2N_vi8i8i4i4i4u1i4},
 	{"vi8i8i4i4i8", __M2N_vi8i8i4i4i8},
+	{"vi8i8i4i4u2", __M2N_vi8i8i4i4u2},
 	{"vi8i8i4i8", __M2N_vi8i8i4i8},
 	{"vi8i8i4i8i16", __M2N_vi8i8i4i8i16},
 	{"vi8i8i4i8i4", __M2N_vi8i8i4i8i4},
@@ -10877,6 +11376,10 @@ Managed2NativeMethodInfo hybridclr::interpreter::g_managed2nativeStub[] =
 	{"vi8i8r4r4i4r4", __M2N_vi8i8r4r4i4r4},
 	{"vi8i8r4r4r4", __M2N_vi8i8r4r4r4},
 	{"vi8i8r4r4r4r4", __M2N_vi8i8r4r4r4r4},
+	{"vi8i8r4r4r4r4r4", __M2N_vi8i8r4r4r4r4r4},
+	{"vi8i8r4r4r4r4r4r4", __M2N_vi8i8r4r4r4r4r4r4},
+	{"vi8i8r4r4r4r4r4r4r4", __M2N_vi8i8r4r4r4r4r4r4r4},
+	{"vi8i8r4r4r4r4r4r4r4r4", __M2N_vi8i8r4r4r4r4r4r4r4r4},
 	{"vi8i8sr", __M2N_vi8i8sr},
 	{"vi8i8sri4", __M2N_vi8i8sri4},
 	{"vi8i8sri4i16", __M2N_vi8i8sri4i16},
@@ -10897,6 +11400,7 @@ Managed2NativeMethodInfo hybridclr::interpreter::g_managed2nativeStub[] =
 	{"vi8i8u8u8", __M2N_vi8i8u8u8},
 	{"vi8i8vf2", __M2N_vi8i8vf2},
 	{"vi8i8vf2i4", __M2N_vi8i8vf2i4},
+	{"vi8i8vf2r4", __M2N_vi8i8vf2r4},
 	{"vi8i8vf3", __M2N_vi8i8vf3},
 	{"vi8i8vf4", __M2N_vi8i8vf4},
 	{"vi8r4", __M2N_vi8r4},
@@ -10917,6 +11421,7 @@ Managed2NativeMethodInfo hybridclr::interpreter::g_managed2nativeStub[] =
 	{"vi8r4r4r4r4r4r4", __M2N_vi8r4r4r4r4r4r4},
 	{"vi8r4r4u1", __M2N_vi8r4r4u1},
 	{"vi8r4u1", __M2N_vi8r4u1},
+	{"vi8r4vf2vf2r4r4i8", __M2N_vi8r4vf2vf2r4r4i8},
 	{"vi8r4vf3r4", __M2N_vi8r4vf3r4},
 	{"vi8r4vf3r4r4", __M2N_vi8r4vf3r4r4},
 	{"vi8r4vf3r4r4i4", __M2N_vi8r4vf3r4r4i4},
@@ -10927,6 +11432,7 @@ Managed2NativeMethodInfo hybridclr::interpreter::g_managed2nativeStub[] =
 	{"vi8sri8i8", __M2N_vi8sri8i8},
 	{"vi8sri8i8i8i8i4i8i8", __M2N_vi8sri8i8i8i8i4i8i8},
 	{"vi8sri8r4", __M2N_vi8sri8r4},
+	{"vi8srsr", __M2N_vi8srsr},
 	{"vi8srvf4", __M2N_vi8srvf4},
 	{"vi8u1", __M2N_vi8u1},
 	{"vi8u1i4", __M2N_vi8u1i4},
@@ -10957,12 +11463,16 @@ Managed2NativeMethodInfo hybridclr::interpreter::g_managed2nativeStub[] =
 	{"vi8u4i8u4i2i8i8i8i8", __M2N_vi8u4i8u4i2i8i8i8i8},
 	{"vi8u4sr", __M2N_vi8u4sr},
 	{"vi8u4sri16r4i4", __M2N_vi8u4sri16r4i4},
+	{"vi8u4sri16r4i4i8", __M2N_vi8u4sri16r4i4i8},
 	{"vi8u4u1", __M2N_vi8u4u1},
 	{"vi8u4u4", __M2N_vi8u4u4},
 	{"vi8u4u4i8", __M2N_vi8u4u4i8},
+	{"vi8u4u4r4", __M2N_vi8u4u4r4},
 	{"vi8u4u4u1", __M2N_vi8u4u4u1},
 	{"vi8u4u4u4", __M2N_vi8u4u4u4},
 	{"vi8u4u4u4u1", __M2N_vi8u4u4u4u1},
+	{"vi8u4vf4", __M2N_vi8u4vf4},
+	{"vi8u4vf4u4vf4", __M2N_vi8u4vf4u4vf4},
 	{"vi8u8", __M2N_vi8u8},
 	{"vi8vf2", __M2N_vi8vf2},
 	{"vi8vf2i4", __M2N_vi8vf2i4},
@@ -10978,15 +11488,19 @@ Managed2NativeMethodInfo hybridclr::interpreter::g_managed2nativeStub[] =
 	{"vi8vf3r4i4", __M2N_vi8vf3r4i4},
 	{"vi8vf3vf3", __M2N_vi8vf3vf3},
 	{"vi8vf3vf3i4", __M2N_vi8vf3vf3i4},
+	{"vi8vf3vf3i8i8", __M2N_vi8vf3vf3i8i8},
+	{"vi8vf3vf3i8r4r4r4r4i8", __M2N_vi8vf3vf3i8r4r4r4r4i8},
 	{"vi8vf3vf3r4", __M2N_vi8vf3vf3r4},
 	{"vi8vf3vf4", __M2N_vi8vf3vf4},
 	{"vi8vf3vf4i4i16r4", __M2N_vi8vf3vf4i4i16r4},
 	{"vi8vf3vf4i4i16r4r4", __M2N_vi8vf3vf4i4i16r4r4},
 	{"vi8vf3vf4i4i16r4r4u1", __M2N_vi8vf3vf4i4i16r4r4u1},
+	{"vi8vf3vf4vf3", __M2N_vi8vf3vf4vf3},
 	{"vi8vf4", __M2N_vi8vf4},
 	{"vi8vf4i8i4u1u1", __M2N_vi8vf4i8i4u1u1},
 	{"vi8vf4i8u1", __M2N_vi8vf4i8u1},
 	{"vi8vf4i8u1u1u1u1", __M2N_vi8vf4i8u1u1u1u1},
+	{"vi8vf4r4i4i8", __M2N_vi8vf4r4i4i8},
 	{"vi8vf4r4u1u1", __M2N_vi8vf4r4u1u1},
 	{"vi8vf4r4u1u1u1", __M2N_vi8vf4r4u1u1u1},
 	{"vi8vf4u1", __M2N_vi8vf4u1},
@@ -11015,8 +11529,16 @@ Managed2NativeMethodInfo hybridclr::interpreter::g_managed2nativeStub[] =
 	{"vvf3vf3vf4r4u1", __M2N_vvf3vf3vf4r4u1},
 	{"vvf4", __M2N_vvf4},
 	{"vvf4i8", __M2N_vvf4i8},
+	{"vvf4i8i4", __M2N_vvf4i8i4},
+	{"vvf4i8i4u1", __M2N_vvf4i8i4u1},
+	{"vvf4i8i4u1r4", __M2N_vvf4i8i4u1r4},
+	{"vvf4i8i4u1r4vf4r4r4", __M2N_vvf4i8i4u1r4vf4r4r4},
+	{"vvf4i8i4u1r4vf4vf4r4", __M2N_vvf4i8i4u1r4vf4vf4r4},
+	{"vvf4i8i4u1r4vf4vf4vf4", __M2N_vvf4i8i4u1r4vf4vf4vf4},
 	{"vvf4i8i8", __M2N_vvf4i8i8},
 	{"vvf4i8i8i8", __M2N_vvf4i8i8i8},
+	{"vvf4r4vf4", __M2N_vvf4r4vf4},
+	{"vvf4vf4", __M2N_vvf4vf4},
 	{nullptr, nullptr},
 };
 
@@ -11750,6 +12272,16 @@ static int64_t __N2M_i8i16(ValueTypeSize16 __arg0, const MethodInfo* method)
 }
 
 
+// TResult System.Func`3::Invoke(T1,T2)
+static int64_t __N2M_i8i4i8(int32_t __arg0, int64_t __arg1, const MethodInfo* method)
+{
+    StackObject args[3] = {*(uint64_t*)&__arg0, *(uint64_t*)&__arg1 };
+    StackObject* ret = args + 2;
+    Interpreter::Execute(method, args, ret);
+    return *(int64_t*)ret;
+}
+
+
 // System.String Interop/ErrorInfo::ToString()
 static int64_t __N2M_i8i8(int64_t __arg0, const MethodInfo* method)
 {
@@ -11845,6 +12377,16 @@ static int64_t __N2M_i8i8i4i4i8i8i8i8(int64_t __arg0, int32_t __arg1, int32_t __
 {
     StackObject args[8] = {*(uint64_t*)&__arg0, *(uint64_t*)&__arg1, *(uint64_t*)&__arg2, *(uint64_t*)&__arg3, *(uint64_t*)&__arg4, *(uint64_t*)&__arg5, *(uint64_t*)&__arg6 };
     StackObject* ret = args + 7;
+    Interpreter::Execute(method, args, ret);
+    return *(int64_t*)ret;
+}
+
+
+// TResult System.Func`3::Invoke(T1,T2)
+static int64_t __N2M_i8i8i4i8(int64_t __arg0, int32_t __arg1, int64_t __arg2, const MethodInfo* method)
+{
+    StackObject args[4] = {*(uint64_t*)&__arg0, *(uint64_t*)&__arg1, *(uint64_t*)&__arg2 };
+    StackObject* ret = args + 3;
     Interpreter::Execute(method, args, ret);
     return *(int64_t*)ret;
 }
@@ -11975,6 +12517,16 @@ static int64_t __N2M_i8i8i8i4i8i4i8i8(int64_t __arg0, int64_t __arg1, int32_t __
 {
     StackObject args[8] = {*(uint64_t*)&__arg0, *(uint64_t*)&__arg1, *(uint64_t*)&__arg2, *(uint64_t*)&__arg3, *(uint64_t*)&__arg4, *(uint64_t*)&__arg5, *(uint64_t*)&__arg6 };
     StackObject* ret = args + 7;
+    Interpreter::Execute(method, args, ret);
+    return *(int64_t*)ret;
+}
+
+
+// System.IAsyncResult UnityEngine.Events.UnityAction`2::BeginInvoke(T0,T1,System.AsyncCallback,System.Object)
+static int64_t __N2M_i8i8i8i4i8i8(int64_t __arg0, int64_t __arg1, int32_t __arg2, int64_t __arg3, int64_t __arg4, const MethodInfo* method)
+{
+    StackObject args[6] = {*(uint64_t*)&__arg0, *(uint64_t*)&__arg1, *(uint64_t*)&__arg2, *(uint64_t*)&__arg3, *(uint64_t*)&__arg4 };
+    StackObject* ret = args + 5;
     Interpreter::Execute(method, args, ret);
     return *(int64_t*)ret;
 }
@@ -12170,7 +12722,27 @@ static int64_t __N2M_i8i8i8u1u1(int64_t __arg0, int64_t __arg1, uint8_t __arg2, 
 }
 
 
-// System.IAsyncResult System.Action`1::BeginInvoke(T,System.AsyncCallback,System.Object)
+// System.IAsyncResult UnityEngine.Events.UnityAction`2::BeginInvoke(T0,T1,System.AsyncCallback,System.Object)
+static int64_t __N2M_i8i8i8vf2i8i8(int64_t __arg0, int64_t __arg1, HtVector2f __arg2, int64_t __arg3, int64_t __arg4, const MethodInfo* method)
+{
+    StackObject args[6] = {*(uint64_t*)&__arg0, *(uint64_t*)&__arg1, *(uint64_t*)&__arg2, *(uint64_t*)&__arg3, *(uint64_t*)&__arg4 };
+    StackObject* ret = args + 5;
+    Interpreter::Execute(method, args, ret);
+    return *(int64_t*)ret;
+}
+
+
+// System.IAsyncResult UnityEngine.Events.UnityAction`2::BeginInvoke(T0,T1,System.AsyncCallback,System.Object)
+static int64_t __N2M_i8i8i8vf3i8i8(int64_t __arg0, int64_t __arg1, HtVector3f __arg2, int64_t __arg3, int64_t __arg4, const MethodInfo* method)
+{
+    StackObject args[6] = {*(uint64_t*)&__arg0, *(uint64_t*)&__arg1, (uint64_t)&__arg2, *(uint64_t*)&__arg3, *(uint64_t*)&__arg4 };
+    StackObject* ret = args + 5;
+    Interpreter::Execute(method, args, ret);
+    return *(int64_t*)ret;
+}
+
+
+// System.IAsyncResult UnityEngine.Events.UnityAction`1::BeginInvoke(T0,System.AsyncCallback,System.Object)
 static int64_t __N2M_i8i8r4i8i8(int64_t __arg0, float __arg1, int64_t __arg2, int64_t __arg3, const MethodInfo* method)
 {
     StackObject args[5] = {*(uint64_t*)&__arg0, *(uint64_t*)&__arg1, *(uint64_t*)&__arg2, *(uint64_t*)&__arg3 };
@@ -12340,6 +12912,16 @@ static int64_t __N2M_i8i8vf2i8(int64_t __arg0, HtVector2f __arg1, int64_t __arg2
 }
 
 
+// System.IAsyncResult UnityEngine.Events.UnityAction`1::BeginInvoke(T0,System.AsyncCallback,System.Object)
+static int64_t __N2M_i8i8vf2i8i8(int64_t __arg0, HtVector2f __arg1, int64_t __arg2, int64_t __arg3, const MethodInfo* method)
+{
+    StackObject args[5] = {*(uint64_t*)&__arg0, *(uint64_t*)&__arg1, *(uint64_t*)&__arg2, *(uint64_t*)&__arg3 };
+    StackObject* ret = args + 4;
+    Interpreter::Execute(method, args, ret);
+    return *(int64_t*)ret;
+}
+
+
 // System.IAsyncResult UnityEngine.UI.ReflectionMethodsCache/Raycast2DCallback::BeginInvoke(UnityEngine.Vector2,UnityEngine.Vector2,System.Single,System.Int32,System.AsyncCallback,System.Object)
 static int64_t __N2M_i8i8vf2vf2r4i4i8i8(int64_t __arg0, HtVector2f __arg1, HtVector2f __arg2, float __arg3, int32_t __arg4, int64_t __arg5, int64_t __arg6, const MethodInfo* method)
 {
@@ -12400,7 +12982,7 @@ static int64_t __N2M_i8i8vf4(int64_t __arg0, HtVector4f __arg1, const MethodInfo
 }
 
 
-// System.IAsyncResult System.Predicate`1::BeginInvoke(T,System.AsyncCallback,System.Object)
+// System.IAsyncResult UnityEngine.Events.UnityAction`1::BeginInvoke(T0,System.AsyncCallback,System.Object)
 static int64_t __N2M_i8i8vf4i8i8(int64_t __arg0, HtVector4f __arg1, int64_t __arg2, int64_t __arg3, const MethodInfo* method)
 {
     StackObject args[5] = {*(uint64_t*)&__arg0, (uint64_t)&__arg1, *(uint64_t*)&__arg2, *(uint64_t*)&__arg3 };
@@ -13640,7 +14222,7 @@ static uint8_t __N2M_u1r4r4(float __arg0, float __arg1, const MethodInfo* method
 }
 
 
-// System.Boolean System.Predicate`1::Invoke(T)
+// TResult System.Func`2::Invoke(T)
 static uint8_t __N2M_u1sr(uint64_t __arg0, const MethodInfo* method)
 {
     StackObject args[2] = {*(uint64_t*)&__arg0 };
@@ -13772,6 +14354,16 @@ static uint16_t __N2M_u2i8i8i4(int64_t __arg0, int64_t __arg1, int32_t __arg2, c
 
 // System.Char UnityEngine.UI.InputField/OnValidateInput::Invoke(System.String,System.Int32,System.Char)
 static uint16_t __N2M_u2i8i8i4u2(int64_t __arg0, int64_t __arg1, int32_t __arg2, uint16_t __arg3, const MethodInfo* method)
+{
+    StackObject args[5] = {*(uint64_t*)&__arg0, *(uint64_t*)&__arg1, *(uint64_t*)&__arg2, *(uint64_t*)&__arg3 };
+    StackObject* ret = args + 4;
+    Interpreter::Execute(method, args, ret);
+    return *(uint16_t*)ret;
+}
+
+
+// System.Char TMPro.TMP_InputValidator::Validate(System.String&,System.Int32&,System.Char)
+static uint16_t __N2M_u2i8i8i8u2(int64_t __arg0, int64_t __arg1, int64_t __arg2, uint16_t __arg3, const MethodInfo* method)
 {
     StackObject args[5] = {*(uint64_t*)&__arg0, *(uint64_t*)&__arg1, *(uint64_t*)&__arg2, *(uint64_t*)&__arg3 };
     StackObject* ret = args + 4;
@@ -13925,6 +14517,16 @@ static HtVector2f __N2M_vf2i8i8r4i4r4i4(int64_t __arg0, int64_t __arg1, float __
 {
     StackObject args[7] = {*(uint64_t*)&__arg0, *(uint64_t*)&__arg1, *(uint64_t*)&__arg2, *(uint64_t*)&__arg3, *(uint64_t*)&__arg4, *(uint64_t*)&__arg5 };
     StackObject* ret = args + 6;
+    Interpreter::Execute(method, args, ret);
+    return *(HtVector2f*)ret;
+}
+
+
+// UnityEngine.Vector2 TMPro.TMP_Text::CalculatePreferredValues(System.Single&,UnityEngine.Vector2,System.Boolean,System.Boolean)
+static HtVector2f __N2M_vf2i8i8vf2u1u1(int64_t __arg0, int64_t __arg1, HtVector2f __arg2, uint8_t __arg3, uint8_t __arg4, const MethodInfo* method)
+{
+    StackObject args[6] = {*(uint64_t*)&__arg0, *(uint64_t*)&__arg1, *(uint64_t*)&__arg2, *(uint64_t*)&__arg3, *(uint64_t*)&__arg4 };
+    StackObject* ret = args + 5;
     Interpreter::Execute(method, args, ret);
     return *(HtVector2f*)ret;
 }
@@ -14280,6 +14882,16 @@ static void __N2M_vi8i4i4i8i8(int64_t __arg0, int32_t __arg1, int32_t __arg2, in
 }
 
 
+// System.Void TMPro.TMP_Text::FillCharacterVertexBuffers(System.Int32,System.Int32,System.Boolean)
+static void __N2M_vi8i4i4u1(int64_t __arg0, int32_t __arg1, int32_t __arg2, uint8_t __arg3, const MethodInfo* method)
+{
+    StackObject args[4] = {*(uint64_t*)&__arg0, *(uint64_t*)&__arg1, *(uint64_t*)&__arg2, *(uint64_t*)&__arg3 };
+    StackObject* ret = nullptr;
+    Interpreter::Execute(method, args, ret);
+    
+}
+
+
 // System.Void UnityEngine.UIElements.UIR.BaseShaderInfoStorage::SetTexel(System.Int32,System.Int32,UnityEngine.Color)
 static void __N2M_vi8i4i4vf4(int64_t __arg0, int32_t __arg1, int32_t __arg2, HtVector4f __arg3, const MethodInfo* method)
 {
@@ -14404,6 +15016,16 @@ static void __N2M_vi8i8(int64_t __arg0, int64_t __arg1, const MethodInfo* method
 static void __N2M_vi8i8i16(int64_t __arg0, int64_t __arg1, ValueTypeSize16 __arg2, const MethodInfo* method)
 {
     StackObject args[3] = {*(uint64_t*)&__arg0, *(uint64_t*)&__arg1, (uint64_t)&__arg2 };
+    StackObject* ret = nullptr;
+    Interpreter::Execute(method, args, ret);
+    
+}
+
+
+// System.Void UnityEngine.Events.UnityAction`4::Invoke(T0,T1,T2,T3)
+static void __N2M_vi8i8i16i8i8(int64_t __arg0, int64_t __arg1, ValueTypeSize16 __arg2, int64_t __arg3, int64_t __arg4, const MethodInfo* method)
+{
+    StackObject args[5] = {*(uint64_t*)&__arg0, *(uint64_t*)&__arg1, (uint64_t)&__arg2, *(uint64_t*)&__arg3, *(uint64_t*)&__arg4 };
     StackObject* ret = nullptr;
     Interpreter::Execute(method, args, ret);
     
@@ -14730,6 +15352,26 @@ static void __N2M_vi8i8vf2i4(int64_t __arg0, int64_t __arg1, HtVector2f __arg2, 
 }
 
 
+// System.Void UnityEngine.Events.UnityAction`3::Invoke(T0,T1,T2)
+static void __N2M_vi8i8vf2r4(int64_t __arg0, int64_t __arg1, HtVector2f __arg2, float __arg3, const MethodInfo* method)
+{
+    StackObject args[4] = {*(uint64_t*)&__arg0, *(uint64_t*)&__arg1, *(uint64_t*)&__arg2, *(uint64_t*)&__arg3 };
+    StackObject* ret = nullptr;
+    Interpreter::Execute(method, args, ret);
+    
+}
+
+
+// System.Void UnityEngine.Events.UnityAction`2::Invoke(T0,T1)
+static void __N2M_vi8i8vf3(int64_t __arg0, int64_t __arg1, HtVector3f __arg2, const MethodInfo* method)
+{
+    StackObject args[3] = {*(uint64_t*)&__arg0, *(uint64_t*)&__arg1, (uint64_t)&__arg2 };
+    StackObject* ret = nullptr;
+    Interpreter::Execute(method, args, ret);
+    
+}
+
+
 // System.Void System.IO.BinaryWriter::Write(System.Single)
 static void __N2M_vi8r4(int64_t __arg0, float __arg1, const MethodInfo* method)
 {
@@ -14754,6 +15396,16 @@ static void __N2M_vi8r4i4(int64_t __arg0, float __arg1, int32_t __arg2, const Me
 static void __N2M_vi8r4r4(int64_t __arg0, float __arg1, float __arg2, const MethodInfo* method)
 {
     StackObject args[3] = {*(uint64_t*)&__arg0, *(uint64_t*)&__arg1, *(uint64_t*)&__arg2 };
+    StackObject* ret = nullptr;
+    Interpreter::Execute(method, args, ret);
+    
+}
+
+
+// System.Void TMPro.TMP_Text::SaveGlyphVertexInfo(System.Single,System.Single,UnityEngine.Color32)
+static void __N2M_vi8r4r4i8(int64_t __arg0, float __arg1, float __arg2, int64_t __arg3, const MethodInfo* method)
+{
+    StackObject args[4] = {*(uint64_t*)&__arg0, *(uint64_t*)&__arg1, *(uint64_t*)&__arg2, *(uint64_t*)&__arg3 };
     StackObject* ret = nullptr;
     Interpreter::Execute(method, args, ret);
     
@@ -14830,8 +15482,28 @@ static void __N2M_vi8u1(int64_t __arg0, uint8_t __arg1, const MethodInfo* method
 }
 
 
+// System.Void System.Action`2::Invoke(T1,T2)
+static void __N2M_vi8u1i8(int64_t __arg0, uint8_t __arg1, int64_t __arg2, const MethodInfo* method)
+{
+    StackObject args[3] = {*(uint64_t*)&__arg0, *(uint64_t*)&__arg1, *(uint64_t*)&__arg2 };
+    StackObject* ret = nullptr;
+    Interpreter::Execute(method, args, ret);
+    
+}
+
+
 // System.Void System.Action`3::Invoke(T1,T2,T3)
 static void __N2M_vi8u1sr(int64_t __arg0, uint8_t __arg1, uint64_t __arg2, const MethodInfo* method)
+{
+    StackObject args[3] = {*(uint64_t*)&__arg0, *(uint64_t*)&__arg1, *(uint64_t*)&__arg2 };
+    StackObject* ret = nullptr;
+    Interpreter::Execute(method, args, ret);
+    
+}
+
+
+// System.Void TMPro.TextMeshPro::ForceMeshUpdate(System.Boolean,System.Boolean)
+static void __N2M_vi8u1u1(int64_t __arg0, uint8_t __arg1, uint8_t __arg2, const MethodInfo* method)
 {
     StackObject args[3] = {*(uint64_t*)&__arg0, *(uint64_t*)&__arg1, *(uint64_t*)&__arg2 };
     StackObject* ret = nullptr;
@@ -14940,10 +15612,40 @@ static void __N2M_vi8vf2i4(int64_t __arg0, HtVector2f __arg1, int32_t __arg2, co
 }
 
 
+// System.Void UnityEngine.Events.UnityAction`3::Invoke(T0,T1,T2)
+static void __N2M_vi8vf2r4(int64_t __arg0, HtVector2f __arg1, float __arg2, const MethodInfo* method)
+{
+    StackObject args[3] = {*(uint64_t*)&__arg0, *(uint64_t*)&__arg1, *(uint64_t*)&__arg2 };
+    StackObject* ret = nullptr;
+    Interpreter::Execute(method, args, ret);
+    
+}
+
+
 // System.Void UnityEngine.UIElements.ITransform::set_position(UnityEngine.Vector3)
 static void __N2M_vi8vf3(int64_t __arg0, HtVector3f __arg1, const MethodInfo* method)
 {
     StackObject args[2] = {*(uint64_t*)&__arg0, (uint64_t)&__arg1 };
+    StackObject* ret = nullptr;
+    Interpreter::Execute(method, args, ret);
+    
+}
+
+
+// System.Void TMPro.TMP_Text::DrawTextHighlight(UnityEngine.Vector3,UnityEngine.Vector3,System.Int32&,UnityEngine.Color32)
+static void __N2M_vi8vf3vf3i8i8(int64_t __arg0, HtVector3f __arg1, HtVector3f __arg2, int64_t __arg3, int64_t __arg4, const MethodInfo* method)
+{
+    StackObject args[5] = {*(uint64_t*)&__arg0, (uint64_t)&__arg1, (uint64_t)&__arg2, *(uint64_t*)&__arg3, *(uint64_t*)&__arg4 };
+    StackObject* ret = nullptr;
+    Interpreter::Execute(method, args, ret);
+    
+}
+
+
+// System.Void TMPro.TMP_Text::DrawUnderlineMesh(UnityEngine.Vector3,UnityEngine.Vector3,System.Int32&,System.Single,System.Single,System.Single,System.Single,UnityEngine.Color32)
+static void __N2M_vi8vf3vf3i8r4r4r4r4i8(int64_t __arg0, HtVector3f __arg1, HtVector3f __arg2, int64_t __arg3, float __arg4, float __arg5, float __arg6, float __arg7, int64_t __arg8, const MethodInfo* method)
+{
+    StackObject args[9] = {*(uint64_t*)&__arg0, (uint64_t)&__arg1, (uint64_t)&__arg2, *(uint64_t*)&__arg3, *(uint64_t*)&__arg4, *(uint64_t*)&__arg5, *(uint64_t*)&__arg6, *(uint64_t*)&__arg7, *(uint64_t*)&__arg8 };
     StackObject* ret = nullptr;
     Interpreter::Execute(method, args, ret);
     
@@ -15024,6 +15726,16 @@ static void __N2M_vsr(uint64_t __arg0, const MethodInfo* method)
 static void __N2M_vu1(uint8_t __arg0, const MethodInfo* method)
 {
     StackObject args[1] = {*(uint64_t*)&__arg0 };
+    StackObject* ret = nullptr;
+    Interpreter::Execute(method, args, ret);
+    
+}
+
+
+// System.Void System.Action`2::Invoke(T1,T2)
+static void __N2M_vu1i8(uint8_t __arg0, int64_t __arg1, const MethodInfo* method)
+{
+    StackObject args[2] = {*(uint64_t*)&__arg0, *(uint64_t*)&__arg1 };
     StackObject* ret = nullptr;
     Interpreter::Execute(method, args, ret);
     
@@ -15156,6 +15868,7 @@ Native2ManagedMethodInfo hybridclr::interpreter::g_native2managedStub[] =
 	{"i4vf4vf4", (Il2CppMethodPointer)__N2M_i4vf4vf4},
 	{"i8", (Il2CppMethodPointer)__N2M_i8},
 	{"i8i16", (Il2CppMethodPointer)__N2M_i8i16},
+	{"i8i4i8", (Il2CppMethodPointer)__N2M_i8i4i8},
 	{"i8i8", (Il2CppMethodPointer)__N2M_i8i8},
 	{"i8i8i16", (Il2CppMethodPointer)__N2M_i8i8i16},
 	{"i8i8i16i8i8", (Il2CppMethodPointer)__N2M_i8i8i16i8i8},
@@ -15166,6 +15879,7 @@ Native2ManagedMethodInfo hybridclr::interpreter::g_native2managedStub[] =
 	{"i8i8i4i4i8i8", (Il2CppMethodPointer)__N2M_i8i8i4i4i8i8},
 	{"i8i8i4i4i8i8i4", (Il2CppMethodPointer)__N2M_i8i8i4i4i8i8i4},
 	{"i8i8i4i4i8i8i8i8", (Il2CppMethodPointer)__N2M_i8i8i4i4i8i8i8i8},
+	{"i8i8i4i8", (Il2CppMethodPointer)__N2M_i8i8i4i8},
 	{"i8i8i4i8i4i8i8", (Il2CppMethodPointer)__N2M_i8i8i4i8i4i8i8},
 	{"i8i8i4i8i8", (Il2CppMethodPointer)__N2M_i8i8i4i8i8},
 	{"i8i8i4i8i8i8", (Il2CppMethodPointer)__N2M_i8i8i4i8i8i8},
@@ -15179,6 +15893,7 @@ Native2ManagedMethodInfo hybridclr::interpreter::g_native2managedStub[] =
 	{"i8i8i8i4i4i8i4i8i8", (Il2CppMethodPointer)__N2M_i8i8i8i4i4i8i4i8i8},
 	{"i8i8i8i4i4i8i8", (Il2CppMethodPointer)__N2M_i8i8i8i4i4i8i8},
 	{"i8i8i8i4i8i4i8i8", (Il2CppMethodPointer)__N2M_i8i8i8i4i8i4i8i8},
+	{"i8i8i8i4i8i8", (Il2CppMethodPointer)__N2M_i8i8i8i4i8i8},
 	{"i8i8i8i4i8i8i8", (Il2CppMethodPointer)__N2M_i8i8i8i4i8i8i8},
 	{"i8i8i8i4i8i8i8i8", (Il2CppMethodPointer)__N2M_i8i8i8i4i8i8i8i8},
 	{"i8i8i8i4i8i8i8i8i8i8", (Il2CppMethodPointer)__N2M_i8i8i8i4i8i8i8i8i8i8},
@@ -15198,6 +15913,8 @@ Native2ManagedMethodInfo hybridclr::interpreter::g_native2managedStub[] =
 	{"i8i8i8u1", (Il2CppMethodPointer)__N2M_i8i8i8u1},
 	{"i8i8i8u1i4", (Il2CppMethodPointer)__N2M_i8i8i8u1i4},
 	{"i8i8i8u1u1", (Il2CppMethodPointer)__N2M_i8i8i8u1u1},
+	{"i8i8i8vf2i8i8", (Il2CppMethodPointer)__N2M_i8i8i8vf2i8i8},
+	{"i8i8i8vf3i8i8", (Il2CppMethodPointer)__N2M_i8i8i8vf3i8i8},
 	{"i8i8r4i8i8", (Il2CppMethodPointer)__N2M_i8i8r4i8i8},
 	{"i8i8r4r4r4", (Il2CppMethodPointer)__N2M_i8i8r4r4r4},
 	{"i8i8sr", (Il2CppMethodPointer)__N2M_i8i8sr},
@@ -15215,6 +15932,7 @@ Native2ManagedMethodInfo hybridclr::interpreter::g_native2managedStub[] =
 	{"i8i8u4u4i8", (Il2CppMethodPointer)__N2M_i8i8u4u4i8},
 	{"i8i8vf2", (Il2CppMethodPointer)__N2M_i8i8vf2},
 	{"i8i8vf2i8", (Il2CppMethodPointer)__N2M_i8i8vf2i8},
+	{"i8i8vf2i8i8", (Il2CppMethodPointer)__N2M_i8i8vf2i8i8},
 	{"i8i8vf2vf2r4i4i8i8", (Il2CppMethodPointer)__N2M_i8i8vf2vf2r4i4i8i8},
 	{"i8i8vf3", (Il2CppMethodPointer)__N2M_i8i8vf3},
 	{"i8i8vf3i8i8", (Il2CppMethodPointer)__N2M_i8i8vf3i8i8},
@@ -15359,6 +16077,7 @@ Native2ManagedMethodInfo hybridclr::interpreter::g_native2managedStub[] =
 	{"u2i8i8", (Il2CppMethodPointer)__N2M_u2i8i8},
 	{"u2i8i8i4", (Il2CppMethodPointer)__N2M_u2i8i8i4},
 	{"u2i8i8i4u2", (Il2CppMethodPointer)__N2M_u2i8i8i4u2},
+	{"u2i8i8i8u2", (Il2CppMethodPointer)__N2M_u2i8i8i8u2},
 	{"u2i8u2", (Il2CppMethodPointer)__N2M_u2i8u2},
 	{"u4i8", (Il2CppMethodPointer)__N2M_u4i8},
 	{"u4i8i4", (Il2CppMethodPointer)__N2M_u4i8i4},
@@ -15374,6 +16093,7 @@ Native2ManagedMethodInfo hybridclr::interpreter::g_native2managedStub[] =
 	{"vf2i8", (Il2CppMethodPointer)__N2M_vf2i8},
 	{"vf2i8i8", (Il2CppMethodPointer)__N2M_vf2i8i8},
 	{"vf2i8i8r4i4r4i4", (Il2CppMethodPointer)__N2M_vf2i8i8r4i4r4i4},
+	{"vf2i8i8vf2u1u1", (Il2CppMethodPointer)__N2M_vf2i8i8vf2u1u1},
 	{"vf2i8r4i4r4i4", (Il2CppMethodPointer)__N2M_vf2i8r4i4r4i4},
 	{"vf2i8r4vf2u1i8i8", (Il2CppMethodPointer)__N2M_vf2i8r4vf2u1i8i8},
 	{"vf2i8srr4", (Il2CppMethodPointer)__N2M_vf2i8srr4},
@@ -15409,6 +16129,7 @@ Native2ManagedMethodInfo hybridclr::interpreter::g_native2managedStub[] =
 	{"vi8i4i4i4", (Il2CppMethodPointer)__N2M_vi8i4i4i4},
 	{"vi8i4i4i4i4i4", (Il2CppMethodPointer)__N2M_vi8i4i4i4i4i4},
 	{"vi8i4i4i8i8", (Il2CppMethodPointer)__N2M_vi8i4i4i8i8},
+	{"vi8i4i4u1", (Il2CppMethodPointer)__N2M_vi8i4i4u1},
 	{"vi8i4i4vf4", (Il2CppMethodPointer)__N2M_vi8i4i4vf4},
 	{"vi8i4i8", (Il2CppMethodPointer)__N2M_vi8i4i8},
 	{"vi8i4i8i8", (Il2CppMethodPointer)__N2M_vi8i4i8i8},
@@ -15422,6 +16143,7 @@ Native2ManagedMethodInfo hybridclr::interpreter::g_native2managedStub[] =
 	{"vi8i4vf4", (Il2CppMethodPointer)__N2M_vi8i4vf4},
 	{"vi8i8", (Il2CppMethodPointer)__N2M_vi8i8},
 	{"vi8i8i16", (Il2CppMethodPointer)__N2M_vi8i8i16},
+	{"vi8i8i16i8i8", (Il2CppMethodPointer)__N2M_vi8i8i16i8i8},
 	{"vi8i8i4", (Il2CppMethodPointer)__N2M_vi8i8i4},
 	{"vi8i8i4i16", (Il2CppMethodPointer)__N2M_vi8i8i4i16},
 	{"vi8i8i4i2", (Il2CppMethodPointer)__N2M_vi8i8i4i2},
@@ -15454,9 +16176,12 @@ Native2ManagedMethodInfo hybridclr::interpreter::g_native2managedStub[] =
 	{"vi8i8u4", (Il2CppMethodPointer)__N2M_vi8i8u4},
 	{"vi8i8vf2", (Il2CppMethodPointer)__N2M_vi8i8vf2},
 	{"vi8i8vf2i4", (Il2CppMethodPointer)__N2M_vi8i8vf2i4},
+	{"vi8i8vf2r4", (Il2CppMethodPointer)__N2M_vi8i8vf2r4},
+	{"vi8i8vf3", (Il2CppMethodPointer)__N2M_vi8i8vf3},
 	{"vi8r4", (Il2CppMethodPointer)__N2M_vi8r4},
 	{"vi8r4i4", (Il2CppMethodPointer)__N2M_vi8r4i4},
 	{"vi8r4r4", (Il2CppMethodPointer)__N2M_vi8r4r4},
+	{"vi8r4r4i8", (Il2CppMethodPointer)__N2M_vi8r4r4i8},
 	{"vi8r4r4u1", (Il2CppMethodPointer)__N2M_vi8r4r4u1},
 	{"vi8r4u1", (Il2CppMethodPointer)__N2M_vi8r4u1},
 	{"vi8r8", (Il2CppMethodPointer)__N2M_vi8r8},
@@ -15464,7 +16189,9 @@ Native2ManagedMethodInfo hybridclr::interpreter::g_native2managedStub[] =
 	{"vi8sri8", (Il2CppMethodPointer)__N2M_vi8sri8},
 	{"vi8sri8r4", (Il2CppMethodPointer)__N2M_vi8sri8r4},
 	{"vi8u1", (Il2CppMethodPointer)__N2M_vi8u1},
+	{"vi8u1i8", (Il2CppMethodPointer)__N2M_vi8u1i8},
 	{"vi8u1sr", (Il2CppMethodPointer)__N2M_vi8u1sr},
+	{"vi8u1u1", (Il2CppMethodPointer)__N2M_vi8u1u1},
 	{"vi8u2", (Il2CppMethodPointer)__N2M_vi8u2},
 	{"vi8u4", (Il2CppMethodPointer)__N2M_vi8u4},
 	{"vi8u4i4", (Il2CppMethodPointer)__N2M_vi8u4i4},
@@ -15475,7 +16202,10 @@ Native2ManagedMethodInfo hybridclr::interpreter::g_native2managedStub[] =
 	{"vi8u8", (Il2CppMethodPointer)__N2M_vi8u8},
 	{"vi8vf2", (Il2CppMethodPointer)__N2M_vi8vf2},
 	{"vi8vf2i4", (Il2CppMethodPointer)__N2M_vi8vf2i4},
+	{"vi8vf2r4", (Il2CppMethodPointer)__N2M_vi8vf2r4},
 	{"vi8vf3", (Il2CppMethodPointer)__N2M_vi8vf3},
+	{"vi8vf3vf3i8i8", (Il2CppMethodPointer)__N2M_vi8vf3vf3i8i8},
+	{"vi8vf3vf3i8r4r4r4r4i8", (Il2CppMethodPointer)__N2M_vi8vf3vf3i8r4r4r4r4i8},
 	{"vi8vf4", (Il2CppMethodPointer)__N2M_vi8vf4},
 	{"vi8vf4i8u1", (Il2CppMethodPointer)__N2M_vi8vf4i8u1},
 	{"vi8vf4r4u1u1", (Il2CppMethodPointer)__N2M_vi8vf4r4u1u1},
@@ -15484,6 +16214,7 @@ Native2ManagedMethodInfo hybridclr::interpreter::g_native2managedStub[] =
 	{"vr4", (Il2CppMethodPointer)__N2M_vr4},
 	{"vsr", (Il2CppMethodPointer)__N2M_vsr},
 	{"vu1", (Il2CppMethodPointer)__N2M_vu1},
+	{"vu1i8", (Il2CppMethodPointer)__N2M_vu1i8},
 	{"vu2", (Il2CppMethodPointer)__N2M_vu2},
 	{"vu4", (Il2CppMethodPointer)__N2M_vu4},
 	{"vvf2", (Il2CppMethodPointer)__N2M_vvf2},
@@ -16199,6 +16930,16 @@ static ValueTypeSize<44> __N2M_AdjustorThunk_S44i8i4(int64_t __arg0, int32_t __a
     StackObject* ret = args + 2;
     Interpreter::Execute(method, args, ret);
     return *(ValueTypeSize<44>*)ret;
+}
+
+
+// T System.Collections.Generic.IEnumerator`1::get_Current()
+static ValueTypeSize<48> __N2M_AdjustorThunk_S48i8(int64_t __arg0, const MethodInfo* method)
+{
+    StackObject args[7] = {(uint64_t)(*(uint8_t**)&__arg0 + sizeof(Il2CppObject)) };
+    StackObject* ret = args + 1;
+    Interpreter::Execute(method, args, ret);
+    return *(ValueTypeSize<48>*)ret;
 }
 
 
@@ -17346,6 +18087,7 @@ NativeAdjustThunkMethodInfo hybridclr::interpreter::g_adjustThunkStub[] =
 	{"S40i8i4", (Il2CppMethodPointer)__N2M_AdjustorThunk_S40i8i4},
 	{"S44i8", (Il2CppMethodPointer)__N2M_AdjustorThunk_S44i8},
 	{"S44i8i4", (Il2CppMethodPointer)__N2M_AdjustorThunk_S44i8i4},
+	{"S48i8", (Il2CppMethodPointer)__N2M_AdjustorThunk_S48i8},
 	{"S48i8i4", (Il2CppMethodPointer)__N2M_AdjustorThunk_S48i8i4},
 	{"S56i8", (Il2CppMethodPointer)__N2M_AdjustorThunk_S56i8},
 	{"S56i8i4", (Il2CppMethodPointer)__N2M_AdjustorThunk_S56i8i4},

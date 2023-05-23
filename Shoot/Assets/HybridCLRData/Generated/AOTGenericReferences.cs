@@ -14,20 +14,20 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 	// {{ AOT generic types
 	// System.Action<UnityEngine.Vector4>
 	// System.Action<object>
+	// System.Action<System.Net.Sockets.SocketError>
 	// System.Action<float>
 	// System.Action<UnityEngine.Vector2>
 	// System.Action<UnityEngine.Vector3>
 	// System.Action<UnityEngine.Quaternion>
 	// System.Action<UnityEngine.Color>
-	// System.Action<System.Net.Sockets.SocketError>
 	// System.Collections.Concurrent.ConcurrentQueue<object>
 	// System.Collections.Generic.IEnumerator<object>
-	// System.Collections.Generic.List<object>
-	// System.Collections.Generic.List<UniFramework.Window.UniWindow.WindowInfo>
-	// System.Collections.Generic.List<float>
 	// System.Collections.Generic.List<double>
 	// System.Collections.Generic.List<long>
 	// System.Collections.Generic.List<int>
+	// System.Collections.Generic.List<float>
+	// System.Collections.Generic.List<UniFramework.Window.UniWindow.WindowInfo>
+	// System.Collections.Generic.List<object>
 	// System.Collections.Generic.List.Enumerator<object>
 	// System.Collections.Generic.Queue<object>
 	// System.Collections.Generic.Queue.Enumerator<object>
@@ -35,6 +35,10 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 	// System.Func<byte>
 	// System.Predicate<object>
 	// UniFramework.Singleton.SingletonInstance<object>
+	// UnityEngine.Events.UnityAction<object>
+	// UnityEngine.Events.UnityAction<object,UnityEngine.Vector2>
+	// UnityEngine.Events.UnityEvent<object>
+	// UnityEngine.Events.UnityEvent<object,UnityEngine.Vector2>
 	// }}
 
 	public void RefMethods()

@@ -76,6 +76,13 @@
             "DependIDs": []
         },
         {
+            "Address": "player",
+            "AssetPath": "Assets/GameRes/Entity/player.prefab",
+            "AssetTags": [],
+            "BundleID": 2,
+            "DependIDs": []
+        },
+        {
             "Address": "player_bullet",
             "AssetPath": "Assets/GameRes/Entity/player_bullet.prefab",
             "AssetTags": [],
@@ -146,199 +153,213 @@
             "DependIDs": []
         },
         {
+            "Address": "scene_battleSettings",
+            "AssetPath": "Assets/GameRes/Scene/scene_battleSettings.lighting",
+            "AssetTags": [],
+            "BundleID": 6,
+            "DependIDs": []
+        },
+        {
             "Address": "scene_home",
             "AssetPath": "Assets/GameRes/Scene/scene_home.unity",
             "AssetTags": [],
-            "BundleID": 6,
+            "BundleID": 7,
+            "DependIDs": []
+        },
+        {
+            "Address": "scene_homeSettings",
+            "AssetPath": "Assets/GameRes/Scene/scene_homeSettings.lighting",
+            "AssetTags": [],
+            "BundleID": 8,
             "DependIDs": []
         },
         {
             "Address": "Space",
             "AssetPath": "Assets/GameRes/UIImage/Space.jpg",
             "AssetTags": [],
-            "BundleID": 7,
+            "BundleID": 9,
             "DependIDs": []
         },
         {
             "Address": "UIAbout",
             "AssetPath": "Assets/GameRes/UIPanel/UIAbout.prefab",
             "AssetTags": [],
-            "BundleID": 8,
+            "BundleID": 10,
             "DependIDs": []
         },
         {
             "Address": "UIBattle",
             "AssetPath": "Assets/GameRes/UIPanel/UIBattle.prefab",
             "AssetTags": [],
-            "BundleID": 9,
+            "BundleID": 11,
             "DependIDs": []
         },
         {
             "Address": "UICanvas",
             "AssetPath": "Assets/GameRes/UIPanel/UICanvas.prefab",
             "AssetTags": [],
-            "BundleID": 10,
+            "BundleID": 12,
             "DependIDs": []
         },
         {
             "Address": "UIHome",
             "AssetPath": "Assets/GameRes/UIPanel/UIHome.prefab",
             "AssetTags": [],
-            "BundleID": 11,
+            "BundleID": 13,
             "DependIDs": []
         },
         {
             "Address": "UILoading",
             "AssetPath": "Assets/GameRes/UIPanel/UILoading.prefab",
             "AssetTags": [],
-            "BundleID": 12,
+            "BundleID": 14,
             "DependIDs": []
         },
         {
             "Address": "arrow1_left",
             "AssetPath": "Assets/GameRes/UISprite/common/arrows/arrow1_left.png",
             "AssetTags": [],
-            "BundleID": 13,
+            "BundleID": 15,
             "DependIDs": []
         },
         {
             "Address": "arrow1_right",
             "AssetPath": "Assets/GameRes/UISprite/common/arrows/arrow1_right.png",
             "AssetTags": [],
-            "BundleID": 13,
+            "BundleID": 15,
             "DependIDs": []
         },
         {
             "Address": "arrow_left",
             "AssetPath": "Assets/GameRes/UISprite/common/arrows/arrow_left.png",
             "AssetTags": [],
-            "BundleID": 13,
+            "BundleID": 15,
             "DependIDs": []
         },
         {
             "Address": "arrow_right",
             "AssetPath": "Assets/GameRes/UISprite/common/arrows/arrow_right.png",
             "AssetTags": [],
-            "BundleID": 13,
+            "BundleID": 15,
             "DependIDs": []
         },
         {
             "Address": "back_arrow",
             "AssetPath": "Assets/GameRes/UISprite/common/arrows/back_arrow.png",
             "AssetTags": [],
-            "BundleID": 13,
+            "BundleID": 15,
             "DependIDs": []
         },
         {
             "Address": "long_arrow_left",
             "AssetPath": "Assets/GameRes/UISprite/common/arrows/long_arrow_left.png",
             "AssetTags": [],
-            "BundleID": 13,
+            "BundleID": 15,
             "DependIDs": []
         },
         {
             "Address": "long_arrow_right",
             "AssetPath": "Assets/GameRes/UISprite/common/arrows/long_arrow_right.png",
             "AssetTags": [],
-            "BundleID": 13,
+            "BundleID": 15,
             "DependIDs": []
         },
         {
             "Address": "plus",
             "AssetPath": "Assets/GameRes/UISprite/common/arrows/plus.png",
             "AssetTags": [],
-            "BundleID": 13,
+            "BundleID": 15,
             "DependIDs": []
         },
         {
             "Address": "bar_blue",
             "AssetPath": "Assets/GameRes/UISprite/common/bars/bar_blue.png",
             "AssetTags": [],
-            "BundleID": 13,
+            "BundleID": 15,
             "DependIDs": []
         },
         {
             "Address": "bar_blue1",
             "AssetPath": "Assets/GameRes/UISprite/common/bars/bar_blue1.png",
             "AssetTags": [],
-            "BundleID": 13,
+            "BundleID": 15,
             "DependIDs": []
         },
         {
             "Address": "progress_bar",
             "AssetPath": "Assets/GameRes/UISprite/common/bars/progress_bar.png",
             "AssetTags": [],
-            "BundleID": 13,
+            "BundleID": 15,
             "DependIDs": []
         },
         {
             "Address": "progress_bar_background",
             "AssetPath": "Assets/GameRes/UISprite/common/bars/progress_bar_background.png",
             "AssetTags": [],
-            "BundleID": 13,
+            "BundleID": 15,
             "DependIDs": []
         },
         {
             "Address": "bullets",
             "AssetPath": "Assets/GameRes/UISprite/common/buttons/bullets.png",
             "AssetTags": [],
-            "BundleID": 13,
+            "BundleID": 15,
             "DependIDs": []
         },
         {
             "Address": "button1",
             "AssetPath": "Assets/GameRes/UISprite/common/buttons/button1.png",
             "AssetTags": [],
-            "BundleID": 13,
+            "BundleID": 15,
             "DependIDs": []
         },
         {
             "Address": "button_active",
             "AssetPath": "Assets/GameRes/UISprite/common/buttons/button_active.png",
             "AssetTags": [],
-            "BundleID": 13,
+            "BundleID": 15,
             "DependIDs": []
         },
         {
             "Address": "button_pushed",
             "AssetPath": "Assets/GameRes/UISprite/common/buttons/button_pushed.png",
             "AssetTags": [],
-            "BundleID": 13,
+            "BundleID": 15,
             "DependIDs": []
         },
         {
             "Address": "pause",
             "AssetPath": "Assets/GameRes/UISprite/common/buttons/pause.png",
             "AssetTags": [],
-            "BundleID": 13,
+            "BundleID": 15,
             "DependIDs": []
         },
         {
             "Address": "rocket",
             "AssetPath": "Assets/GameRes/UISprite/common/buttons/rocket.png",
             "AssetTags": [],
-            "BundleID": 13,
+            "BundleID": 15,
             "DependIDs": []
         },
         {
             "Address": "window_transparent",
             "AssetPath": "Assets/GameRes/UISprite/common/window/window_transparent.png",
             "AssetTags": [],
-            "BundleID": 13,
+            "BundleID": 15,
             "DependIDs": []
         },
         {
             "Address": "window_transparent1",
             "AssetPath": "Assets/GameRes/UISprite/common/window/window_transparent1.png",
             "AssetTags": [],
-            "BundleID": 13,
+            "BundleID": 15,
             "DependIDs": []
         },
         {
             "Address": "about",
             "AssetPath": "Assets/GameRes/Config/about.txt",
             "AssetTags": [],
-            "BundleID": 14,
+            "BundleID": 16,
             "DependIDs": []
         }
     ],
@@ -404,7 +425,27 @@
             "ReferenceIDs": []
         },
         {
+            "BundleName": "assets_gameres_scene_scene_battlesettings.bundle",
+            "FileHash": "00000000000000000000000000000000",
+            "FileCRC": "00000000",
+            "FileSize": 0,
+            "IsRawFile": false,
+            "LoadMethod": 0,
+            "Tags": [],
+            "ReferenceIDs": []
+        },
+        {
             "BundleName": "assets_gameres_scene_scene_home.bundle",
+            "FileHash": "00000000000000000000000000000000",
+            "FileCRC": "00000000",
+            "FileSize": 0,
+            "IsRawFile": false,
+            "LoadMethod": 0,
+            "Tags": [],
+            "ReferenceIDs": []
+        },
+        {
+            "BundleName": "assets_gameres_scene_scene_homesettings.bundle",
             "FileHash": "00000000000000000000000000000000",
             "FileCRC": "00000000",
             "FileSize": 0,

@@ -29,9 +29,14 @@ namespace TouchController
         private bool IsEndDrag = false;
         private Vector2 draggingTarget;
 
+        private bool _init = false;
+
         // Start is called before the first frame update
         void Start()
         {
+            if(_init)
+                return;
+            _init = true;
             joystickImage = transform.Find("Joystick").GetComponent<Image>();
             if (analogImage != null && joystickImage != null)
             {
@@ -74,8 +79,10 @@ namespace TouchController
         //Pointer down event callback, fire when touch down
         public override void OnPointerDown(PointerEventData eventArgs)
         {
+            Start();
             //set postion of the dragging control
-            parentPosition = new Vector2(transform.position.x, transform.position.y);
+            var position = transform.position;
+            parentPosition = new Vector2(position.x, position.y);
 
             //Call begin drag event
             if (beginDragEvent != null)
@@ -120,6 +127,8 @@ namespace TouchController
                 //set joystick position
                 joystickImage.transform.localPosition = targetMarkerImagePosition;
             }
+            
+            Debug.LogError("---------------");
             //Result callback
             ReturnResult(relativePosition);
         }

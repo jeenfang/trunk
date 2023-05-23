@@ -30,7 +30,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169,0649</NoWarn>
-    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
     <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
   </PropertyGroup>
   <PropertyGroup>
@@ -41,6 +41,7 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets/HotFix/GUI/Generate/UIHomeGenerator.cs" />
      <Compile Include="Assets/HotFix/BattleLogic/Entity/EntityEnemy.cs" />
      <Compile Include="Assets/HotFix/BattleLogic/Entity/EntityEffect.cs" />
      <Compile Include="Assets/HotFix/UniFramework/UniUtility/Runtime/StringFormat.cs" />
@@ -52,6 +53,8 @@
      <Compile Include="Assets/HotFix/UniFramework/UniNetwork/Runtime/TCP/TcpClient.cs" />
      <Compile Include="Assets/HotFix/BattleLogic/BattleRoom.cs" />
      <Compile Include="Assets/HotFix/UniFramework/UniNetwork/Runtime/RingBuffer.cs" />
+     <Compile Include="Assets/HotFix/Player/Unit.cs" />
+     <Compile Include="Assets/HotFix/Player/UnitAI.cs" />
      <Compile Include="Assets/HotFix/UniFramework/UniNetwork/Runtime/Package/INetPackage.cs" />
      <Compile Include="Assets/HotFix/UniFramework/UniTween/Runtime/UniLogger.cs" />
      <Compile Include="Assets/HotFix/HotFixEntry.cs" />
@@ -64,7 +67,7 @@
      <Compile Include="Assets/HotFix/UniFramework/UniTween/Runtime/UniTweenDriver.cs" />
      <Compile Include="Assets/HotFix/UniFramework/UniPooling/Runtime/CreatePoolOperation.cs" />
      <Compile Include="Assets/HotFix/UniFramework/UniTween/Runtime/TweenExtension/UnityEngine_GameObject_Tween_Extension.cs" />
-     <Compile Include="Assets/HotFix/UIWindow/UILoadingWindow.cs" />
+     <Compile Include="Assets/HotFix/GUI/UIWindow/UILoadingWindow.cs" />
      <Compile Include="Assets/HotFix/UniFramework/UniNetwork/Runtime/Package/DefaultNetPackageEncoder.cs" />
      <Compile Include="Assets/HotFix/UniFramework/UniTween/Runtime/UniTimer.cs" />
      <Compile Include="Assets/HotFix/BattleLogic/Entity/EntityBullet.cs" />
@@ -74,11 +77,12 @@
      <Compile Include="Assets/HotFix/UniFramework/UniTween/Runtime/TweenExtension/UnityEngine_UI_Image_Tween_Extension.cs" />
      <Compile Include="Assets/HotFix/UniFramework/UniAnimation/Runtime/AnimMixer.cs" />
      <Compile Include="Assets/HotFix/UniFramework/UniPooling/Runtime/UniPooling.cs" />
+     <Compile Include="Assets/HotFix/Contexts/BaseContext.cs" />
      <Compile Include="Assets/HotFix/UniFramework/UniUtility/Runtime/StringConvert.cs" />
      <Compile Include="Assets/HotFix/BattleLogic/Entity/EntityAsteroid.cs" />
      <Compile Include="Assets/HotFix/UniFramework/UniTween/Runtime/UniTween.cs" />
      <Compile Include="Assets/HotFix/UniFramework/UniAnimation/Runtime/AnimPlayable.cs" />
-     <Compile Include="Assets/HotFix/UIWindow/UIBattleWindow.cs" />
+     <Compile Include="Assets/HotFix/GUI/UIWindow/UIBattleWindow.cs" />
      <Compile Include="Assets/HotFix/GameLogic/FsmNode/FsmSceneBattle.cs" />
      <Compile Include="Assets/HotFix/UniFramework/UniWindow/Runtime/UIWindow.cs" />
      <Compile Include="Assets/HotFix/BattleLogic/Entity/EntityPlayer.cs" />
@@ -90,10 +94,12 @@
      <Compile Include="Assets/HotFix/UniFramework/UniUtility/Runtime/UniTimer.cs" />
      <Compile Include="Assets/HotFix/UniFramework/UniPooling/Runtime/Spawner.cs" />
      <Compile Include="Assets/HotFix/UniFramework/UniPooling/Runtime/UniLogger.cs" />
+     <Compile Include="Assets/HotFix/UniFramework/UniPooling/Runtime/UniObjectPool.cs" />
+     <Compile Include="Assets/HotFix/Utility/GameUtility.cs" />
      <Compile Include="Assets/HotFix/UniFramework/UniNetwork/Runtime/ThreadSyncContext.cs" />
      <Compile Include="Assets/HotFix/UniFramework/UniTween/Runtime/TweenEase.cs" />
      <Compile Include="Assets/HotFix/UniFramework/UniPooling/Runtime/GameObjectPool.cs" />
-     <Compile Include="Assets/HotFix/UIWindow/UIHomeWindow.cs" />
+     <Compile Include="Assets/HotFix/GUI/UIWindow/UIHomeWindow.cs" />
      <Compile Include="Assets/HotFix/UniFramework/UniTween/Runtime/TweenExtension/UnityEngine_UI_Text_Tween_Extension.cs" />
      <Compile Include="Assets/HotFix/UniFramework/UniTween/Runtime/TweenNode/ParallelNode.cs" />
      <Compile Include="Assets/HotFix/UniFramework/UniTween/Runtime/TweenMath.cs" />
@@ -119,11 +125,18 @@
      <Compile Include="Assets/HotFix/UniFramework/UniTween/Runtime/TweenChain/TweenChainExtension.cs" />
      <Compile Include="Assets/HotFix/GameLogic/FsmNode/FsmInitGame.cs" />
      <Compile Include="Assets/HotFix/UniFramework/UniNetwork/Runtime/TCP/TcpChannel.cs" />
-     <Compile Include="Assets/HotFix/UIWindow/UIAboutWindow.cs" />
+     <Compile Include="Assets/HotFix/Player/UnitPlayer.cs" />
+     <Compile Include="Assets/HotFix/GUI/UIWindow/UIAboutWindow.cs" />
      <Compile Include="Assets/HotFix/UniFramework/UniNetwork/Runtime/Package/DefaultNetPackage.cs" />
+     <Compile Include="Assets/HotFix/Contexts/GameContext.cs" />
      <Compile Include="Assets/HotFix/UniFramework/UniTween/Runtime/ETweenLoop.cs" />
+     <Compile Include="Assets/HotFix/Contexts/CameraContext.cs" />
+     <Compile Include="Assets/HotFix/Contexts/PlayerContext.cs" />
      <Folder Include="Assets/HotFix/UniFramework/UniTween/Runtime/TweenNode" />
      <Folder Include="Assets/HotFix/UniFramework/UniAnimation" />
+     <Folder Include="Assets/HotFix/Player" />
+     <Folder Include="Assets/HotFix/Contexts" />
+     <Folder Include="Assets/HotFix/GUI/Renderer" />
      <Folder Include="Assets/HotFix/UniFramework/UniTween" />
      <Folder Include="Assets/HotFix/UniFramework/UniPooling" />
      <Folder Include="Assets/HotFix/UniFramework/UniUtility/Runtime" />
@@ -136,13 +149,16 @@
      <Folder Include="Assets/HotFix/UniFramework/UniTween/Runtime/TweenChain" />
      <Folder Include="Assets/HotFix/UniFramework/UniAnimation/Runtime" />
      <Folder Include="Assets/HotFix/UniFramework/UniUtility" />
+     <Folder Include="Assets/HotFix/GUI" />
+     <Folder Include="Assets/HotFix/GUI/Generate" />
      <Folder Include="Assets/HotFix/UniFramework/UniTween/Runtime/TweenExtension" />
      <Folder Include="Assets/HotFix/EventDefine" />
      <Folder Include="Assets/HotFix/UniFramework/UniPooling/Runtime" />
      <Folder Include="Assets/HotFix/UniFramework/UniNetwork" />
      <Folder Include="Assets/HotFix/UniFramework/UniWindow/Runtime" />
+     <Folder Include="Assets/HotFix/Utility" />
      <Folder Include="Assets/HotFix/GameLogic" />
-     <Folder Include="Assets/HotFix/UIWindow" />
+     <Folder Include="Assets/HotFix/GUI/UIWindow" />
      <Folder Include="Assets/HotFix/UniFramework/UniNetwork/Runtime/Package" />
      <Folder Include="Assets/HotFix" />
      <Folder Include="Assets/HotFix/GameLogic/FsmNode" />
@@ -820,6 +836,12 @@
      <Reference Include="netstandard">
      <HintPath>/Applications/Unity/Hub/Editor/2021.3.14f1c1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/netstandard.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.TextMeshPro">
+     <HintPath>/Volumes/Work/ShootPro/trunk/Shoot/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+     </Reference>
+     <Reference Include="Cinemachine">
+     <HintPath>/Volumes/Work/ShootPro/trunk/Shoot/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
+     </Reference>
      <Reference Include="UnityEditor.UI">
      <HintPath>/Volumes/Work/ShootPro/trunk/Shoot/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
      </Reference>
@@ -843,6 +865,10 @@
     <ProjectReference Include="Extension.csproj">
       <Project>{f93bdda6-54d6-66a8-636d-72e0f85ff315}</Project>
       <Name>Extension</Name>
+    </ProjectReference>
+    <ProjectReference Include="Joystick.csproj">
+      <Project>{25876fe8-6eed-d03b-c384-0f4fa9aefb00}</Project>
+      <Name>Joystick</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

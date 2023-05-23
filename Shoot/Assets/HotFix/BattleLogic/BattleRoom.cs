@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using HotFix.Contexts;
 using HotFix.Utility;
 using UniFramework.Event;
 using UnityEngine;
@@ -175,11 +176,23 @@ public class BattleRoom
 		yield return _entitySpawner.CreateGameObjectPoolAsync("explosion_asteroid");
 		yield return _entitySpawner.CreateGameObjectPoolAsync("explosion_enemy");
 		yield return _entitySpawner.CreateGameObjectPoolAsync("explosion_player");
+		yield return _entitySpawner.CreateGameObjectPoolAsync("player");
+
 
 		// 创建玩家实体对象
 		var handle = _entitySpawner.SpawnSync("player_ship", _roomRoot.transform);
 		var entity = handle.GameObj.GetComponent<EntityPlayer>();
 		entity.InitEntity(handle);
+
+		var spawnAsync = _entitySpawner.SpawnAsync("player");
+		spawnAsync.Completed += (data) =>
+		{
+			if (data is SpawnHandle spawnHandle)
+			{
+				GameContext.GetContext<PlayerContext>().InitPlayer(spawnHandle);
+				Debug.LogError(spawnHandle.GameObj == null);
+			}
+		};
 
 		// 显示战斗界面
 		yield return UniWindow.OpenWindowAsync<UIBattleWindow>(GameUtility.UINameBattle);
@@ -191,7 +204,7 @@ public class BattleRoom
 		_eventGroup.AddListener<BattleEventDefine.PlayerFireBullet>(OnHandleEventMessage);
 		_eventGroup.AddListener<BattleEventDefine.EnemyFireBullet>(OnHandleEventMessage);
 
-		_steps = ESteps.Ready;
+		//_steps = ESteps.Ready;
 	}
 
 	/// <summary>

@@ -833,6 +833,18 @@
      <Reference Include="netstandard">
      <HintPath>/Applications/Unity/Hub/Editor/2021.3.14f1c1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/netstandard.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.ScriptableBuildPipeline">
+     <HintPath>/Volumes/Work/ShootPro/trunk/Shoot/Library/ScriptAssemblies/Unity.ScriptableBuildPipeline.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.ScriptableBuildPipeline.Editor">
+     <HintPath>/Volumes/Work/ShootPro/trunk/Shoot/Library/ScriptAssemblies/Unity.ScriptableBuildPipeline.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.TestRunner">
+     <HintPath>/Volumes/Work/ShootPro/trunk/Shoot/Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEditor.TestRunner">
+     <HintPath>/Volumes/Work/ShootPro/trunk/Shoot/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
+     </Reference>
      <Reference Include="UnityEditor.UI">
      <HintPath>/Volumes/Work/ShootPro/trunk/Shoot/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
      </Reference>
@@ -844,22 +856,6 @@
     <ProjectReference Include="YooAsset.csproj">
       <Project>{7214cb24-1dcf-b8c6-757c-843cf37a554a}</Project>
       <Name>YooAsset</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.ScriptableBuildPipeline.csproj">
-      <Project>{b0adfee7-aa2d-100f-fc45-78e008e6c4eb}</Project>
-      <Name>Unity.ScriptableBuildPipeline</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.ScriptableBuildPipeline.Editor.csproj">
-      <Project>{c6e7d2e0-ca80-2266-95ea-efd5c7bcfa8c}</Project>
-      <Name>Unity.ScriptableBuildPipeline.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="UnityEngine.TestRunner.csproj">
-      <Project>{7877cc4b-07b8-43f2-da11-2996b6f48500}</Project>
-      <Name>UnityEngine.TestRunner</Name>
-    </ProjectReference>
-    <ProjectReference Include="UnityEditor.TestRunner.csproj">
-      <Project>{a4a63e07-3bfa-943d-070f-f41fa6510830}</Project>
-      <Name>UnityEditor.TestRunner</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
