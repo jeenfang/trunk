@@ -69,7 +69,14 @@ public class UIBattleWindow : UIWindow
     private void DragJoystick(string name, Vector2 input)
     {
         UniLogger.Log("begin name:"+ name +" input:"+ input);
-        GameContext.GetContext<PlayerContext>().UpdateDir(input);
+        if (name.Equals("Movement"))
+        {
+            GameContext.GetContext<PlayerContext>().UpdateDir(input);
+        }
+        else
+        {
+            GameContext.GetContext<PlayerContext>().UpdateTarget(input);
+        }
     }
 
     private void OnClickRestartBtn()

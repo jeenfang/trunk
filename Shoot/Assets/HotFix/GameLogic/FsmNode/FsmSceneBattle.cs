@@ -26,7 +26,7 @@ internal class FsmSceneBattle : IStateNode
 		if(_battleRoom != null)
 			_battleRoom.UpdateRoom();
 		
-		GameContext.GetContext<PlayerContext>().Move();
+		GameContext.GetContext<PlayerContext>().OnUpdate();
 	}
 	void IStateNode.OnExit()
 	{

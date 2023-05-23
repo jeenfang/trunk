@@ -128,7 +128,6 @@ namespace TouchController
                 joystickImage.transform.localPosition = targetMarkerImagePosition;
             }
             
-            Debug.LogError("---------------");
             //Result callback
             ReturnResult(relativePosition);
         }

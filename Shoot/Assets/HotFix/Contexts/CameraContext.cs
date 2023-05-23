@@ -3,14 +3,14 @@ using UnityEngine;
 
 namespace HotFix.Contexts
 {
-    public class CameraContext :BaseContext
+    public class CameraContext : BaseContext
     {
         private const string RootAppNode = @"Application";
         private const string RootPlayNode = "RootPlayer";
         private const string VisualCamNode = @"VisualCam";
         private const string MainCameraTag = @"MainCamera";
         private const string CameraLookAt = @"look";
-        
+
         private GameObject _rootApplication;
         private Camera _mainCamera;
         private CinemachineVirtualCamera _cameraFollow;
@@ -28,7 +28,7 @@ namespace HotFix.Contexts
                 return _rootApplication;
             }
         }
-        
+
         public Camera MainCamera
         {
             get
@@ -48,8 +48,10 @@ namespace HotFix.Contexts
             {
                 if (null == _cameraFollow)
                 {
-                    _cameraFollow = RootApplication.transform.Find(VisualCamNode).GetComponent<CinemachineVirtualCamera>();
+                    _cameraFollow = RootApplication.transform.Find(VisualCamNode)
+                        .GetComponent<CinemachineVirtualCamera>();
                 }
+
                 return _cameraFollow;
             }
         }
@@ -70,7 +72,10 @@ namespace HotFix.Contexts
         public void SetFollowTarget(Transform target)
         {
             CameraFollow.Follow = target;
-            CameraFollow.LookAt = target.Find(CameraLookAt);
+            if (null != target)
+            {
+                CameraFollow.LookAt = target.Find(CameraLookAt);
+            }
         }
     }
 }

@@ -23,9 +23,10 @@ namespace HotFix.Contexts
             _player.SetDir(dir);
         }
 
-        public void Move()
+        public void OnUpdate()
         {
             _player.Move();
+            _player.Rotate();
         }
     }
 }
