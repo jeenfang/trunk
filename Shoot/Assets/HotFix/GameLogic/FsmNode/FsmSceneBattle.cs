@@ -41,7 +41,7 @@ internal class FsmSceneBattle : IStateNode
 	{
 		yield return UniWindow.OpenWindowAsync<UILoadingWindow>(GameUtility.UINameLoading);
 		yield return YooAssets.LoadSceneAsync(GameUtility.SceneNameBattle);
-
+		
 		_battleRoom = new BattleRoom();
 		yield return _battleRoom.LoadRoom();
 		UniWindow.CloseWindow<UILoadingWindow>();

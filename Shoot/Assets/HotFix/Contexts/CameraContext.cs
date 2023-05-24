@@ -71,11 +71,14 @@ namespace HotFix.Contexts
 
         public void SetFollowTarget(Transform target)
         {
-            CameraFollow.Follow = target;
-            if (null != target)
+            if (null == target)
             {
-                CameraFollow.LookAt = target.Find(CameraLookAt);
+                CameraFollow.Follow = null;
+                CameraFollow.LookAt = null;
+                return;
             }
+            CameraFollow.Follow = target;
+            CameraFollow.LookAt = target.Find(CameraLookAt);
         }
     }
 }

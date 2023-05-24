@@ -12,8 +12,6 @@ namespace TouchController
         //If relativeTransform set, we need to tranform the position relative to that object
         public static Vector2 GetRelativeTransformedPosition(Vector2 relativePosition, Vector3 relativeForward)
         {
-            Debug.LogError(relativePosition +"  "+relativeForward);
-
             //We get the angles between the up vector of the joystick and the result vector
             float resultAngle = Vector2.SignedAngle(relativePosition, new Vector2(0, 1));
             //rotation the inital forward vector of the character with the angle and set the magnitude equal to the result vector 

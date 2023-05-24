@@ -15,6 +15,7 @@ public class UIBattleWindow : UIWindow
     private GameObject _overView;
     private Joystick _joystickCtrlMove;
     private Joystick _joystickCtrlTarget;
+    private Transform _target;
 
     public override void OnCreate()
     {
@@ -28,21 +29,22 @@ public class UIBattleWindow : UIWindow
         homeBtn.onClick.AddListener(OnClickHomeBtn);
 
         _overView = this.transform.Find("OverView").gameObject;
+        _target = this.transform.Find("Target");
 
         _joystickCtrlMove = this.transform.Find("MoveController/DragArea/JoystickBase").GetComponent<Joystick>();
         _joystickCtrlMove.relativeTransform = GameContext.GetContext<CameraContext>().MainCamera.transform;
         _joystickCtrlMove.beginDragEvent.RemoveAllListeners();
-        _joystickCtrlMove.beginDragEvent.AddListener(BeginDragJoystick);
+        _joystickCtrlMove.beginDragEvent.AddListener(BeginDragMoveJoystick);
         _joystickCtrlMove.dragEvent.RemoveAllListeners();
-        _joystickCtrlMove.dragEvent.AddListener(DragJoystick);
+        _joystickCtrlMove.dragEvent.AddListener(DragMoveJoystick);
 
         _joystickCtrlTarget = this.transform.Find("TargetController/DragArea/JoystickBase").GetComponent<Joystick>();
-        _joystickCtrlTarget.relativeTransform =GameContext.GetContext<CameraContext>().MainCamera.transform;
+        _joystickCtrlTarget.relativeTransform = GameContext.GetContext<CameraContext>().MainCamera.transform;
         _joystickCtrlTarget.beginDragEvent.RemoveAllListeners();
-        _joystickCtrlTarget.beginDragEvent.AddListener(BeginDragJoystick);
+        _joystickCtrlTarget.beginDragEvent.AddListener(BeginDragRotateJoystick);
         _joystickCtrlTarget.dragEvent.RemoveAllListeners();
-        _joystickCtrlTarget.dragEvent.AddListener(DragJoystick);
-        
+        _joystickCtrlTarget.dragEvent.AddListener(DragRotateJoystick);
+
         _eventGroup.AddListener<BattleEventDefine.ScoreChange>(OnHandleEventMessage);
         _eventGroup.AddListener<BattleEventDefine.GameOver>(OnHandleEventMessage);
     }
@@ -59,24 +61,37 @@ public class UIBattleWindow : UIWindow
 
     public override void OnUpdate()
     {
+        UpdateTargetPointPos();
     }
 
-    private void BeginDragJoystick(string name)
+    private void UpdateTargetPointPos()
     {
-        UniLogger.Log("begin name:"+ name);
+        if (null != _target)
+        {
+            _target.position = Vector3.Lerp(_target.position,
+                GameContext.GetContext<PlayerContext>().GetPlayerTargetScreenPoint(), Time.deltaTime * 15);
+        }
     }
 
-    private void DragJoystick(string name, Vector2 input)
+    private void BeginDragMoveJoystick(string name)
     {
-        UniLogger.Log("begin name:"+ name +" input:"+ input);
-        if (name.Equals("Movement"))
-        {
-            GameContext.GetContext<PlayerContext>().UpdateDir(input);
-        }
-        else
-        {
-            GameContext.GetContext<PlayerContext>().UpdateTarget(input);
-        }
+        //UniLogger.Log("begin name:" + name);
+    }
+
+    private void DragMoveJoystick(string name, Vector2 input)
+    {
+        GameContext.GetContext<PlayerContext>().UpdatePosition(input);
+    }
+
+
+    private void BeginDragRotateJoystick(string name)
+    {
+        //UniLogger.Log("begin name:" + name);
+    }
+
+    private void DragRotateJoystick(string name, Vector2 input)
+    {
+        GameContext.GetContext<PlayerContext>().UpdateRotation(input);
     }
 
     private void OnClickRestartBtn()

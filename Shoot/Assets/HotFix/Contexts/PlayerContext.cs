@@ -13,20 +13,24 @@ namespace HotFix.Contexts
             _player.Spawner(playerHandle);
         }
 
-        public void UpdateTarget(Vector2 input)
+        public void UpdateRotation(Vector2 input)
         {
-            _player.SetTarget(input);
+            _player.SetRotation(input);
         }
 
-        public void UpdateDir(Vector2 dir)
+        public void UpdatePosition(Vector2 dir)
         {
-            _player.SetDir(dir);
+            _player.SetPosition(dir);
         }
 
         public void OnUpdate()
         {
-            _player.Move();
-            _player.Rotate();
+            _player.OnUpdate();
+        }
+
+        public Vector2 GetPlayerTargetScreenPoint()
+        {
+            return _player.TargetWorldToScreenPoint();
         }
     }
 }

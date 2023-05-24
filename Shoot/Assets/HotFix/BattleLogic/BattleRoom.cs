@@ -190,10 +190,9 @@ public class BattleRoom
 			if (data is SpawnHandle spawnHandle)
 			{
 				GameContext.GetContext<PlayerContext>().InitPlayer(spawnHandle);
-				Debug.LogError(spawnHandle.GameObj == null);
 			}
 		};
-
+	
 		// 显示战斗界面
 		yield return UniWindow.OpenWindowAsync<UIBattleWindow>(GameUtility.UINameBattle);
 

@@ -9,14 +9,21 @@ namespace TouchController
     [RequireComponent(typeof(EventTrigger))]
     public class Joystick : ControlBase
     {
-        [Header("General Settings")]
-        public string inputName;    // Skill name which pass to skill handler
-        public float draggableRadiusModifier = 0;   //The default draggable area of joystick / Skill button is the image width of the outer circle.  This is used to adjust the default area 
-        public Transform relativeTransform; //Set only if you want the result relative to the target object (e.g.The camera)
+        [Header("General Settings")] public string inputName; // Skill name which pass to skill handler
+
+        public float
+            draggableRadiusModifier =
+                0; //The default draggable area of joystick / Skill button is the image width of the outer circle.  This is used to adjust the default area 
+
+        public Transform
+            relativeTransform; //Set only if you want the result relative to the target object (e.g.The camera)
 
         [Header("Events Settings")]
-        public OnDragBeginEvent beginDragEvent;  //CallBack when Drag Begin - Function(string inputName)
-        public OnResultEvent dragEvent;  //Callback for end drag / end touch - Function(string SkillName, Vector2 TargetVector)
+        public OnDragBeginEvent beginDragEvent; //CallBack when Drag Begin - Function(string inputName)
+
+        public OnResultEvent
+            dragEvent; //Callback for end drag / end touch - Function(string SkillName, Vector2 TargetVector)
+
         public Sprite analogImage;
         public Sprite analogAreaImage;
 
@@ -34,7 +41,7 @@ namespace TouchController
         // Start is called before the first frame update
         void Start()
         {
-            if(_init)
+            if (_init)
                 return;
             _init = true;
             joystickImage = transform.Find("Joystick").GetComponent<Image>();
@@ -42,6 +49,7 @@ namespace TouchController
             {
                 joystickImage.sprite = analogImage;
             }
+
             if (analogAreaImage != null && GetComponent<Image>() != null)
             {
                 GetComponent<Image>().sprite = analogAreaImage;
@@ -76,6 +84,7 @@ namespace TouchController
 
             maxDisplacement = (rect.rect.width / 2) + draggableRadiusModifier;
         }
+
         //Pointer down event callback, fire when touch down
         public override void OnPointerDown(PointerEventData eventArgs)
         {
@@ -95,6 +104,7 @@ namespace TouchController
             {
                 relativeForward = relativeTransform.forward;
             }
+
             OnDrag(eventArgs);
         }
 
@@ -127,7 +137,7 @@ namespace TouchController
                 //set joystick position
                 joystickImage.transform.localPosition = targetMarkerImagePosition;
             }
-            
+
             //Result callback
             ReturnResult(relativePosition);
         }
@@ -139,6 +149,7 @@ namespace TouchController
                 //Reset the joystick to the parent position
                 joystickImage.transform.position = transform.position;
             }
+
             //Call event with zero vector
             ReturnResult(Vector2.zero);
         }
@@ -166,6 +177,5 @@ namespace TouchController
             result = relativePosition / maxDisplacement;
             return result;
         }
-
     }
 }
