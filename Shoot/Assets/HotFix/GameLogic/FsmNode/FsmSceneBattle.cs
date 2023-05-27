@@ -21,13 +21,13 @@ internal class FsmSceneBattle : IStateNode
 	{
 		UniSingleton.StartCoroutine(Prepare());
 	}
+	
 	void IStateNode.OnUpdate()
 	{
 		if(_battleRoom != null)
 			_battleRoom.UpdateRoom();
-		
-		GameContext.GetContext<PlayerContext>().OnUpdate();
 	}
+	
 	void IStateNode.OnExit()
 	{
 		if(_battleRoom != null)

@@ -31,6 +31,21 @@ public class BattleRoom
 		WaitWave,
 		GameOver,
 	}
+	
+	private PlayerContext _playerContext;
+
+	public PlayerContext PlayerContext
+	{
+		get
+		{
+			if (null == _playerContext)
+			{
+				_playerContext = GameContext.GetContext<PlayerContext>();
+			}
+
+			return _playerContext;
+		}
+	}
 
 	private EventGroup _eventGroup = new EventGroup();
 	private Spawner _entitySpawner;
@@ -81,6 +96,8 @@ public class BattleRoom
 	/// </summary>
 	public void UpdateRoom()
 	{
+		PlayerContext.OnUpdate();
+		
 		if (_steps == ESteps.None || _steps == ESteps.GameOver)
 			return;
 
@@ -184,14 +201,15 @@ public class BattleRoom
 		var entity = handle.GameObj.GetComponent<EntityPlayer>();
 		entity.InitEntity(handle);
 
-		var spawnAsync = _entitySpawner.SpawnAsync("player");
-		spawnAsync.Completed += (data) =>
-		{
-			if (data is SpawnHandle spawnHandle)
-			{
-				GameContext.GetContext<PlayerContext>().InitPlayer(spawnHandle);
-			}
-		};
+		//主角
+		// var spawnAsync = _entitySpawner.SpawnAsync("player");
+		// spawnAsync.Completed += (data) =>
+		// {
+		// 	if (data is SpawnHandle spawnHandle)
+		// 	{
+		// 		GameContext.GetContext<PlayerContext>().InitPlayer(spawnHandle);
+		// 	}
+		// };
 	
 		// 显示战斗界面
 		yield return UniWindow.OpenWindowAsync<UIBattleWindow>(GameUtility.UINameBattle);

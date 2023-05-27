@@ -16,6 +16,7 @@ public class UIBattleWindow : UIWindow
     private Joystick _joystickCtrlMove;
     private Joystick _joystickCtrlTarget;
     private Transform _target;
+    private Vector2 _vector2;
 
     public override void OnCreate()
     {
@@ -68,8 +69,9 @@ public class UIBattleWindow : UIWindow
     {
         if (null != _target)
         {
+            _vector2 = GameContext.GetContext<PlayerContext>().Player.TargetWorldToScreenPoint();
             _target.position = Vector3.Lerp(_target.position,
-                GameContext.GetContext<PlayerContext>().GetPlayerTargetScreenPoint(), Time.deltaTime * 15);
+                _vector2, Time.deltaTime * 15);
         }
     }
 
@@ -80,7 +82,7 @@ public class UIBattleWindow : UIWindow
 
     private void DragMoveJoystick(string name, Vector2 input)
     {
-        GameContext.GetContext<PlayerContext>().UpdatePosition(input);
+        GameContext.GetContext<PlayerContext>().Player.UpdateMoveDir(input);
     }
 
 
@@ -91,7 +93,7 @@ public class UIBattleWindow : UIWindow
 
     private void DragRotateJoystick(string name, Vector2 input)
     {
-        GameContext.GetContext<PlayerContext>().UpdateRotation(input);
+        GameContext.GetContext<PlayerContext>().Player.UpdateRotateDir(input);
     }
 
     private void OnClickRestartBtn()

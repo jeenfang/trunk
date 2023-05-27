@@ -2,7 +2,7 @@
 using UniFramework.Pooling;
 using UnityEngine;
 
-namespace HotFix.Player
+namespace HotFix.Entity
 {
     public class UnitPlayer : Unit
     {
@@ -13,6 +13,8 @@ namespace HotFix.Player
         private float _temp = 0;
         private Camera _camera;
         private float _atkMinDistance = 0.2f;
+
+        public UnitPlayer(string name) : base(name){}
 
         private Camera MainCamera
         {
@@ -27,33 +29,34 @@ namespace HotFix.Player
                 {
                     _temp = _rotation.sqrMagnitude;
                     _temp = _temp < _atkMinDistance ? _atkMinDistance : _temp;
-                    return ThisT.forward * ShotDistance * _temp + ThisT.position;
+                    return ThisT.forward * AtkDistance * _temp + ThisT.position;
                 }
 
                 return Vector3.zero;
             }
         }
-        
-        public override void Spawner(SpawnHandle handle)
+
+        protected override void Spawner(SpawnHandle handle)
         {
             base.Spawner(handle);
             if (null != ThisT)
             {
-                ThisT.SetParent(GameContext.GetContext<CameraContext>().RootPlayer);
+                var ctx = GameContext.GetContext<CameraContext>();
+                ThisT.SetParent(ctx.RootPlayer);
                 ThisT.localPosition = Vector3.zero;
-                GameContext.GetContext<CameraContext>().SetFollowTarget(ThisT);
+                ctx.SetFollowTarget(ThisT);
             }
         }
 
         //移动方向
-        public void SetPosition(Vector2 direction)
+        public void UpdateMoveDir(Vector2 direction)
         {
             _isRun = direction != Vector2.zero;
             this._dir = direction;
         }
 
         //转向
-        public void SetRotation(Vector2 input)
+        public void UpdateRotateDir(Vector2 input)
         {
             var sqr = input.sqrMagnitude;
             _isRotate = sqr > 0;
@@ -86,6 +89,16 @@ namespace HotFix.Player
         public Vector2 TargetWorldToScreenPoint()
         {
             return RectTransformUtility.WorldToScreenPoint(MainCamera, TargetPosition);
+        }
+
+        public void ChangeWeapon(EWeapon weapon)
+        {
+            
+        }
+
+        public void Shot()
+        {
+            
         }
 
         public override void Dispose()
