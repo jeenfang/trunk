@@ -17,5 +17,10 @@ namespace HotFix.Entity
         {
             throw new System.NotImplementedException();
         }
+        
+        protected override void SpawnerFinished()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

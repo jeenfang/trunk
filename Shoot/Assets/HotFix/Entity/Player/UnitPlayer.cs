@@ -1,4 +1,6 @@
-﻿using HotFix.Contexts;
+﻿using System.Collections.Generic;
+using HotFix.Contexts;
+using HotFix.Utility;
 using UniFramework.Pooling;
 using UnityEngine;
 
@@ -13,13 +15,15 @@ namespace HotFix.Entity
         private float _temp = 0;
         private Camera _camera;
         private float _atkMinDistance = 0.2f;
+        private List<Weapon> _weapons;
+        private List<Transform> _mounts = new List<Transform>(); //挂载点
 
-        public UnitPlayer(string name) : base(name){}
-
-        private Camera MainCamera
+        public UnitPlayer(string name) : base(name)
         {
-            get { return _camera ??= GameContext.GetContext<CameraContext>().MainCamera; }
         }
+
+        private Camera MainCamera => _camera ??= GameContext.GetContext<CameraContext>().MainCamera;
+        public List<Weapon> Weapons => _weapons ??= new List<Weapon>();
 
         private Vector3 TargetPosition
         {
@@ -36,15 +40,27 @@ namespace HotFix.Entity
             }
         }
 
-        protected override void Spawner(SpawnHandle handle)
+        protected override void SpawnerFinished()
         {
-            base.Spawner(handle);
             if (null != ThisT)
             {
                 var ctx = GameContext.GetContext<CameraContext>();
                 ThisT.SetParent(ctx.RootPlayer);
                 ThisT.localPosition = Vector3.zero;
                 ctx.SetFollowTarget(ThisT);
+                GetMountPoints();
+                //默认给个手枪
+                SwitchWeapon(EWeapon.WeaponPistol);
+            }
+        }
+
+        private void GetMountPoints()
+        {
+            if (this.IsLoadFinised)
+            {
+                _mounts.Clear();
+                _mounts.Add(this.ThisT.Find("mount1"));
+                _mounts.Add(this.ThisT.Find("mount2"));
             }
         }
 
@@ -85,24 +101,100 @@ namespace HotFix.Entity
                 //     ThisT.forward * 10 * _rotation.sqrMagnitude + ThisT.position;
             }
         }
-        
+
         public Vector2 TargetWorldToScreenPoint()
         {
             return RectTransformUtility.WorldToScreenPoint(MainCamera, TargetPosition);
         }
 
-        public void ChangeWeapon(EWeapon weapon)
+        public void SwitchWeapon(EWeapon weapon)
         {
-            
+            if (Weapons.Count > 0 && null != Weapons[0])
+            {
+                if (Weapons[0].WeaponType == weapon)
+                {
+                    return;
+                }
+            }
+
+            UnloadAllWeapon();
+            string wName = GameUtility.GetWeaponName(weapon);
+            switch (weapon)
+            {
+                case EWeapon.WeaponPistol:
+                    new WeaponPiston(wName, this);
+                    new WeaponPiston(wName, this);
+                    break;
+            }
         }
 
-        public void Shot()
+        //绑定武器
+        public void BindWeapon(Weapon weapon)
         {
+            if (null != weapon)
+            {
+                if (weapon.IsLoadFinised)
+                {
+                    if (Weapons.Count < this._mounts.Count)
+                    {
+                        weapon.ThisT.SetParent(this._mounts[Weapons.Count], false);
+                        Weapons.Add(weapon);
+                    }
+                }
+            }
+        }
+
+        public void Fire(bool open)
+        {
+            foreach (var weapon in Weapons)
+            {
+                weapon?.Fire(open);
+            }
+        }
+
+        public void UnloadWeapon(Weapon weapon)
+        {
+            if (null != weapon)
+            {
+                if (Weapons.Contains(weapon))
+                {
+                    Weapons.Remove(weapon);
+                }
+                weapon.Unload();
+            }
+        }
+
+        private void UnloadAllWeapon()
+        {
+            while (Weapons.Count > 0)
+            {
+                UnloadWeapon(Weapons[0]);
+                Weapons.RemoveAt(0);
+            }
+        }
+
+        public override void OnUpdate()
+        {
+            base.OnUpdate();
+            foreach (var weapon in Weapons)
+            {
+                weapon.OnUpdate();
+            }
             
+            if (Input.GetMouseButtonDown(0))
+            {
+                Fire(true);
+            }
+
+            if (Input.GetMouseButtonUp(0))
+            {
+                Fire(false);
+            }
         }
 
         public override void Dispose()
         {
+            UnloadAllWeapon();
             base.Dispose();
             _isRotate = false;
             _isRun = false;

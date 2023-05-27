@@ -1,4 +1,5 @@
-﻿using UnityEngine.Pool;
+﻿using HotFix.Entity;
+using UnityEngine.Pool;
 
 namespace HotFix.Utility
 {
@@ -19,6 +20,11 @@ namespace HotFix.Utility
         public static readonly string UINameAbout = "UIAbout";
 
         #endregion
+
+        public static string GetWeaponName(EWeapon weapon)
+        {
+            return weapon.ToString();
+        }
 
      
     }

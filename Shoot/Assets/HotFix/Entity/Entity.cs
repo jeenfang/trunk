@@ -7,10 +7,16 @@ namespace HotFix.Entity
     public abstract class Entity: IDisposable
     {
         private SpawnHandle SpaHandle { get; set; }
-        protected Transform ThisT { get; set; }
-        protected abstract void SpawnerFinished(Transform t);
+        public Transform ThisT { get; set; }
+        public bool IsLoadFinised => null != ThisT;
+        protected abstract void SpawnerFinished();
 
         protected Entity(string prefabName)
+        {
+            Spawner(prefabName);
+        }
+
+        public virtual void Spawner(string prefabName)
         {
             var spawnAsync = UniPooling.CreateSpawner("DefaultPackage").SpawnAsync(prefabName);
             spawnAsync.Completed += (data) =>
@@ -22,17 +28,22 @@ namespace HotFix.Entity
             };
         }
         
-        protected virtual void Spawner(SpawnHandle handle)
+        private void Spawner(SpawnHandle handle)
         {
             if (null == handle) return;
             this.SpaHandle = handle;
             this.ThisT = handle.GameObj.transform;
-            SpawnerFinished(ThisT);
+            SpawnerFinished();
         }
         
         public virtual void Dispose()
         {
-            ThisT = null;
+            if (null != ThisT)
+            {
+                ThisT.SetParent(null);
+                ThisT = null;
+            }
+            
             if (null != SpaHandle)
             {
                 SpaHandle.Restore();

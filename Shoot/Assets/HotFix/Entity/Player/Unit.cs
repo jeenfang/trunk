@@ -14,13 +14,8 @@ namespace HotFix.Entity
         protected Unit(string prefabName) : base(prefabName)
         {
         }
-        protected abstract void Move();
-        protected abstract void Rotate();
-        
-        protected override void SpawnerFinished(Transform t)
-        {
-            
-        }
+        protected abstract void Move();//移动
+        protected abstract void Rotate();//转向
         
         public virtual void OnUpdate()
         {
