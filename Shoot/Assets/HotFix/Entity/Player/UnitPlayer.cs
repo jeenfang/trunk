@@ -18,9 +18,10 @@ namespace HotFix.Entity
         private List<Weapon> _weapons;
         private List<Transform> _mounts = new List<Transform>(); //挂载点
 
-        public UnitPlayer(string name) : base(name)
-        {
-        }
+        // public UnitPlayer(string name) : base(name)
+        // {
+        //    
+        // }
 
         private Camera MainCamera => _camera ??= GameContext.GetContext<CameraContext>().MainCamera;
         public List<Weapon> Weapons => _weapons ??= new List<Weapon>();
@@ -122,8 +123,14 @@ namespace HotFix.Entity
             switch (weapon)
             {
                 case EWeapon.WeaponPistol:
-                    new WeaponPiston(wName, this);
-                    new WeaponPiston(wName, this);
+                    // new WeaponPistol(wName, this);
+                    // new WeaponPistol(wName, this);
+                    var sp1 = UniObjectPool<WeaponPistol>.Get();
+                    sp1?.BindPlayer(this);
+                    sp1?.Spawner("WeaponPistol");
+                    var sp2 = UniObjectPool<WeaponPistol>.Get();
+                    sp2?.BindPlayer(this);
+                    sp2?.Spawner("WeaponPistol");
                     break;
             }
         }

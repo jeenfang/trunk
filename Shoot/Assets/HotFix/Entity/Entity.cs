@@ -10,11 +10,12 @@ namespace HotFix.Entity
         public Transform ThisT { get; set; }
         public bool IsLoadFinised => null != ThisT;
         protected abstract void SpawnerFinished();
-
-        protected Entity(string prefabName)
-        {
-            Spawner(prefabName);
-        }
+        public virtual void OnUpdate(){}
+        
+        // protected Entity(string prefabName)
+        // {
+        //     Spawner(prefabName);
+        // }
 
         public virtual void Spawner(string prefabName)
         {

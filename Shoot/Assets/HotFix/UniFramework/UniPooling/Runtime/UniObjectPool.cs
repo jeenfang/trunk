@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 namespace UniFramework.Pooling
 {
-    public static class UniObjectPool<T> where T : class, new()
+    public static class UniObjectPool<T> where T : class,new()
     {
         private static readonly Dictionary<Type, ObjectPool<T>> _dictionary = new Dictionary<Type, ObjectPool<T>>();
 
@@ -29,7 +29,7 @@ namespace UniFramework.Pooling
 
         public static T Get()
         {
-            var objectPool = GetTPool() ?? CreateObjectPool(() => new T());
+            var objectPool = GetTPool() ?? CreateObjectPool(()=>new T());
             return objectPool.Get();
         }
 

@@ -4,9 +4,9 @@ namespace HotFix.Entity
 {
     public class UnitAI : Unit
     {
-        public UnitAI(string prefabName) : base(prefabName)
-        {
-        }
+        // public UnitAI(string prefabName) : base(prefabName)
+        // {
+        // }
 
         protected override void Move()
         {

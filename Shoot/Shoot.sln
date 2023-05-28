@@ -15,8 +15,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BetterStreaming", "BetterSt
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Extension", "Extension.csproj", "{f93bdda6-54d6-66a8-636d-72e0f85ff315}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AimingRig", "AimingRig.csproj", "{f4cc7004-5c75-8f1a-0b2a-a56104a87481}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YooAsset.Editor", "YooAsset.Editor.csproj", "{769b8ce4-54ca-d3de-7dea-f719ebac80bd}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor", "Assembly-CSharp-Editor.csproj", "{19a6a5e5-ff43-2b02-10f6-85b2552220ae}"
@@ -40,8 +38,6 @@ Global
 		{cfbcf696-5e35-04cf-8785-d3fe16963837}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{f93bdda6-54d6-66a8-636d-72e0f85ff315}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{f93bdda6-54d6-66a8-636d-72e0f85ff315}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{f4cc7004-5c75-8f1a-0b2a-a56104a87481}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{f4cc7004-5c75-8f1a-0b2a-a56104a87481}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{769b8ce4-54ca-d3de-7dea-f719ebac80bd}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{769b8ce4-54ca-d3de-7dea-f719ebac80bd}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{19a6a5e5-ff43-2b02-10f6-85b2552220ae}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
