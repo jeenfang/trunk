@@ -26,7 +26,7 @@ namespace HotFix.Entity
         private Camera MainCamera => _camera ??= GameContext.GetContext<CameraContext>().MainCamera;
         public List<Weapon> Weapons => _weapons ??= new List<Weapon>();
 
-        private Vector3 TargetPosition
+        public Vector3 TargetPosition
         {
             get
             {
@@ -105,6 +105,7 @@ namespace HotFix.Entity
 
         public Vector2 TargetWorldToScreenPoint()
         {
+            // GameObject.CreatePrimitive(PrimitiveType.Capsule).transform.position = TargetPosition;
             return RectTransformUtility.WorldToScreenPoint(MainCamera, TargetPosition);
         }
 

@@ -15,7 +15,6 @@ namespace HotFix.Entity
         //发射点(每次能发射的子弹数量，也可以是字典初始点)
         private List<Transform> _firePoints;
 
-        private List<Bullet> _bullets;
 
         //参数从配置表中获取
         public string WeaponName { get; set; } //武器
@@ -28,7 +27,6 @@ namespace HotFix.Entity
 
 
         public List<Transform> FirePoints => _firePoints ??= new List<Transform>();
-        public List<Bullet> Bullets => _bullets ??= new List<Bullet>();
 
         //武器绑定的角色
         // protected Weapon(string mWeaponName,UnitPlayer mUnit):base(mWeaponName)
@@ -62,9 +60,7 @@ namespace HotFix.Entity
             FireOpen = open;
         }
 
-        public virtual void Run()
-        {
-        }
+        protected abstract void Run();
         
         protected override void SpawnerFinished()
         {
@@ -75,11 +71,6 @@ namespace HotFix.Entity
         public override void OnUpdate()
         {
             base.OnUpdate();
-
-            foreach (var bullet in Bullets)
-            {
-                bullet.OnUpdate();
-            }
 
             if (FireTime > 0)
             {

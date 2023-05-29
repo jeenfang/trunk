@@ -1,4 +1,5 @@
-﻿using UniFramework.Pooling;
+﻿using HotFix.Contexts;
+using UniFramework.Pooling;
 using UnityEngine;
 using Time = Codice.Client.Common.Time;
 
@@ -20,15 +21,16 @@ namespace HotFix.Entity
             var temp = UniObjectPool<BulletPistol>.Get();
             if (null != temp)
             {
-                temp.Spawner("BulletPistol");
                 temp.BindWeapon(this);
-                Bullets.Add(temp);
+                temp.SetOrigin(this.FirePoints[0].position,this.FirePoints[0].rotation);
+                temp.SetTarget(GameContext.GetContext<PlayerContext>().Player.TargetPosition);
+                temp.Spawner("BulletPistol");
+                GameContext.GetContext<PlayerContext>().AddBullet(temp);
             }
         }
 
-        public override void Run()
+        protected override void Run()
         {
-            base.Run();
             Debug.LogError("发射子弹。。。。。。。。。。");
             Shotting();
         }

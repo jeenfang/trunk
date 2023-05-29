@@ -7,9 +7,13 @@ namespace HotFix.Entity
     {
         public override void Move()
         {
-            if (null != ThisT)
+            base.Move();
+            if (IsRun)
             {
-                ThisT.Translate(Vector3.forward * Time.deltaTime * 10);
+                if (null != ThisT)
+                {
+                    ThisT.Translate(Vector3.forward * Time.deltaTime * Speed);
+                }
             }
         }
 
