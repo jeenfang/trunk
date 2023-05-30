@@ -35,8 +35,8 @@ namespace HotFix.Entity
                 IsRun = _bornTime < LifeTime;
                 if (!IsRun)
                 {
-                    Debug.LogError("到达目标，可以杀敌爆炸效果了");
-                    //GameContext.GetContext<PlayerContext>().RemoveBullet(this);
+                    //Debug.LogError("到达目标，可以杀敌爆炸效果了");
+                    GameContext.GetContext<PlayerContext>().RemoveBullet(this);
                 }
             }
         }
@@ -57,7 +57,7 @@ namespace HotFix.Entity
         {
             Debug.LogWarning(target);
             this._target = target;
-            this._lifeTime = Vector3.Distance(this._target, this._origin) / (Time.deltaTime * _speed);
+            this._lifeTime = Vector3.Distance(this._target, this._origin) / _speed;
             Debug.LogWarning(_target + "  " + _origin +" "+ _lifeTime);
         }
 

@@ -10,7 +10,7 @@ namespace UniFramework.Pooling
     {
         private static readonly Dictionary<Type, ObjectPool<T>> _dictionary = new Dictionary<Type, ObjectPool<T>>();
 
-        private static ObjectPool<T> GetTPool()
+        public static ObjectPool<T> GetTPool()
         {
             var typo = typeof(T);
             return _dictionary.TryGetValue(typo, out var objectPool) ? objectPool : null;

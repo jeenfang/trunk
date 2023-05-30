@@ -71,7 +71,7 @@ public class UIBattleWindow : UIWindow
         {
             _vector2 = GameContext.GetContext<PlayerContext>().Player.TargetWorldToScreenPoint();
             _target.position = Vector3.Lerp(_target.position,
-                _vector2, Time.deltaTime * 15);
+                _vector2, Time.deltaTime * 30);
         }
     }
 

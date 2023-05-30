@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace HotFix.Contexts
 {
-    public class PlayerContext: BaseContext
+    public class PlayerContext : BaseContext
     {
         private UnitPlayer _player;
         private List<Bullet> _bullets;
@@ -21,9 +21,11 @@ namespace HotFix.Contexts
                     //先放着创建player模型
                     _player.Spawner("player");
                 }
+
                 return _player;
             }
         }
+
         public List<Bullet> Bullets => _bullets ??= new List<Bullet>();
 
         public void AddBullet(Bullet bullet)
@@ -43,8 +45,7 @@ namespace HotFix.Contexts
         public void OnUpdate()
         {
             Player.OnUpdate();
-            
-            for(int i = 0; i< Bullets.Count;i++)    
+            for (int i = 0; i < Bullets.Count; i++)
             {
                 Bullets[i].OnUpdate();
             }
