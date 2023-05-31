@@ -32,7 +32,7 @@ namespace UniFramework.Pooling
             var objectPool = GetTPool() ?? CreateObjectPool(()=>new T());
             return objectPool.Get();
         }
-
+        
         public static void Release(T element)
         {
             if (null == element) return;

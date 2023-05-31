@@ -55,10 +55,8 @@ namespace HotFix.Entity
 
         public void SetTarget(Vector3 target)
         {
-            Debug.LogWarning(target);
             this._target = target;
             this._lifeTime = Vector3.Distance(this._target, this._origin) / _speed;
-            Debug.LogWarning(_target + "  " + _origin +" "+ _lifeTime);
         }
 
         public override void OnUpdate()

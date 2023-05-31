@@ -7,16 +7,10 @@ namespace HotFix.Entity
     public abstract class Entity: IDisposable
     {
         private SpawnHandle SpaHandle { get; set; }
-        public Transform ThisT { get; set; }
-        public bool IsLoadFinised => null != ThisT;
+        public Transform ThisT { get;private set; }
         protected abstract void SpawnerFinished();
         public virtual void OnUpdate(){}
         
-        // protected Entity(string prefabName)
-        // {
-        //     Spawner(prefabName);
-        // }
-
         public virtual void Spawner(string prefabName)
         {
             var spawnAsync = UniPooling.CreateSpawner("DefaultPackage").SpawnAsync(prefabName);

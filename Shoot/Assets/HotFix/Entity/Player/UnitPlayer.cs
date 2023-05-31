@@ -57,7 +57,7 @@ namespace HotFix.Entity
 
         private void GetMountPoints()
         {
-            if (this.IsLoadFinised)
+            if (this.ThisT != null)
             {
                 _mounts.Clear();
                 _mounts.Add(this.ThisT.Find("mount1"));
@@ -120,20 +120,7 @@ namespace HotFix.Entity
             }
 
             UnloadAllWeapon();
-            string wName = GameUtility.GetWeaponName(weapon);
-            switch (weapon)
-            {
-                case EWeapon.WeaponPistol:
-                    // new WeaponPistol(wName, this);
-                    // new WeaponPistol(wName, this);
-                    var sp1 = UniObjectPool<WeaponPistol>.Get();
-                    sp1?.BindPlayer(this);
-                    sp1?.Spawner("WeaponPistol");
-                    var sp2 = UniObjectPool<WeaponPistol>.Get();
-                    sp2?.BindPlayer(this);
-                    sp2?.Spawner("WeaponPistol");
-                    break;
-            }
+            GameUtility.SwitchWeapon(weapon,this);
         }
 
         //绑定武器
@@ -141,7 +128,7 @@ namespace HotFix.Entity
         {
             if (null != weapon)
             {
-                if (weapon.IsLoadFinised)
+                if (weapon.ThisT != null)
                 {
                     if (Weapons.Count < this._mounts.Count)
                     {
