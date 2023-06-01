@@ -51,7 +51,7 @@ namespace HotFix.Entity
                 ctx.SetFollowTarget(ThisT);
                 GetMountPoints();
                 //默认给个手枪
-                SwitchWeapon(EWeapon.WeaponPistol);
+                SwitchWeapon(EWeapon.WeaponLaser);
             }
         }
 

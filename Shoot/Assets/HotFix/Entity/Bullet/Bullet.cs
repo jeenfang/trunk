@@ -11,11 +11,10 @@ namespace HotFix.Entity
         private Quaternion _quaternion;
         private Vector3 _target;
         private float _lifeTime = 1f; //子弹生命周期
-        private float _speed = 20;
 
         private float _bornTime = 0;
         public float LifeTime => _lifeTime;
-        public float Speed => _speed;
+        public float Speed { get; set; } = 20;
         public bool IsRun { get; set; }
 
         public abstract void Rotate();
@@ -56,7 +55,7 @@ namespace HotFix.Entity
         public void SetTarget(Vector3 target)
         {
             this._target = target;
-            this._lifeTime = Vector3.Distance(this._target, this._origin) / _speed;
+            this._lifeTime = Vector3.Distance(this._target, this._origin) / Speed;
         }
 
         public override void OnUpdate()

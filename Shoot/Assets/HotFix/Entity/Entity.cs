@@ -27,8 +27,11 @@ namespace HotFix.Entity
         {
             if (null == handle) return;
             this.SpaHandle = handle;
-            this.ThisT = handle.GameObj.transform;
-            SpawnerFinished();
+            if (handle.GameObj)
+            {
+                this.ThisT = handle.GameObj.transform;
+                SpawnerFinished();
+            }
         }
         
         public virtual void Dispose()

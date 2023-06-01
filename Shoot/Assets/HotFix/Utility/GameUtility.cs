@@ -11,18 +11,21 @@ namespace HotFix.Utility
     {
         #region 武器类型和武器工程关了
 
-        private static Dictionary<EWeapon, Func<Weapon>> _dicWeaponFactoryMapping = new Dictionary<EWeapon, Func<Weapon>>()
-        {
-            { EWeapon.WeaponPistol ,UniObjectPool<WeaponPistol>.Get}
-        };
+        private static Dictionary<EWeapon, Func<Weapon>> _dicWeaponFactoryMapping =
+            new Dictionary<EWeapon, Func<Weapon>>()
+            {
+                { EWeapon.WeaponPistol, UniObjectPool<WeaponPistol>.Get },
+                { EWeapon.WeaponMissle, UniObjectPool<WeaponMissle>.Get },
+                { EWeapon.WeaponLaser, UniObjectPool<WeaponLaser>.Get }
+            };
 
         #endregion
-        
+
 
         #region 场景名字
 
         public static readonly string SceneNameHome = "scene_home";
-        public static readonly string SceneNameBattle = "scene_battle";     
+        public static readonly string SceneNameBattle = "scene_battle";
 
         #endregion
 
@@ -40,33 +43,20 @@ namespace HotFix.Utility
             return weapon.ToString();
         }
 
- 
-        public static void SwitchWeapon(EWeapon weapon,UnitPlayer owner)
-        {
-            if (_dicWeaponFactoryMapping.TryGetValue(weapon,out Func<Weapon> func))
-            {
-                var wp = func();
-                wp?.Init();
-                wp?.BindPlayer(owner);
-                wp?.Spawner(wp.WeaponName);
-                var wp1 = func();
-                wp1.Init();
-                wp1?.BindPlayer(owner);
-                wp1?.Spawner(wp1.WeaponName);
-            }
-            // switch (weapon)
-            // {
-            //     case EWeapon.WeaponPistol:
-            //         var sp1 = UniObjectPool<WeaponPistol>.Get();
-            //         sp1?.BindPlayer(owner);
-            //         sp1?.Spawner("WeaponPistol");
-            //         var sp2 = UniObjectPool<WeaponPistol>.Get();
-            //         sp2?.BindPlayer(owner);
-            //         sp2?.Spawner("WeaponPistol");
-            //         break;
-            // }
-        }
-        
-    }
 
+        public static void SwitchWeapon(EWeapon weapon, UnitPlayer owner)
+        {
+            if (_dicWeaponFactoryMapping.TryGetValue(weapon, out Func<Weapon> func))
+            {
+                int num = (weapon == EWeapon.WeaponPistol) ? 2 : 1;
+                for (int i = 0; i < num; i++)
+                {
+                    var wp = func();
+                    wp?.Init();
+                    wp?.BindPlayer(owner);
+                    wp?.Spawner(wp.WeaponName);
+                }
+            }
+        }
+    }
 }

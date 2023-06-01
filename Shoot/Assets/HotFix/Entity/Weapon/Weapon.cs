@@ -9,7 +9,7 @@ namespace HotFix.Entity
 {
     public abstract class Weapon : Entity
     {
-        private float _lastFireTime; //上次发射次数
+        private float _timeSinceFire; //上次发射时间
         public byte _numberBarrels = 1; //枪管数量
 
         public EWeapon WeaponType { get; set; }
@@ -17,7 +17,7 @@ namespace HotFix.Entity
 
         //发射点(每次能发射的子弹数量，也可以是字典初始点)
         private List<Transform> _firePoints;
-        public float FireCd { get; set; } = 0.1f; //间隔
+        protected float FireCd { get; set; } = 0.1f; //间隔
 
 
         //参数从配置表中获取
@@ -71,16 +71,16 @@ namespace HotFix.Entity
         {
             base.OnUpdate();
 
-            if (_lastFireTime > 0)
+            if (_timeSinceFire > 0)
             {
-                _lastFireTime -= UnityEngine.Time.deltaTime;
+                _timeSinceFire -= UnityEngine.Time.deltaTime;
             }
 
             if (FireOpen)
             {
-                if (_lastFireTime <= 0)
+                if (_timeSinceFire <= 0)
                 {
-                    _lastFireTime = FireCd;
+                    _timeSinceFire = FireCd;
                     Run();
                 }
             }
