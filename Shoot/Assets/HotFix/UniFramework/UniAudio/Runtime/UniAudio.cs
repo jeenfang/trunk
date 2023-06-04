@@ -2,7 +2,6 @@
 using UnityEngine;
 using Object = UnityEngine.Object;
 using System.Collections;
-using System.Threading.Tasks;
 using YooAsset;
 
 namespace UniFramework.Audio
@@ -41,21 +40,22 @@ namespace UniFramework.Audio
         {
             if (_isInitialize)
             {
-                Clear();
+                DestroyAll();
 
                 _isInitialize = false;
                 if (_driver != null)
                     Object.Destroy(_driver);
-                _behaviour = null;
                 UniLogger.Log($"{nameof(UniAudio)} destroy all !");
             }
         }
 
-        private static void Clear()
+        private static void DestroyAll()
         {
+            _behaviour.StopAllCoroutines();
             musicSource = null;
             ambientSource = null;
             fxSource = null;
+            _behaviour = null;
         }
 
         public enum AudioChannel
@@ -160,9 +160,6 @@ namespace UniFramework.Audio
 
         private static IEnumerator _PlayMusicFade(string musicName, float duration)
         {
-            float startVolume = 0;
-            float targetVolume = musicSource.volume;
-            float currentTime = 0;
             yield return LoadAudioClipAsync(musicName, (clip) =>
                 {
                     musicSource.clip = clip;
@@ -170,6 +167,9 @@ namespace UniFramework.Audio
                 }
             );
 
+            float startVolume = 0;
+            float targetVolume = musicSource.volume;
+            float currentTime = 0;
             while (currentTime < duration)
             {
                 currentTime += Time.deltaTime;
