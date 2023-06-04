@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Object = UnityEngine.Object;
 
 namespace UniFramework.Event
 {
@@ -56,7 +57,7 @@ namespace UniFramework.Event
 
 				_isInitialize = false;
 				if (_driver != null)
-					GameObject.Destroy(_driver);
+					Object.Destroy(_driver);
 				UniLogger.Log($"{nameof(UniEvent)} destroy all !");
 			}
 		}

@@ -21,17 +21,17 @@ namespace HotFix.Entity
             }
         }
 
-        public override void Move()
-        {
-            base.Move();
-            if (IsRun)
-            {
-                if (null != ThisT)
-                {
-                    ThisT.Translate(Vector3.forward * Time.deltaTime * Speed);
-                }
-            }
-        }
+        // public override void Move()
+        // {
+        //     base.Move();
+        //     if (IsRun)
+        //     {
+        //         if (null != ThisT)
+        //         {
+        //             ThisT.Translate(Vector3.forward * Time.deltaTime * Speed);
+        //         }
+        //     }
+        // }
 
         public override void Rotate()
         {

@@ -1,7 +1,6 @@
 ﻿using HotFix.Contexts;
 using UniFramework.Pooling;
 using UnityEngine;
-using Time = Codice.Client.Common.Time;
 
 namespace HotFix.Entity
 {
@@ -19,19 +18,14 @@ namespace HotFix.Entity
             base.OnUpdate();
         }
         
-        protected override void Run()
-        {
-            Debug.LogError("发射子弹。。。。。。。。。。");
-            Shotting();
-        }
-
         public override void Fire(bool open)
         {
             base.Fire(open);
         }
 
-        private void Shotting()
+        protected override void Shotting()
         {
+            base.Shotting();
             for (int i = 0; i < this.FirePoints.Count; i++)
             {
                 if(null == this.FirePoints[i])

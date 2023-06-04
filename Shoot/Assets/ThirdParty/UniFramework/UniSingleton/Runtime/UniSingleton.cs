@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Object = UnityEngine.Object;
 
 namespace UniFramework.Singleton
 {
@@ -37,9 +38,9 @@ namespace UniFramework.Singleton
 			{
 				// 创建驱动器
 				_isInitialize = true;
-				_driver = new UnityEngine.GameObject($"[{nameof(UniSingleton)}]");
+				_driver = new GameObject($"[{nameof(UniSingleton)}]");
 				_behaviour = _driver.AddComponent<UniSingletonDriver>();
-				UnityEngine.Object.DontDestroyOnLoad(_driver);
+				Object.DontDestroyOnLoad(_driver);
 				UniLogger.Log($"{nameof(UniSingleton)} initalize !");
 			}
 		}
@@ -55,7 +56,7 @@ namespace UniFramework.Singleton
 
 				_isInitialize = false;
 				if (_driver != null)
-					GameObject.Destroy(_driver);
+					Object.Destroy(_driver);
 				UniLogger.Log($"{nameof(UniSingleton)} destroy all !");
 			}
 		}

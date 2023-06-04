@@ -11,14 +11,12 @@ namespace HotFix.Entity
         protected float RotateSpeed { set; get; } = 30;
         protected float AtkDistance { set; get; } = 10;
         
-        // protected Unit(string prefabName) : base(prefabName)
-        // {
-        // }
         protected abstract void Move();//移动
         protected abstract void Rotate();//转向
         
-        public virtual void OnUpdate()
+        public override void OnUpdate()
         {
+            base.OnUpdate();
             Move();
             Rotate();
         }

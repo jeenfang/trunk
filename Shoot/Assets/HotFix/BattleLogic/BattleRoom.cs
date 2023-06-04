@@ -3,12 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using HotFix.Contexts;
 using HotFix.Utility;
+using UniFramework.Audio;
 using UniFramework.Event;
 using UnityEngine;
 using UniFramework.Window;
 using UniFramework.Pooling;
 using UniFramework.Utility;
 using YooAsset;
+using Object = UnityEngine.Object;
 using Random = UnityEngine.Random;
 
 [Serializable]
@@ -50,7 +52,7 @@ public class BattleRoom
 	private EventGroup _eventGroup = new EventGroup();
 	private Spawner _entitySpawner;
 	private GameObject _roomRoot;
-	private AssetOperationHandle _musicHandle;
+	// private AssetOperationHandle _musicHandle;
 
 	// 关卡参数
 	private const int EnemyCount = 10;
@@ -76,8 +78,8 @@ public class BattleRoom
 	/// </summary>
 	public void DestroyRoom()
 	{
-		if (_musicHandle != null)
-			_musicHandle.Release();
+		// if (_musicHandle != null)
+		// 	_musicHandle.Release();
 
 		if (_eventGroup != null)
 			_eventGroup.RemoveAllListener();
@@ -86,7 +88,7 @@ public class BattleRoom
 			_entitySpawner.DestroyAll(true);
 
 		if (_roomRoot != null)
-			GameObject.Destroy(_roomRoot);
+			Object.Destroy(_roomRoot);
 
 		UniWindow.CloseWindow<UIBattleWindow>();
 	}
@@ -98,67 +100,67 @@ public class BattleRoom
 	{
 		PlayerContext.OnUpdate();
 		
-		if (_steps == ESteps.None || _steps == ESteps.GameOver)
-			return;
-
-		if (_steps == ESteps.Ready)
-		{
-			if (_startWaitTimer.Update(Time.deltaTime))
-			{
-				_steps = ESteps.Spawn;
-			}
-		}
-
-		if (_steps == ESteps.Spawn)
-		{
-			var enemyLocation = _entityLocations[Random.Range(0, 4)];
-			Vector3 spawnPosition = new Vector3(Random.Range(-_spawnValues.x, _spawnValues.x), _spawnValues.y, _spawnValues.z);
-			Quaternion spawnRotation = Quaternion.identity;
-
-			if (enemyLocation == "enemy_ship")
-			{
-				// 生成敌人实体
-				var handle = _entitySpawner.SpawnSync(enemyLocation, _roomRoot.transform, spawnPosition, spawnRotation);
-				var entity = handle.GameObj.GetComponent<EntityEnemy>();
-				entity.InitEntity(handle);
-			}
-			else
-			{
-				// 生成小行星实体
-				var handle = _entitySpawner.SpawnSync(enemyLocation, _roomRoot.transform, spawnPosition, spawnRotation);
-				var entity = handle.GameObj.GetComponent<EntityAsteroid>();
-				entity.InitEntity(handle);
-			}
-
-			_waveSpawnCount++;
-			if (_waveSpawnCount >= EnemyCount)
-			{
-				_steps = ESteps.WaitWave;
-			}
-			else
-			{
-				_steps = ESteps.WaitSpawn;
-			}
-		}
-
-		if (_steps == ESteps.WaitSpawn)
-		{
-			if (_spawnWaitTimer.Update(Time.deltaTime))
-			{
-				_spawnWaitTimer.Reset();
-				_steps = ESteps.Spawn;
-			}
-		}
-
-		if (_steps == ESteps.WaitWave)
-		{
-			if (_waveWaitTimer.Update(Time.deltaTime))
-			{
-				_waveWaitTimer.Reset();
-				_waveSpawnCount = 0;
-				_steps = ESteps.Spawn;
-			}
-		}
+		// if (_steps == ESteps.None || _steps == ESteps.GameOver)
+		// 	return;
+		//
+		// if (_steps == ESteps.Ready)
+		// {
+		// 	if (_startWaitTimer.Update(Time.deltaTime))
+		// 	{
+		// 		_steps = ESteps.Spawn;
+		// 	}
+		// }
+		//
+		// if (_steps == ESteps.Spawn)
+		// {
+		// 	var enemyLocation = _entityLocations[Random.Range(0, 4)];
+		// 	Vector3 spawnPosition = new Vector3(Random.Range(-_spawnValues.x, _spawnValues.x), _spawnValues.y, _spawnValues.z);
+		// 	Quaternion spawnRotation = Quaternion.identity;
+		//
+		// 	if (enemyLocation == "enemy_ship")
+		// 	{
+		// 		// 生成敌人实体
+		// 		var handle = _entitySpawner.SpawnSync(enemyLocation, _roomRoot.transform, spawnPosition, spawnRotation);
+		// 		var entity = handle.GameObj.GetComponent<EntityEnemy>();
+		// 		entity.InitEntity(handle);
+		// 	}
+		// 	else
+		// 	{
+		// 		// 生成小行星实体
+		// 		var handle = _entitySpawner.SpawnSync(enemyLocation, _roomRoot.transform, spawnPosition, spawnRotation);
+		// 		var entity = handle.GameObj.GetComponent<EntityAsteroid>();
+		// 		entity.InitEntity(handle);
+		// 	}
+		//
+		// 	_waveSpawnCount++;
+		// 	if (_waveSpawnCount >= EnemyCount)
+		// 	{
+		// 		_steps = ESteps.WaitWave;
+		// 	}
+		// 	else
+		// 	{
+		// 		_steps = ESteps.WaitSpawn;
+		// 	}
+		// }
+		//
+		// if (_steps == ESteps.WaitSpawn)
+		// {
+		// 	if (_spawnWaitTimer.Update(Time.deltaTime))
+		// 	{
+		// 		_spawnWaitTimer.Reset();
+		// 		_steps = ESteps.Spawn;
+		// 	}
+		// }
+		//
+		// if (_steps == ESteps.WaitWave)
+		// {
+		// 	if (_waveWaitTimer.Update(Time.deltaTime))
+		// 	{
+		// 		_waveWaitTimer.Reset();
+		// 		_waveSpawnCount = 0;
+		// 		_steps = ESteps.Spawn;
+		// 	}
+		// }
 	}
 
 	/// <summary>
@@ -169,37 +171,39 @@ public class BattleRoom
 		// 创建房间根对象
 		_roomRoot = new GameObject("BattleRoom");
 
-		// 加载背景音乐
-		_musicHandle = YooAssets.LoadAssetAsync<AudioClip>("music_background");
-		yield return _musicHandle;
-
-		// 播放背景音乐
-		var audioSource = _roomRoot.AddComponent<AudioSource>();
-		audioSource.loop = true;
-		audioSource.clip = _musicHandle.AssetObject as AudioClip;
-		audioSource.Play();
+		// // 加载背景音乐
+		// _musicHandle = YooAssets.LoadAssetAsync<AudioClip>("Music_Background");
+		// yield return _musicHandle;
+		//
+		// // 播放背景音乐
+		// var audioSource = _roomRoot.AddComponent<AudioSource>();
+		// audioSource.loop = true;
+		// audioSource.clip = _musicHandle.AssetObject as AudioClip;
+		// audioSource.Play();
+		
+		UniAudio.PlayMusic("Music_Background",1);
 
 		// 创建游戏对象发生器
 		_entitySpawner = UniPooling.CreateSpawner("DefaultPackage");
 
 		// 创建游戏对象池
-		yield return _entitySpawner.CreateGameObjectPoolAsync("player_ship");
-		yield return _entitySpawner.CreateGameObjectPoolAsync("player_bullet");
-		yield return _entitySpawner.CreateGameObjectPoolAsync("enemy_ship");
-		yield return _entitySpawner.CreateGameObjectPoolAsync("enemy_bullet");
-		yield return _entitySpawner.CreateGameObjectPoolAsync("asteroid01");
-		yield return _entitySpawner.CreateGameObjectPoolAsync("asteroid02");
-		yield return _entitySpawner.CreateGameObjectPoolAsync("asteroid03");
-		yield return _entitySpawner.CreateGameObjectPoolAsync("explosion_asteroid");
-		yield return _entitySpawner.CreateGameObjectPoolAsync("explosion_enemy");
-		yield return _entitySpawner.CreateGameObjectPoolAsync("explosion_player");
-		yield return _entitySpawner.CreateGameObjectPoolAsync("player");
+		// yield return _entitySpawner.CreateGameObjectPoolAsync("player_ship");
+		// yield return _entitySpawner.CreateGameObjectPoolAsync("player_bullet");
+		// yield return _entitySpawner.CreateGameObjectPoolAsync("enemy_ship");
+		// yield return _entitySpawner.CreateGameObjectPoolAsync("enemy_bullet");
+		// yield return _entitySpawner.CreateGameObjectPoolAsync("asteroid01");
+		// yield return _entitySpawner.CreateGameObjectPoolAsync("asteroid02");
+		// yield return _entitySpawner.CreateGameObjectPoolAsync("asteroid03");
+		// yield return _entitySpawner.CreateGameObjectPoolAsync("explosion_asteroid");
+		// yield return _entitySpawner.CreateGameObjectPoolAsync("explosion_enemy");
+		// yield return _entitySpawner.CreateGameObjectPoolAsync("explosion_player");
+		// yield return _entitySpawner.CreateGameObjectPoolAsync("player");
 
 
 		// 创建玩家实体对象
-		var handle = _entitySpawner.SpawnSync("player_ship", _roomRoot.transform);
-		var entity = handle.GameObj.GetComponent<EntityPlayer>();
-		entity.InitEntity(handle);
+		// var handle = _entitySpawner.SpawnSync("player_ship", _roomRoot.transform);
+		// var entity = handle.GameObj.GetComponent<EntityPlayer>();
+		// entity.InitEntity(handle);
 
 		//主角
 		// var spawnAsync = _entitySpawner.SpawnAsync("player");
@@ -215,13 +219,13 @@ public class BattleRoom
 		yield return UniWindow.OpenWindowAsync<UIBattleWindow>(GameUtility.UINameBattle);
 
 		// 监听游戏事件
-		_eventGroup.AddListener<BattleEventDefine.PlayerDead>(OnHandleEventMessage);
-		_eventGroup.AddListener<BattleEventDefine.EnemyDead>(OnHandleEventMessage);
-		_eventGroup.AddListener<BattleEventDefine.AsteroidExplosion>(OnHandleEventMessage);
-		_eventGroup.AddListener<BattleEventDefine.PlayerFireBullet>(OnHandleEventMessage);
-		_eventGroup.AddListener<BattleEventDefine.EnemyFireBullet>(OnHandleEventMessage);
-
-		//_steps = ESteps.Ready;
+		// _eventGroup.AddListener<BattleEventDefine.PlayerDead>(OnHandleEventMessage);
+		// _eventGroup.AddListener<BattleEventDefine.EnemyDead>(OnHandleEventMessage);
+		// _eventGroup.AddListener<BattleEventDefine.AsteroidExplosion>(OnHandleEventMessage);
+		// _eventGroup.AddListener<BattleEventDefine.PlayerFireBullet>(OnHandleEventMessage);
+		// _eventGroup.AddListener<BattleEventDefine.EnemyFireBullet>(OnHandleEventMessage);
+		//
+		// //_steps = ESteps.Ready;
 	}
 
 	/// <summary>
@@ -230,59 +234,59 @@ public class BattleRoom
 	/// <param name="message"></param>
 	private void OnHandleEventMessage(IEventMessage message)
 	{
-		if (message is BattleEventDefine.PlayerDead)
-		{
-			var msg = message as BattleEventDefine.PlayerDead;
-
-			// 创建爆炸效果
-			var handle = _entitySpawner.SpawnSync("explosion_player", _roomRoot.transform, msg.Position, msg.Rotation);
-			var entity = handle.GameObj.GetComponent<EntityEffect>();
-			entity.InitEntity(handle);
-
-			_steps = ESteps.GameOver;
-			BattleEventDefine.GameOver.SendEventMessage();
-		}
-		else if (message is BattleEventDefine.EnemyDead)
-		{
-			var msg = message as BattleEventDefine.EnemyDead;
-
-			// 创建爆炸效果
-			var handle = _entitySpawner.SpawnSync("explosion_enemy", _roomRoot.transform, msg.Position, msg.Rotation);
-			var entity = handle.GameObj.GetComponent<EntityEffect>();
-			entity.InitEntity(handle);
-
-			_totalScore += EnemyScore;
-			BattleEventDefine.ScoreChange.SendEventMessage(_totalScore);
-		}
-		else if (message is BattleEventDefine.AsteroidExplosion)
-		{
-			var msg = message as BattleEventDefine.AsteroidExplosion;
-
-			// 创建爆炸效果
-			var handle = _entitySpawner.SpawnSync("explosion_asteroid", _roomRoot.transform, msg.Position, msg.Rotation);
-			var entity = handle.GameObj.GetComponent<EntityEffect>();
-			entity.InitEntity(handle);
-
-			_totalScore += AsteroidScore;
-			BattleEventDefine.ScoreChange.SendEventMessage(_totalScore);
-		}
-		else if (message is BattleEventDefine.PlayerFireBullet)
-		{
-			var msg = message as BattleEventDefine.PlayerFireBullet;
-
-			// 创建子弹实体
-			var handle = _entitySpawner.SpawnSync("player_bullet", _roomRoot.transform, msg.Position, msg.Rotation);
-			var entity = handle.GameObj.GetComponent<EntityBullet>();
-			entity.InitEntity(handle);
-		}
-		else if (message is BattleEventDefine.EnemyFireBullet)
-		{
-			var msg = message as BattleEventDefine.EnemyFireBullet;
-
-			// 创建子弹实体
-			var handle = _entitySpawner.SpawnSync("enemy_bullet", _roomRoot.transform, msg.Position, msg.Rotation);
-			var entity = handle.GameObj.GetComponent<EntityBullet>();
-			entity.InitEntity(handle);
-		}
+		// if (message is BattleEventDefine.PlayerDead)
+		// {
+		// 	var msg = message as BattleEventDefine.PlayerDead;
+		//
+		// 	// 创建爆炸效果
+		// 	var handle = _entitySpawner.SpawnSync("explosion_player", _roomRoot.transform, msg.Position, msg.Rotation);
+		// 	var entity = handle.GameObj.GetComponent<EntityEffect>();
+		// 	entity.InitEntity(handle);
+		//
+		// 	_steps = ESteps.GameOver;
+		// 	BattleEventDefine.GameOver.SendEventMessage();
+		// }
+		// else if (message is BattleEventDefine.EnemyDead)
+		// {
+		// 	var msg = message as BattleEventDefine.EnemyDead;
+		//
+		// 	// 创建爆炸效果
+		// 	var handle = _entitySpawner.SpawnSync("explosion_enemy", _roomRoot.transform, msg.Position, msg.Rotation);
+		// 	var entity = handle.GameObj.GetComponent<EntityEffect>();
+		// 	entity.InitEntity(handle);
+		//
+		// 	_totalScore += EnemyScore;
+		// 	BattleEventDefine.ScoreChange.SendEventMessage(_totalScore);
+		// }
+		// else if (message is BattleEventDefine.AsteroidExplosion)
+		// {
+		// 	var msg = message as BattleEventDefine.AsteroidExplosion;
+		//
+		// 	// 创建爆炸效果
+		// 	var handle = _entitySpawner.SpawnSync("explosion_asteroid", _roomRoot.transform, msg.Position, msg.Rotation);
+		// 	var entity = handle.GameObj.GetComponent<EntityEffect>();
+		// 	entity.InitEntity(handle);
+		//
+		// 	_totalScore += AsteroidScore;
+		// 	BattleEventDefine.ScoreChange.SendEventMessage(_totalScore);
+		// }
+		// else if (message is BattleEventDefine.PlayerFireBullet)
+		// {
+		// 	var msg = message as BattleEventDefine.PlayerFireBullet;
+		//
+		// 	// 创建子弹实体
+		// 	var handle = _entitySpawner.SpawnSync("player_bullet", _roomRoot.transform, msg.Position, msg.Rotation);
+		// 	var entity = handle.GameObj.GetComponent<EntityBullet>();
+		// 	entity.InitEntity(handle);
+		// }
+		// else if (message is BattleEventDefine.EnemyFireBullet)
+		// {
+		// 	var msg = message as BattleEventDefine.EnemyFireBullet;
+		//
+		// 	// 创建子弹实体
+		// 	var handle = _entitySpawner.SpawnSync("enemy_bullet", _roomRoot.transform, msg.Position, msg.Rotation);
+		// 	var entity = handle.GameObj.GetComponent<EntityBullet>();
+		// 	entity.InitEntity(handle);
+		// }
 	}
 }

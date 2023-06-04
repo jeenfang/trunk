@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using YooAsset;
+using Object = UnityEngine.Object;
 
 namespace UniFramework.Pooling
 {
@@ -91,7 +92,7 @@ namespace UniFramework.Pooling
 			foreach (var operation in _cacheOperations)
 			{
 				if (operation.Result != null)
-					GameObject.Destroy(operation.Result);
+					Object.Destroy(operation.Result);
 			}
 			_cacheOperations.Clear();
 

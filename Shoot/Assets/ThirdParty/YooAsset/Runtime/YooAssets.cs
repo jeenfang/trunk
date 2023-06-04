@@ -3,6 +3,7 @@ using System.Diagnostics;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Object = UnityEngine.Object;
 
 namespace YooAsset
 {
@@ -19,7 +20,10 @@ namespace YooAsset
 		public static void Initialize(ILogger logger = null)
 		{
 			if (_isInitialize)
-				throw new Exception($"{nameof(YooAssets)} is initialized !");
+			{
+				UnityEngine.Debug.LogWarning($"{nameof(YooAssets)} is initialized !");
+				return;
+			}
 
 			if (_isInitialize == false)
 			{
@@ -61,7 +65,7 @@ namespace YooAsset
 
 				_isInitialize = false;
 				if (_driver != null)
-					GameObject.Destroy(_driver);
+					Object.Destroy(_driver);
 				YooLogger.Log($"{nameof(YooAssets)} destroy all !");
 			}
 		}

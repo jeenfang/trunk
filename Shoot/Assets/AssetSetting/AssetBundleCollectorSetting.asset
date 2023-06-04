@@ -25,11 +25,11 @@ MonoBehaviour:
       AssetTags: 
       ActiveRuleName: EnableGroup
       Collectors:
-      - CollectPath: Assets/GameRes/Effect
-        CollectorGUID: 80d76514758554baaa96a9efffe9f3ef
+      - CollectPath: Assets/GameRes/Prefabs/Bullets
+        CollectorGUID: f2aa775a9fd0f7b41bf269f55938b1ec
         CollectorType: 0
         AddressRuleName: AddressByFileName
-        PackRuleName: PackDirectory
+        PackRuleName: PackSeparately
         FilterRuleName: CollectAll
         AssetTags: 
         UserData: 
@@ -37,15 +37,7 @@ MonoBehaviour:
         CollectorGUID: 4d7c84745db8e884f8020a8c5356e67c
         CollectorType: 0
         AddressRuleName: AddressByFileName
-        PackRuleName: PackDirectory
-        FilterRuleName: CollectAll
-        AssetTags: 
-        UserData: 
-      - CollectPath: Assets/GameRes/Audio
-        CollectorGUID: 306075fbe00b24251b6c889984a7a7d5
-        CollectorType: 0
-        AddressRuleName: AddressByFileName
-        PackRuleName: PackDirectory
+        PackRuleName: PackSeparately
         FilterRuleName: CollectAll
         AssetTags: 
         UserData: 
@@ -68,7 +60,7 @@ MonoBehaviour:
       ActiveRuleName: EnableGroup
       Collectors:
       - CollectPath: Assets/GameRes/Scene
-        CollectorGUID: 6070eae1192f2994887f2983a177d503
+        CollectorGUID: 214f92124328c964798dd33a78bab85d
         CollectorType: 0
         AddressRuleName: AddressByFileName
         PackRuleName: PackSeparately
@@ -80,27 +72,27 @@ MonoBehaviour:
       AssetTags: 
       ActiveRuleName: EnableGroup
       Collectors:
-      - CollectPath: Assets//GameRes/UIImage
-        CollectorGUID: 30c57db62bb02a24590e7046d3a9e33a
-        CollectorType: 0
-        AddressRuleName: AddressByFileName
-        PackRuleName: PackDirectory
-        FilterRuleName: CollectAll
-        AssetTags: 
-        UserData: 
-      - CollectPath: Assets/GameRes/UIPanel
-        CollectorGUID: 12d33f33f3a55224c9c747d7bffa1c68
+      - CollectPath: Assets/GameRes/UI/Atlas
+        CollectorGUID: 80caf8bc3d0ac5b48a5cab7765a68205
         CollectorType: 0
         AddressRuleName: AddressByFileName
         PackRuleName: PackSeparately
         FilterRuleName: CollectAll
         AssetTags: 
         UserData: 
-      - CollectPath: Assets/GameRes/UISprite
-        CollectorGUID: 01865ad6f7c806147b6cb37f2d83bc96
+      - CollectPath: Assets/GameRes/UI/Image
+        CollectorGUID: 30c57db62bb02a24590e7046d3a9e33a
         CollectorType: 0
         AddressRuleName: AddressByFileName
-        PackRuleName: PackTopDirectory
+        PackRuleName: PackSeparately
+        FilterRuleName: CollectAll
+        AssetTags: 
+        UserData: 
+      - CollectPath: Assets/GameRes/UI/Panel
+        CollectorGUID: 12d33f33f3a55224c9c747d7bffa1c68
+        CollectorType: 0
+        AddressRuleName: AddressByFileName
+        PackRuleName: PackSeparately
         FilterRuleName: CollectAll
         AssetTags: 
         UserData: 
@@ -114,6 +106,19 @@ MonoBehaviour:
         CollectorType: 0
         AddressRuleName: AddressByFileName
         PackRuleName: PackRawFile
+        FilterRuleName: CollectAll
+        AssetTags: 
+        UserData: 
+    - GroupName: Audio
+      GroupDesc: "\u58F0\u97F3"
+      AssetTags: 
+      ActiveRuleName: EnableGroup
+      Collectors:
+      - CollectPath: Assets/GameRes/Audio
+        CollectorGUID: 306075fbe00b24251b6c889984a7a7d5
+        CollectorType: 0
+        AddressRuleName: AddressByFileName
+        PackRuleName: PackSeparately
         FilterRuleName: CollectAll
         AssetTags: 
         UserData: 

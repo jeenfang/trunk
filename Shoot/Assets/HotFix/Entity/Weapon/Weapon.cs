@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Transactions;
+using UniFramework.Audio;
 using UniFramework.Pooling;
 using UnityEngine;
 using Object = UnityEngine.Object;
@@ -64,8 +65,10 @@ namespace HotFix.Entity
             FireOpen = open;
         }
 
-        protected abstract void Run();
-
+        protected virtual void Shotting()
+        {
+            UniAudio.PlaySound2D("LaserShoot");
+        }
 
         public override void OnUpdate()
         {
@@ -81,7 +84,7 @@ namespace HotFix.Entity
                 if (_timeSinceFire <= 0)
                 {
                     _timeSinceFire = FireCd;
-                    Run();
+                    Shotting();
                 }
             }
         }
