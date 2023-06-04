@@ -29,9 +29,6 @@ public class Boot : MonoBehaviour
 		// 初始化资源系统
 		YooAssets.Initialize();
 		YooAssets.SetOperationSystemMaxTimeSlice(30);
-		
-		// 初始化音效
-		UniAudio.Initalize();
 
 		// 创建补丁管理器
 		UniSingleton.CreateSingleton<PatchManager>();
