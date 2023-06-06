@@ -181,7 +181,7 @@ public class BattleRoom
 		// audioSource.clip = _musicHandle.AssetObject as AudioClip;
 		// audioSource.Play();
 		
-		UniAudio.PlayMusic("Music_Background",1);
+		UniAudio.PlayMusic("music_background",1);
 
 		// 创建游戏对象发生器
 		_entitySpawner = UniPooling.CreateSpawner("DefaultPackage");

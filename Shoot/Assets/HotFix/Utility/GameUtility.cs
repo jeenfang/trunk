@@ -20,7 +20,6 @@ namespace HotFix.Utility
 
         #endregion
 
-
         #region 场景名字
 
         public static readonly string SceneNameHome = "scene_home";
@@ -41,8 +40,7 @@ namespace HotFix.Utility
         {
             return weapon.ToString();
         }
-
-
+        
         public static void SwitchWeapon(EWeapon weapon, UnitPlayer owner)
         {
             if (_dicWeaponFactoryMapping.TryGetValue(weapon, out Func<Weapon> func))

@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Configs;
 using UnityEngine;
 using UniFramework.Event;
 using UniFramework.Machine;
@@ -43,6 +44,7 @@ public class GameManager : SingletonInstance<GameManager>, ISingleton
 			_machine.AddNode<FsmSceneHome>();
 			_machine.AddNode<FsmSceneBattle>();
 			_machine.Run<FsmInitGame>();
+			GameLog.Log( "itemcfg数量："+ConfigMgr<Item>.Instance.InfoDic.Count);
 		}
 		else
 		{
