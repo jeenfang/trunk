@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3341136}
   - component: {fileID: 2321512}
   m_Layer: 0
-  m_Name: Gun_3
+  m_Name: Gun_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28,6 +28,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1, y: 0, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 483128}
   m_Father: {fileID: 497970}
@@ -52,9 +53,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -66,6 +70,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -78,6 +83,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &139322
 GameObject:
   m_ObjectHideFlags: 0
@@ -104,6 +110,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0.72499996}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 448134}
   m_RootOrder: 0
@@ -134,6 +141,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0.72499996}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 489816}
   m_RootOrder: 0
@@ -164,6 +172,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0.72499996}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 476438}
   m_RootOrder: 0
@@ -196,6 +205,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 490596}
   m_Father: {fileID: 497970}
@@ -220,9 +230,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -234,6 +247,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -246,6 +260,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &174274
 GameObject:
   m_ObjectHideFlags: 0
@@ -258,7 +273,7 @@ GameObject:
   - component: {fileID: 3342532}
   - component: {fileID: 2349722}
   m_Layer: 0
-  m_Name: Gun_3
+  m_Name: Gun_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -274,6 +289,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1, y: 0, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 401316}
   m_Father: {fileID: 497970}
@@ -298,9 +314,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -312,6 +331,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -324,6 +344,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &195872
 GameObject:
   m_ObjectHideFlags: 0
@@ -333,7 +354,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 497970}
-  - component: {fileID: 11488150}
   m_Layer: 0
   m_Name: Weapon_MultiCannon
   m_TagString: Untagged
@@ -351,6 +371,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 448134}
   - {fileID: 476438}
@@ -358,91 +379,3 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &11488150
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 195872}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4b3f678a3832bc4d989b4be8ea0cb8b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ID: 7
-  icon: {fileID: 21300000, guid: 83bba2fef1811af4ea93e067de6e54c2, type: 3}
-  weaponName: MultiCannon
-  desp: 
-  shootObject: {fileID: 133948, guid: 85c91927388385549b50dce9b5e5c07e, type: 3}
-  shootPointList:
-  - {fileID: 401316}
-  - {fileID: 483128}
-  - {fileID: 490596}
-  shootPointDelay: 0
-  continousFire: 1
-  range: 40
-  cooldown: 0.25
-  currentCD: 0
-  useEnergyAsAmmo: 0
-  energyCost: 2
-  clipSize: 50
-  currentClip: 30
-  ammoCap: 0
-  ammo: 300
-  reloadDuration: 0
-  currentReload: 0
-  recoilMagnitude: 0
-  recoil: 1
-  recoilCamShake: 0
-  spread: 1
-  spreadAngle: 15
-  aStats:
-    damageType: 0
-    damageMin: 4
-    damageMax: 4
-    aoeRadius: 0
-    diminishingAOE: 1
-    critChance: 0
-    critMultiplier: 2
-    impactForce: 0
-    explosionRadius: 0
-    explosionForce: 5
-    effectID: 0
-    effectIdx: -1
-  shootSFX: {fileID: 8300000, guid: 667b340e93d22ea4c80ebce683a4af5c, type: 3}
-  reloadSFX: {fileID: 8300000, guid: 35f76970bbd3dbb4f9ff3ef761889c19, type: 3}
-  temporary: 0
-  abilityID: 5
-  ability:
-    ID: 5
-    name: Shield Up
-    icon: {fileID: 21300000, guid: 36d4334467d3aed4abc8621a0357f71f, type: 3}
-    desp: 
-    type: 3
-    moveType: 0
-    duration: 0.2
-    cost: 0
-    cooldown: 0
-    currentCD: 0
-    aStats:
-      damageType: 0
-      damageMin: 0
-      damageMax: 0
-      aoeRadius: 0
-      diminishingAOE: 1
-      critChance: 0
-      critMultiplier: 2
-      impactForce: 0
-      explosionRadius: 0
-      explosionForce: 5
-      effectID: 9
-      effectIdx: -1
-    range: 20
-    shootObject: {fileID: 0}
-    shootPosOffset: {x: 0, y: 1, z: 0}
-    launchObj: {fileID: 0}
-    autoDestroyLaunchObj: 1
-    launchObjActiveDuration: 2
-    launchSFX: {fileID: 0}
-  randCursorForRecoil: 0
