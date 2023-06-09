@@ -836,17 +836,17 @@
      <Reference Include="Unity.ScriptableBuildPipeline.Editor">
      <HintPath>F:\Unity\Project\ShootPro\trunk\Shoot\Library\ScriptAssemblies\Unity.ScriptableBuildPipeline.Editor.dll</HintPath>
      </Reference>
-     <Reference Include="UnityEngine.TestRunner">
-     <HintPath>F:\Unity\Project\ShootPro\trunk\Shoot\Library\ScriptAssemblies\UnityEngine.TestRunner.dll</HintPath>
-     </Reference>
-     <Reference Include="UnityEditor.TestRunner">
-     <HintPath>F:\Unity\Project\ShootPro\trunk\Shoot\Library\ScriptAssemblies\UnityEditor.TestRunner.dll</HintPath>
-     </Reference>
      <Reference Include="UnityEditor.UI">
      <HintPath>F:\Unity\Project\ShootPro\trunk\Shoot\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
      </Reference>
      <Reference Include="UnityEngine.UI">
      <HintPath>F:\Unity\Project\ShootPro\trunk\Shoot\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.TestRunner">
+     <HintPath>F:\Unity\Project\ShootPro\trunk\Shoot\Library\ScriptAssemblies\UnityEngine.TestRunner.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEditor.TestRunner">
+     <HintPath>F:\Unity\Project\ShootPro\trunk\Shoot\Library\ScriptAssemblies\UnityEditor.TestRunner.dll</HintPath>
      </Reference>
   </ItemGroup>
   <ItemGroup>

@@ -45,9 +45,9 @@
      <Compile Include="Assets\ThirdParty\Extension\Editor\PackageImportWindow.cs" />
      <Compile Include="Assets\ThirdParty\Extension\Editor\PackageCompareWindow.cs" />
      <Compile Include="Assets\ThirdParty\Extension\Editor\CustomPackRule.cs" />
-     <Compile Include="Assets\GameScript\Editor\Encryption.cs" />
-     <Compile Include="Assets\GameScript\Editor\UIAutoGenerator.cs" />
-     <Folder Include="Assets\GameScript\Editor" />
+     <Compile Include="Assets\Scripts\Editor\Encryption.cs" />
+     <Compile Include="Assets\Scripts\Editor\UIAutoGenerator.cs" />
+     <Folder Include="Assets\Scripts\Editor" />
      <Folder Include="Assets\ThirdParty\Extension\Editor" />
      <Folder Include="Assets\ThirdParty\StreamingAssetsHelper\Editor" />
      <Reference Include="UnityEngine">
